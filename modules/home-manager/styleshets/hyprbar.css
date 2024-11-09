@@ -1,0 +1,107 @@
+@import '../../.cache/wallust/meiner.css';
+
+* {
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family: "Noto Sans CJK KR Regular";
+  font-size: 13px;
+  min-height: 0;
+  background-color: transparent;
+  color: @foreground;
+}
+
+.modules-left,
+.modules-center,
+.modules-right{
+  margin-top: 5px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+#workspaces {
+  border: 2px solid @foreground;
+  border-radius: 11px;
+}
+
+#workspaces button {
+  /* Avoid rounded borders under each button name */
+  border: none;
+  border-radius: 0;
+  padding: 0 4px;
+  background-color: transparent; 
+}
+
+#workspaces button.active {
+  border-radius: 10px;
+  background: @color10;
+}
+
+#workspaces button:hover { 
+  border-radius: 10px;
+  background: @color11;
+}
+
+#clock {
+  padding: 1px 5px 0px 5px;
+  border: 2px solid @foreground;
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px;
+  font-size:15px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#custom-logout {
+  margin-right: 5px;
+  padding: 5px 15px 5px 10px;
+  border: @foreground;
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+  background: @color10;
+}
+
+#taskbar {
+  margin-left: 5px;
+  background-color: rgba(0,0,0,0.3);
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px; 
+  border: 2px solid @foreground;
+  min-width: 10px; 
+}
+
+#taskbar button {
+  border: none;
+  border-radius: 0;
+  transition: 0;
+  margin: 0;
+  padding: 4px;
+  background-color: transparent;
+}
+
+#taskbar button.active {
+  border: none;
+  background-color: @color10;
+  border-radius: 10px;
+}
+
+#taskbar button:hover {
+  border: none;
+  border-radius: 10px;
+  background: @color11;
+}
+
+#window {
+  padding: 2px;
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+  border: 2px solid @color10;
+  background: @color10;
+  min-width: 10px;
+}

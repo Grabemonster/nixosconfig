@@ -1,0 +1,38 @@
+@import '.cache/wallust/meiner.css';
+
+* {
+	border-radius: 5px;
+	border: none;
+}
+
+window {
+	font-size:32px;
+	background-color: rgba(0,0,0,0.3);
+	color: @foreground;
+	border: 2px solid white;
+}
+
+#entry {
+	padding: 0.25em;
+}
+
+#entry:selected {
+	background: @color14;
+	background: linear-gradient(90deg, @color13, @color15);
+}
+
+#text:selected {
+	color: @background;
+}
+
+#input {
+	background-color: rgba(0,0,0,0.3);
+	color: @foreground;
+	padding: 0.25em;
+}
+
+image {
+	margin-left: 0.25em;
+	margin-right: 0.25em;
+}
+
