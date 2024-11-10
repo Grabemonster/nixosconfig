@@ -11,12 +11,6 @@
         keybind = "l";
       }
       {
-        label = "hibernate";
-        action = "systemctl hibernate";
-        text = "Hibernate";
-        keybind = "h";
-      }
-      {
         label = "logout";
         action = "hyprctl dispatch exit";
         text = "Logout";
@@ -27,13 +21,7 @@
         action = "systemctl poweroff";
         text = "Shutdown";
         keybind = "s";
-      }
-      {
-        label = "suspend";
-        action = "systemctl suspend";
-        text = "Suspend";
-        keybind = "u";
-      }
+      } 
       {
         label = "reboot";
         action = "systemctl reboot";
@@ -42,5 +30,13 @@
       }
     ];
     style = ./styleshets/wlogout.css;
+  };
+  home.file = let
+      icon = ".config/wlogout/icons";
+    in {
+    "${icon}/lock.png".source = ./styleshets/icons/lock.png;
+    "${icon}/logout.png".source = ./styleshets/icons/logout.png;
+    "${icon}/shutdown.png".source = ./styleshets/icons/shutdown.png;
+    "${icon}/reboot.png".source = ./styleshets/icons/reboot.png;
   };
 }
