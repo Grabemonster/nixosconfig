@@ -13,7 +13,7 @@
         "$mod, Q, exec, $terminal"
         "$mod, E, exec, $fileManager"
         "$mod, C, killactive"
-        "$mod, M, exec, wlogout"
+        "$mod, M, exec, wlogout -b 2"
         "$mod, H, togglefloating"
       "$mod, SPACE, exec, $wofi"
       "$mod, U, exec, $background"
