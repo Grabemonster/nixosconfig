@@ -17,19 +17,20 @@ button {
 	border-radius:20px;
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size:30%;
 }
 
 button:focus,
 button:active {
 	color: @color10;
 	background-color: rgba(12, 12, 12, 0.5);
-	border: 3px solid @color10;
+	border: 2px solid @color10;
 }
 
 button:hover {
 	color: @color11;
 	background-color: rgba(12, 12, 12, 0.5);
-	border: 3px solid @color11;
+	border: 2px solid @color11;
 }
 
 #lock {
