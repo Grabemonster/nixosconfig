@@ -10,7 +10,7 @@
       manager = {
         show_hidden = false;
         sort_dir_first = true;
-        layout = [1 4 4];
+        layout = [1 3 4];
       };
       
       preview = {
