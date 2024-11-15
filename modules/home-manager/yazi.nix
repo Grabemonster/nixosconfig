@@ -3,14 +3,18 @@
   programs.yazi = {
     enable = true;
     settings = {
-      opener.edit = [{
-        block = true;
-        run = "nvim $@";
-      }];
+      opener = {
+        edit = [{
+          block = true;
+          run = "nvim $@";
+        }];
+      };
+
       manager = {
         show_hidden = false;
         sort_dir_first = true;
         layout = [1 3 4];
+        sort_by = "alphabetical";
       };
       
       preview = {
@@ -29,6 +33,22 @@
         macro_workers = 10;
         bizarre_retry = 5;
       };
+
+      confirm = {
+        delete_title = "Permanently delete {n} selected file{s}?";
+      };
+
+
+      open.rules = [
+        {
+          mime = "text/*";
+          use = ["edit" "reveal"];
+        }
+        {
+          mime = "image/*";
+          use = ["opem" "reveal"];
+        }
+      ];
     };
   };
 }
