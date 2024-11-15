@@ -13,6 +13,7 @@
       ../../modules/home-manager/nixvim.nix
       ../../modules/home-manager/rebuild.nix
       ../../modules/home-manager/bash.nix
+      ../../modules/home-manager/yazi.nix
     ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
