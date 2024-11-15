@@ -3,15 +3,10 @@
   programs.yazi = {
     enable = true;
     settings = {
-      keymap = {
-
-      };
-      theme = {};
-      yazi = {
-        manager = {
-          ratio = [1 4 4];
-        };
-      };
+      opener.edit = [{
+        block = true;
+        run = "nvim $@";
+      }];
     };
   };
 }
