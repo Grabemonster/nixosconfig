@@ -2,7 +2,7 @@
 {
   wayland.windowManager.hyprland.settings = {
    "$terminal" = "gnome-terminal";
-   "$fileManager" = ''gnome-terminal -e lf'';
+   "$fileManager" = ''gnome-terminal -e yazi'';
    "$firefox" = "firefox";
    "$wofi" = "wofi --show"; 
    "$background" = "bash ~/.config/scripts/randomimage.sh";
