@@ -14,6 +14,7 @@
       ../../modules/home-manager/rebuild.nix
       ../../modules/home-manager/bash.nix
       ../../modules/home-manager/yazi.nix
+      ../../modules/home-manager/hyprpanel.nix
     ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.

@@ -1,4 +1,9 @@
-{pkgs, ...}:
+{pkgs, input, ...}:
 {
-  programs.
+#  inport = [
+#    input.hyprpanel.overlay
+ # ];
+  #programs.hyprpanel = {
+   # enable = true;
+  #};
 }

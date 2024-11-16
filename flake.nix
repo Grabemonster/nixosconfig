@@ -51,6 +51,9 @@
     homeConfiguration = {
         default = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
+          overlays = [
+            inputs.hyprpanel.overlays
+          ];
           extraSpecialArgs = {inherit inputs; inherit nixvim; inherit hyprpanel;};
           modules = [
             ./home/default/home.nix
