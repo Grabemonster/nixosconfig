@@ -42,7 +42,7 @@
       open.rules = [
         {
           mime = "text/*";
-          use = ["edit" "reveal"];
+          use = ["edit"];
         }
         {
           mime = "image/*";
