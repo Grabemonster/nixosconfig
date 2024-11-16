@@ -14,9 +14,14 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hyprpanel = {
+      url = "github:Jas-SinghFSU/HyprPanel";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixvim, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, nixvim, hyprpanel, ... }@inputs: 
   let
     system = "x86_64-linux";
 
@@ -37,19 +42,19 @@
 	    };
 	
 
-          modules = [
-	        ./hosts/default/configuration.nix
-            inputs.home-manager.nixosModules.default 
-	      ];
+        modules = [
+           ./hosts/default/configuration.nix
+           inputs.home-manager.nixosModules.default 
+        ];
       };
-      };
+    };
     homeConfiguration = {
         default = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          extraSpecialArgs = {inherit inputs; inherit nixvim;};
+          extraSpecialArgs = {inherit inputs; inherit nixvim; inherit hyprpanel;};
           modules = [
             ./home/default/home.nix
-
+            
           ];
         };
     };
