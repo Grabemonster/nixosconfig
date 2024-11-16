@@ -110,7 +110,7 @@
     psmisc
     gh
     wl-clipboard
-    
+    fzf
   ];
 
   fonts.packages = with pkgs; [ 
