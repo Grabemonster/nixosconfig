@@ -15,14 +15,18 @@
         "$mod, C, killactive"
         "$mod, M, exec, wlogout -b 2"
         "$mod, H, togglefloating"
-      "$mod, SPACE, exec, $wofi"
-      "$mod, U, exec, $background"
+        "$mod, SPACE, exec, $wofi"
+        "$mod, U, exec, $background"
 
         #Move focus
         "$mod, left, movefocus, l"
         "$mod, right, movefocus, r"
         "$mod, up, movefocus, u"
         "$mod, down, movefocus, d"
+
+        #Move Window
+        "$mod SHIFT, up, swapactive top"
+        "$mod SHIFT, down, swapactive bottom"
       ]
       ++ (
         builtins.concatLists (builtins.genList (i:
