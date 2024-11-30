@@ -12,7 +12,7 @@
       }
       {
         label = "logout";
-        action = "loginctl terminate-user \"meiner\"";
+        action = "hyprctl dispatch exit";
         text = "Logout";
         keybind = "l";
       }
