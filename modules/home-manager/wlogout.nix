@@ -12,7 +12,7 @@
       }
       {
         label = "logout";
-        action = "uwsm stop";
+        action = "loginctl terminate-user \"\"";
         text = "Logout";
         keybind = "l";
       }
