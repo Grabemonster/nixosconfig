@@ -125,7 +125,9 @@
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = 1;
-    MOZ_ENABLEWAYLAND=1;
+  };
+  environment.variables = {
+    MOZ_ENABLE_WAYLAND = "1";
   };
   # programs need SUID wrappers, can be configured further or are
   # started in user sessions.
