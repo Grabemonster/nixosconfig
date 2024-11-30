@@ -12,7 +12,7 @@
       }
       {
         label = "logout";
-        action = "loginctl terminate-user \"\"";
+        action = "loginctl terminate-user \"meiner\"";
         text = "Logout";
         keybind = "l";
       }
