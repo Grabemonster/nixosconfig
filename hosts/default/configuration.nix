@@ -117,7 +117,7 @@
     dejavu_fonts
     font-awesome
     jetbrains-mono
-    #nerd-fonts.EnvyCodeR    
+    (nerdfonts.override { fonts = ["EnvyCodeR"];})    
   ];
 
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}"];
