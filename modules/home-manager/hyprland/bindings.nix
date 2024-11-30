@@ -31,7 +31,10 @@
         "$mod SHIFT, left, movewindow, l"
 
         #recize Window
-        "$mod CTRL, up, resizeactive, 0 50"
+        "$mod CTRL, up, resizeactive, 0 -50"
+        "$mod CTRL, down, resizeactive, 0 50"
+        "$mod CTRL, right, resizeactive, 50 0"
+        "$mod CTRL, left, resizeactive, -50 0"
       ]
       ++ (
         builtins.concatLists (builtins.genList (i:
