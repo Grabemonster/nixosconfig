@@ -25,8 +25,8 @@
         "$mod, down, movefocus, d"
 
         #Move Window
-        "$mod SHIFT, up, swapwindow u"
-        "$mod SHIFT, down, swapwindow d"
+        "$mod SHIFT, up, swapwindow, u"
+        "$mod SHIFT, down, swapwindow, d"
       ]
       ++ (
         builtins.concatLists (builtins.genList (i:
