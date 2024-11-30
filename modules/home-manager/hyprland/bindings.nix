@@ -29,6 +29,9 @@
         "$mod SHIFT, down, movewindow, d"
         "$mod SHIFT, right, movewindow, r"
         "$mod SHIFT, left, movewindow, l"
+
+        #recize Window
+        "$mod CTRL, up, rezizeactive, 0 50"
       ]
       ++ (
         builtins.concatLists (builtins.genList (i:
