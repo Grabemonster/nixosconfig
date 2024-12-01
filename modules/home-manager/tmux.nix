@@ -17,5 +17,10 @@
       tmuxPlugins.yank
       tmuxPlugins.catppuccin
     ];
+    sensibleOnTop = true;
+
+    extraConfig = ''
+      set-option -sa terminal-overrides ",xterm*:TC"
+    '';
   };
 }
