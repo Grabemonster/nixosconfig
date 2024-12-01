@@ -15,6 +15,7 @@
       tmuxPlugins.sensible
       tmuxPlugins.vim-tmux-navigator
       tmuxPlugins.yank
+      tmuxPlugins.catppuccin
     ];
   };
 }
