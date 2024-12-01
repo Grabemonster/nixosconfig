@@ -20,7 +20,7 @@
     sensibleOnTop = true;
 
     extraConfig = ''
-      set-option -sa terminal-overrides ",xterm*:TC"
+      set -sa terminal-overrides "xterm-256color:RGB"
     '';
   };
 }
