@@ -14,7 +14,7 @@
     vimAlias = true;
   };
 
-  home.sessionVariables.EDITOR = "nvim";
+  
 
 }
 
