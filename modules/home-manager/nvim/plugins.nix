@@ -774,7 +774,7 @@ programs.nixvim = {
   -- }
        })  '';
 
-  colorschemes.oxocarbon.enable = true;
+  colorschemes.catppuccin.enable = true;
 
   extraPlugins = with pkgs.vimPlugins;
     [
