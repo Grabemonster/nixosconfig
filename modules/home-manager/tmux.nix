@@ -9,7 +9,7 @@
     keyMode = "vi";
     mouse = true;
     prefix = "C-SPACE";
-    terminal = "xterm256color";
+    terminal = "tmux-256color";
 
     plugins = with pkgs; [
       tmuxPlugins.sensible
