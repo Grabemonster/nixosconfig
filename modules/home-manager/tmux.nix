@@ -11,6 +11,10 @@
     prefix = "C-SPACE";
     terminal = "screen-256color";
 
-
+    plugins = with pkgs; [
+      tmuxPlugins.sensible
+      tmuxPlugins.vim-tmux-navigator
+      tmuxPlugins.yank
+    ];
   };
 }
