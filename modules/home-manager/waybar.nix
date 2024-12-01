@@ -55,7 +55,7 @@ programs.waybar ={
     
       "custom/logout" = {
         exec = "echo -e '\\uf011'";
-        on-click = "wlogout";
+        on-click = "wlogout -b 2";
         tooltip-format = "opens wlogout";
       };
   }];
