@@ -23,5 +23,31 @@
     if [[ -z "$QUERY" ]] then 
       exit 0
     fi
+
+    # Prüfe auf Präfixe
+    if [[ "$QUERY" == "="* ]]; then
+      # Mathe-Modus
+      INPUT=${QUERY:1}  # Entfernt das '='
+      RESULT=$(echo "$INPUT" | bc -l 2>/dev/null)
+      if [[ $? -ne 0 ]]; then
+        notify-send "Fehler" "Ungültige Eingabe: $INPUT"
+      else
+        notify-send "Ergebnis" "$INPUT = $RESULT"
+      fi
+
+    elif [[ "$QUERY" == "http://"* || "$QUERY" == "https://"* ]]; then
+      # URL-Modus
+      xdg-open "$QUERY" &
+
+    else
+    # Versuche, ob es ein Programm oder ein Suchbegriff ist
+    if command -v "$QUERY" &>/dev/null; then
+        # Programm starten
+        "$QUERY" &
+     else
+        # Websuche durchführen
+        xdg-open "https://www.google.com/search?q=$QUERY" &
+      fi
+    fi
   '';
 }
