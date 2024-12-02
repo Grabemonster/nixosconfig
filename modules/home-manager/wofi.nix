@@ -29,7 +29,7 @@ APPS=$(find $DESKTOP_DIRS -name '*.desktop' -print 2>/dev/null | sort | while re
 done)
 
 # Wähle eine App mit Wofi (Drun-ähnliche Anzeige)
-QUERY=$(echo -e "$APPS" | wofi --dmenu --prompt "Wählen Sie eine Anwendung" --show-icons)
+QUERY=$(echo -e "$APPS" | wofi --dmenu --prompt "Wählen Sie eine Anwendung" )
 
 # Falls eine Auswahl getroffen wurde
 if [[ -n "$CHOICE" ]]; then
