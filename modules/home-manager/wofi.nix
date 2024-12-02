@@ -24,8 +24,7 @@
 
 
 # Wähle eine App mit Wofi (Drun-ähnliche Anzeige)
-QUERY=$(wofi --dmenu --prompt "Eingabe" )
-
+QUERY=$(wofi --dmenu --show drun --prompt "Eingabe" )
 
     
 if [[ -z "$QUERY" ]]; then
