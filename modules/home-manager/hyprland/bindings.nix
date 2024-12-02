@@ -4,7 +4,7 @@
    "$terminal" = "gnome-terminal";
    "$fileManager" = ''gnome-terminal -e yazi'';
    "$firefox" = "firefox";
-   "$wofi" = "wofi --show"; 
+   "$wofi" = "wofi"; 
    "$background" = "bash ~/.config/scripts/randomimage.sh";
 
    "$mod" = "SUPER";

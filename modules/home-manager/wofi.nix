@@ -12,25 +12,16 @@
       width = "60%";
       height = "30%";
     };
-    style = style;
+    inherit style;
   };
 
   home.file.".config/scripts/wofi-launcher.sh".text = ''
 #!${pkgs.bash}/bin/bash
 
-DESKTOP_DIRS="~/.nix-profile/share/applications"
 
-# Apps extrahieren
-APPS=$(find $DESKTOP_DIRS -name '*.desktop' -print 2>/dev/null | sort | while read -r FILE; do
-    # Extrahiere Name und Exec aus der Desktop-Datei
-    NAME=$(grep -m 1 '^Name=' "$FILE" | cut -d '=' -f 2)
-    EXEC=$(grep -m 1 '^Exec=' "$FILE" | cut -d '=' -f 2 | sed 's/%.//g')  # Platzhalter entfernen
-    echo -e "$NAME\x1f$EXEC"
-    done)
-echo "$APPS"
 
 # Wähle eine App mit Wofi (Drun-ähnliche Anzeige)
-QUERY=$(echo -e "$APPS" | wofi --dmenu --prompt "Wählen Sie eine Anwendung" )
+QUERY=$(wofi --dmenu --prompt "Eingabe" )
 
 # Falls eine Auswahl getroffen wurde
 if [[ -n "$CHOICE" ]]; then
