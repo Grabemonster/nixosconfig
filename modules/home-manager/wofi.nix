@@ -16,38 +16,40 @@
   };
 
   home.file.".config/scripts/wofi-launcher.sh".text = ''
-    #!${pkgs.bash}/bin/bash
+#!${pkgs.bash}/bin/bash
+    
+QUERY=$(wofi --dmenu --prompt "Eingabe")
 
-    QUERY=$(wofi --dmenu --prompt "Eingabe")
+if [[ -z "$QUERY" ]]; then
+  exit 0
+fi
 
-    if [[ -z "$QUERY" ]] then 
-      exit 0
-    fi
+# Check for prefixes
+if [[ "$QUERY" == "="* ]]; then
+  # Math mode
+  INPUT=${QUERY:1}  # Remove the '='
+  RESULT=$(echo "$INPUT" | bc -l 2>/dev/null)
+  if [[ $? -ne 0 ]]; then
+    echo "Ungültiger mathematischer Ausdruck: $INPUT" | wofi --dmenu --prompt "Fehler"
+  else
+    echo "$INPUT = $RESULT" | wofi --dmenu --prompt "Ergebnis"
+  fi
 
-    # Prüfe auf Präfixe
-    if [[ "$QUERY" == "="* ]]; then
-      # Mathe-Modus
-      INPUT=${QUERY:1}  # Entfernt das '='
-      RESULT=$(echo "$INPUT" | bc -l 2>/dev/null)
-      if [[ $? -ne 0 ]]; then
-        $RESULT | wofi --dmenu --prompt "$QUERY"        
-      else
-        notify-send "Ergebnis" "$INPUT = $RESULT"
-      fi
+elif [[ "$QUERY" == "http://"* || "$QUERY" == "https://"* ]]; then
+  # URL mode
+  xdg-open "$QUERY" &
 
-    elif [[ "$QUERY" == "http://"* || "$QUERY" == "https://"* ]]; then
-      # URL-Modus
-      xdg-open "$QUERY" &
+else
+  # Check if it's a program or a search term
+  if command -v "$QUERY" &>/dev/null; then
+    # Launch program
+    "$QUERY" &
+  else
+    # Perform a web search
+    echo "Suche nach: $QUERY" | wofi --dmenu --prompt "Websuche"
+    xdg-open "https://www.google.com/search?q=$QUERY" &
+  fi
+fi
 
-    else
-    # Versuche, ob es ein Programm oder ein Suchbegriff ist
-    if command -v "$QUERY" &>/dev/null; then
-        # Programm starten
-        "$QUERY" &
-     else
-        # Websuche durchführen
-        xdg-open "https://www.google.com/search?q=$QUERY" &
-      fi
-    fi
   '';
 }
