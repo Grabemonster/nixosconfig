@@ -29,7 +29,7 @@ if [[ "$QUERY" == =* ]]; then
   # Math mode
     echo "$QUERY"
   INPUT=$(echo "$QUERY" | cut -c2-) # Remove the '='
-  RESULT=$(echo "$INPUT" | bc -l 2>/dev/null)
+  RESULT=$(echo "$INPUT" | ${pkgs.bc}/bin/bc -l 2>/dev/null)
   if [[ $? -ne 0 ]]; then
     echo "Ungültiger mathematischer Ausdruck: $INPUT" | wofi --dmenu --prompt "Fehler"
   else
