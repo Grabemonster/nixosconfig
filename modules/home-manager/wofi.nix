@@ -18,27 +18,24 @@
   home.file.".config/scripts/wofi-launcher.sh".text = ''
 #!${pkgs.bash}/bin/bash
     
-
-#!/usr/bin/env bash
-
 QUERY=$(wofi --dmenu --prompt "Eingabe")
 
 if [[ -z "$QUERY" ]]; then
   exit 0
 fi
 
-# Check for prefixes
-if [[ "${QUERY:0:1}" == "=" ]]; then
+# Check if the query starts with '='
+if [[ "$QUERY" == =* ]]; then
   # Math mode
   INPUT="${QUERY:1}"  # Remove the '='
   RESULT=$(echo "$INPUT" | bc -l 2>/dev/null)
   if [[ $? -ne 0 ]]; then
     echo "Ungültiger mathematischer Ausdruck: $INPUT" | wofi --dmenu --prompt "Fehler"
   else
-    echo "test $RESULT" | wofi --dmenu --prompt "Ergebnis"
+    echo "$INPUT = $RESULT" | wofi --dmenu --prompt "Ergebnis"
   fi
 
-elif [[ "$QUERY" == "http://"* || "$QUERY" == "https://"* ]]; then
+elif [[ "$QUERY" =~ ^https?:// ]]; then
   # URL mode
   xdg-open "$QUERY" &
 
@@ -50,10 +47,8 @@ else
   else
     # Perform a web search
     echo "Suche nach: $QUERY" | wofi --dmenu --prompt "Websuche"
-    xdg-open "https://www.google.com/search?q=$QUERY" &
+    xdg-open "https://www.google.com/search?q=$(echo "$QUERY" | sed 's/ /+/g')" &
   fi
 fi
-
-
   '';
 }
