@@ -30,7 +30,7 @@
       INPUT=${QUERY:1}  # Entfernt das '='
       RESULT=$(echo "$INPUT" | bc -l 2>/dev/null)
       if [[ $? -ne 0 ]]; then
-        notify-send "Fehler" "Ungültige Eingabe: $INPUT"
+        wofi --dmenu --prompt "$QUERY"        
       else
         notify-send "Ergebnis" "$INPUT = $RESULT"
       fi
