@@ -28,7 +28,7 @@ fi
 if [[ "$QUERY" == =* ]]; then
   # Math mode
     echo "$QUERY"
-  INPUT="${QUERY:1}"  # Remove the '='
+  INPUT=$(echo "$QUERY" | cut -c2-) # Remove the '='
   RESULT=$(echo "$INPUT" | bc -l 2>/dev/null)
   if [[ $? -ne 0 ]]; then
     echo "Ungültiger mathematischer Ausdruck: $INPUT" | wofi --dmenu --prompt "Fehler"
