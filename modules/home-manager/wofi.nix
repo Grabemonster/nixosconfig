@@ -18,7 +18,7 @@
   home.file.".config/scripts/wofi-launcher.sh".text = ''
 #!${pkgs.bash}/bin/bash
     
-QUERY=$(wofi --prompt "Eingabe")
+QUERY=$(wofi --dmenu --prompt "Eingabe")
 
 if [[ -z "$QUERY" ]]; then
   exit 0
