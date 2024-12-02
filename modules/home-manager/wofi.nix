@@ -7,7 +7,8 @@
   {
     enable = true;
     settings = {
-      mode = "drun";
+      mode = "dmenu";
+      parseaction = true;
       allow_images = true;
       width = "60%";
       height = "30%";
@@ -23,11 +24,7 @@
 # Wähle eine App mit Wofi (Drun-ähnliche Anzeige)
 QUERY=$(wofi --dmenu --prompt "Eingabe" )
 
-# Falls eine Auswahl getroffen wurde
-if [[ -n "$CHOICE" ]]; then
-    CMD=$(echo "$CHOICE" | awk -F '\x1f' '{print $2}')  # Exec-Befehl extrahieren
-    eval "$CMD" &  # App starten
-fi
+
     
 if [[ -z "$QUERY" ]]; then
   exit 0
