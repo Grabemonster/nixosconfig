@@ -18,7 +18,7 @@
   home.file.".config/scripts/wofi-launcher.sh".text = ''
 #!${pkgs.bash}/bin/bash
 
-DESKTOP_DIRS="/meiner/share/applications ~/.local/share/applications"
+DESKTOP_DIRS="~/share/applications ~/.local/share/applications"
 
 # Apps extrahieren
 APPS=$(find $DESKTOP_DIRS -name '*.desktop' -print 2>/dev/null | sort | while read -r FILE; do
