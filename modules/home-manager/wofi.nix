@@ -9,6 +9,8 @@
     settings = {
       mode = "dmenu";
       parseaction = true;
+      halign = "fill";
+      valign = "fill";
       allow_images = true;
       width = "60%";
       height = "30%";
