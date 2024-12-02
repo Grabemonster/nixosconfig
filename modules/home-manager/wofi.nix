@@ -35,7 +35,7 @@ if [[ "${QUERY:0:1}" == "=" ]]; then
   if [[ $? -ne 0 ]]; then
     echo "Ungültiger mathematischer Ausdruck: $INPUT" | wofi --dmenu --prompt "Fehler"
   else
-    echo "$RESULT" | wofi --dmenu --prompt "Ergebnis"
+    echo "test $RESULT" | wofi --dmenu --prompt "Ergebnis"
   fi
 
 elif [[ "$QUERY" == "http://"* || "$QUERY" == "https://"* ]]; then
