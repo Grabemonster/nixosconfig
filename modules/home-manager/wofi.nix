@@ -17,9 +17,26 @@
 
   home.file.".config/scripts/wofi-launcher.sh".text = ''
 #!${pkgs.bash}/bin/bash
-    
-QUERY=$(wofi --dmenu --prompt "Eingabe")
 
+DESKTOP_DIRS="/usr/share/applications ~/.local/share/applications"
+
+# Apps extrahieren
+APPS=$(find $DESKTOP_DIRS -name '*.desktop' -print 2>/dev/null | sort | while read -r FILE; do
+    # Extrahiere Name und Exec aus der Desktop-Datei
+    NAME=$(grep -m 1 '^Name=' "$FILE" | cut -d '=' -f 2)
+    EXEC=$(grep -m 1 '^Exec=' "$FILE" | cut -d '=' -f 2 | sed 's/%.//g')  # Platzhalter entfernen
+    echo -e "$NAME\x1f$EXEC"
+done)
+
+# Wähle eine App mit Wofi (Drun-ähnliche Anzeige)
+QUERY=$(echo -e "$APPS" | wofi --dmenu --prompt "Wählen Sie eine Anwendung" --show-icons)
+
+# Falls eine Auswahl getroffen wurde
+if [[ -n "$CHOICE" ]]; then
+    CMD=$(echo "$CHOICE" | awk -F '\x1f' '{print $2}')  # Exec-Befehl extrahieren
+    eval "$CMD" &  # App starten
+fi
+    
 if [[ -z "$QUERY" ]]; then
   exit 0
 fi
