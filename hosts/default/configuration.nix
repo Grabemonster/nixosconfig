@@ -112,6 +112,7 @@
     gh
     wl-clipboard
     fzf
+    ags
   ];
 
   fonts.packages = with pkgs; [ 
