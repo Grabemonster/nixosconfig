@@ -12,8 +12,7 @@
     settings = {
       mode = "drun";
       parseaction = true;
-      halign = "fill";
-      
+      halign = "fill"; 
       allow_images = true;
       width = "60%";
       height = "30%";
