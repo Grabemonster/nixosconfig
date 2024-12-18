@@ -1,11 +1,11 @@
-{ pkgs, inputs, ...}:
+{user, pkgs, inputs, ...}:
 {
  
   programs.firefox = {
     enable = true;
     languagePacks = ["en_US" "de"];
     package = pkgs.firefox;
-    profiles."meiner" = {
+    profiles."${user}" = {
       id = 0;
       isDefault = true;
       extensions = with inputs.firefox-addons; [bitwarden];
