@@ -82,10 +82,7 @@
   home-manager = {
     extraSpecialArgs = {inherit inputs; };
     users.meiner = import ./home.nix;
-  };
-
-  # Install firefox.
-  programs.firefox.enable = true;
+  };  
 
   programs.hyprland.enable = true;
 
