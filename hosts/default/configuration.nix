@@ -112,7 +112,7 @@
     gh
     wl-clipboard
     fzf
-    ags
+    libreoffice-qt6
   ];
 
   fonts.packages = with pkgs; [ 
