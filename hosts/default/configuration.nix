@@ -75,8 +75,7 @@
     isNormalUser = true;
     description = "${user}";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    ];
+    
   };
 
    programs.hyprland.enable = true;
