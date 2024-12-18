@@ -112,7 +112,10 @@
     gh
     wl-clipboard
     fzf
-    libreoffice-qt6
+    libreoffice-qt
+    hunspell
+    hunspellDicts.de_DE
+    hunspellDicts.en_US
   ];
 
   fonts.packages = with pkgs; [ 
