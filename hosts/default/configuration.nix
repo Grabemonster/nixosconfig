@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{ user, pkgs, inputs, ... }:
 
 {
   imports =
@@ -71,20 +71,15 @@
   };
  
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.meiner = {
+  users.users.${user} = {
     isNormalUser = true;
-    description = "meiner";
+    description = "${user}";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     ];
   };
 
-  home-manager = {
-    extraSpecialArgs = {inherit inputs; };
-    users.meiner = import ./home.nix;
-  };  
-
-  programs.hyprland.enable = true;
+   programs.hyprland.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

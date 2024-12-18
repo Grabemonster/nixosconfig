@@ -19,11 +19,18 @@
       url = "github:Jas-SinghFSU/HyprPanel";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixvim, hyprpanel, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, nixvim, hyprpanel, firefox-addons, ... }@inputs: 
   let
     system = "x86_64-linux";
+
+    user = "meiner";
 
     pkgs = import nixpkgs {
       inherit system;
@@ -36,12 +43,8 @@
   {
     nixosConfigurations = {
       default = nixpkgs.lib.nixosSystem {
-	    specialArgs = {
-          inherit system; 
-	      inherit inputs;
-	    };
-	
-
+	    specialArgs = {inherit system; inherit inputs; inherit user;};
+  
         modules = [
            ./hosts/default/configuration.nix
            inputs.home-manager.nixosModules.default 
@@ -54,7 +57,7 @@
           overlays = [
             inputs.hyprpanel.overlays
           ];
-          extraSpecialArgs = {inherit inputs; inherit nixvim; inherit hyprpanel;};
+          extraSpecialArgs = {inherit inputs; inherit nixvim; inherit hyprpanel; inherit firefox-addons; inherit user;};
           modules = [
             ./home/default/home.nix
             

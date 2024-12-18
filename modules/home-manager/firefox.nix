@@ -1,11 +1,22 @@
-{pkgs, ...}:
+{ pkgs, inputs, ...}:
 {
+ 
   programs.firefox = {
     enable = true;
     languagePacks = ["en_US" "de"];
-    package = pkgs.firefox.override {
-      nativeMessagingHosts = [
-	pkgs.tridactyl-native
+    package = pkgs.firefox;
+    profiles."meiner" = {
+      id = 0;
+      isDefault = true;
+      extensions = with inputs.firefox-addons; [bitwarden];
+      
+      bookmarks = [
+        {
+          name = "home-manager";
+          tags = ["nix" "home" "manager"];
+          keyword = "home-manager";
+          url = "https://nix-community.github.io/home-manager/options.xhtml";
+        }
       ];
     };
   };

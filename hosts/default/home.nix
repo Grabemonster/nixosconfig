@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{user, config, pkgs, ... }:
 
 {
   imports = 
@@ -14,14 +14,13 @@
       ../../modules/home-manager/rebuild.nix
       ../../modules/home-manager/bash.nix
       ../../modules/home-manager/yazi.nix
-      ../../modules/home-manager/tmux.nix
-      ../../modules/home-manager/eww.nix
+      ../../modules/home-manager/tmux.nix 
       ../../modules/home-manager/firefox.nix
     ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "meiner";
-  home.homeDirectory = "/home/meiner";
+  home.username = "${user}";
+  home.homeDirectory = "/home/${user}";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
