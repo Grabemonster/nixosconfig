@@ -18,6 +18,9 @@
           url = "https://nix-community.github.io/home-manager/options.xhtml";
         }
       ];
+      settings = {
+        "browser.startup.homepage" = "https://google.com";
+      };
     };
   };
 }
