@@ -30,7 +30,7 @@
   let
     system = "x86_64-linux";
 
-    user = "meiner";
+    user = "Grabemonster";
 
     pkgs = import nixpkgs {
       inherit system;
