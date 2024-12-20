@@ -1,4 +1,4 @@
-{user, pkgs,inputs, ...}:
+{user, pkgs, ...}:
 {
  
   programs.firefox = {
@@ -10,7 +10,7 @@
       isDefault = true;
       extensions = with pkgs.nur.repos.rycee.firefox-addons; [
         bitwarden
-      ];      
+      ];
       bookmarks = [
         {
           name = "home-manager";
@@ -21,7 +21,7 @@
       ];
       settings = {
         "browser.startup.homepage" = "https://google.com";
-        "extensions.autoDisableScopes" = 0;  # Automatisches Aktivieren von Add-ons
+        "extensions.autoDisableScopes" = 0;       
       };
     };
   };
