@@ -3,9 +3,6 @@
   programs.wofi = 
   let
     style = builtins.readFile "${toString ./styleshets/wofi.css}";
-
-    # Ort, an dem wir das Skript speichern werden
-    calculatorScript = "${config.home.homeDirectory}/.local/bin/calculate-handler.sh";
   in 
   {
     enable = true;

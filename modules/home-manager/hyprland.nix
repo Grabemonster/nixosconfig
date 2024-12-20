@@ -33,7 +33,7 @@
 
 
 
-      "windowrulev2" = "suppressevent maximize, class:.*";
+      
     };
   };
 }

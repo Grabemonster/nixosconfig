@@ -19,6 +19,11 @@ wayland.windowManager.hyprland.settings = {
 
           "vibrancy" = "0.1696";
         };
-      };
+    };
+
+    windowrulev2 = [
+      "opacity,0.85,gnome-terminal"
+      "suppressevent maximize, class:.*"
+    ];
   };
 }
