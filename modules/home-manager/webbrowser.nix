@@ -29,4 +29,15 @@
       };
     };
   };
+
+  programs.chromium = {
+    enable = true;
+    dictionaries = [
+      pkgs.hunspellDictsChromium.en_US
+      pkgs.hunspellDictsChromium.de_DE
+    ];
+    extensions = [
+      {id = "nngceckbapebfimnlniiiahkandclblb";}
+    ];
+  };
 }
