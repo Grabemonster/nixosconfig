@@ -20,7 +20,7 @@ wayland.windowManager.hyprland.settings = {
     };
 
     windowrulev2 = [
-      "opacity,0.85,class:gnome-terminal-server"
+      "opacity,0.85,class:gnome-terminal.*"
       "suppressevent maximize, class:.*"
     ];
   };
