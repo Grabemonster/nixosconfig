@@ -32,7 +32,7 @@
 
   programs.chromium = {
     enable = true;
-    package = pkgs.brave;
+    package = pkgs.chromium;
     commandLineArgs = [
       "--disable-password-manager"
     ];
