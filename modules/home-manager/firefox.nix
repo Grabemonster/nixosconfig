@@ -21,6 +21,7 @@
       ];
       settings = {
         "browser.startup.homepage" = "https://google.com";
+        "extensions.autoDisableScopes" = 0;  # Automatisches Aktivieren von Add-ons
       };
     };
   };
