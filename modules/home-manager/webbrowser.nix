@@ -32,6 +32,9 @@
 
   programs.chromium = {
     enable = true;
+    commandLineArgs = [
+      "disable-password-manager"
+    ];
     dictionaries = [
       pkgs.hunspellDictsChromium.en_US
       pkgs.hunspellDictsChromium.de_DE
