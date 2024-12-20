@@ -34,6 +34,14 @@
   home.packages = [
   ];
 
+  gtk = {
+      enable = true;
+      theme = {
+        name = "Adwaita-dark";
+        package = pkgs.gnome.gnome-themes-extra;
+      };
+    };
+
   fonts.fontconfig.enable = true;
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
