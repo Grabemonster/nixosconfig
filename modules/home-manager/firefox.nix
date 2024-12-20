@@ -1,15 +1,16 @@
-{user, pkgs, inputs, ...}:
+{user, pkgs,inputs, ...}:
 {
  
   programs.firefox = {
-    enable = false;
+    enable = true;
     languagePacks = ["en_US" "de"];
     package = pkgs.firefox;
     profiles."${user}" = {
       id = 0;
       isDefault = true;
-      extensions = with pkgs.nur.repos.rycee.firefox-addons; [bitwarden];
-      
+      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+        bitwarden
+      ];      
       bookmarks = [
         {
           name = "home-manager";

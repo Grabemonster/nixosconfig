@@ -47,6 +47,9 @@
 	    specialArgs = {inherit system; inherit inputs; inherit user;};
   
         modules = [
+           nur.modules.nixos.default
+           # NUR modules to import
+           nur.legacyPackages."${system}".repos.iopq.modules.xraya
            ./hosts/default/configuration.nix
            inputs.home-manager.nixosModules.default 
         ];
