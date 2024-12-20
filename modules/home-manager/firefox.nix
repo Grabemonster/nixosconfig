@@ -8,7 +8,7 @@
     profiles."${user}" = {
       id = 0;
       isDefault = true;
-      extensions = with inputs.nur; [bitwarden];
+      extensions = with pkgs.nur.repos.rycee.firefox-addons; [bitwarden];
       
       bookmarks = [
         {
