@@ -8,7 +8,7 @@
     profiles."${user}" = {
       id = 0;
       isDefault = true;
-      extensions = with inputs.firefox-addons; [bitwarden];
+      extensions = with inputs.nur; [bitwarden];
       
       bookmarks = [
         {

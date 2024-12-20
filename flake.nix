@@ -20,13 +20,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    firefox-addons = {
-      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+    nur = {
+      url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixvim, hyprpanel, firefox-addons, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, nixvim, hyprpanel, nur, ... }@inputs: 
   let
     system = "x86_64-linux";
 
@@ -34,6 +34,7 @@
 
     pkgs = import nixpkgs {
       inherit system;
+      overlays = [nur.overlays];
 
       config = {
         allowUnfree = true;
@@ -57,7 +58,7 @@
           overlays = [
             inputs.hyprpanel.overlays
           ];
-          extraSpecialArgs = {inherit inputs; inherit nixvim; inherit hyprpanel; inherit firefox-addons; inherit user;};
+          extraSpecialArgs = {inherit inputs; inherit nixvim; inherit hyprpanel; inherit user;};
           modules = [
             ./home/default/home.nix
             

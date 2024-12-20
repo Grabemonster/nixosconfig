@@ -75,11 +75,15 @@
     isNormalUser = true;
     description = "${user}";
     extraGroups = [ "networkmanager" "wheel" ];
-    
+  };
+
+  home-manager = {
+    extraSpecialArgs = {inherit inputs user; };
+    users.${user} = import ./home.nix;
   };
 
    programs.hyprland.enable = true;
-
+ 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
