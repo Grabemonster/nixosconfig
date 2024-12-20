@@ -4,8 +4,6 @@ wayland.windowManager.hyprland.settings = {
   decoration = {
         "rounding" = "5";
 
-        "active_opacity" = "1.0";
-        "inactive_opacity" = "0.8";
 
         "drop_shadow" = "true";
         "shadow_range" = "4";
