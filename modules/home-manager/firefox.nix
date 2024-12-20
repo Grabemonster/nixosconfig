@@ -22,7 +22,8 @@
       ];
       settings = {
         "browser.startup.homepage" = "https://google.com";
-        "extensions.autoDisableScopes" = 0;       
+        "extensions.autoDisableScopes" = 0;
+        "extensions.bitwarden.autostart" = true;
       };
     };
   };
