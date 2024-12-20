@@ -2,7 +2,7 @@
 {
  
   programs.firefox = {
-    enable = false;
+    enable = true;
     languagePacks = ["en_US" "de"];
     package = pkgs.firefox;
     profiles."${user}" = {
