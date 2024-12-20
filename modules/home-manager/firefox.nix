@@ -21,9 +21,11 @@
         }
       ];
       settings = {
-        "browser.startup.homepage" = "https://google.com";
+        "browser.newtabpage.pinned" = [{
+          title="home-manager";
+          url="https://nix-community.github.io/home-manager/options.xhtml";
+        }];
         "extensions.autoDisableScopes" = 0;
-        "extensions.bitwarden.autostart" = true;
       };
     };
   };
