@@ -4,8 +4,4 @@
     enable = true;
     allowImages = true;
   };
-
-
-
-
 }

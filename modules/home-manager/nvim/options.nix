@@ -67,7 +67,7 @@ programs.nixvim= {
     W.bang = true;
   };
 
-  globals.mapleader = ".";
+  globals.mapleader = " ";
 
   autoCmd = [
     {
