@@ -20,6 +20,8 @@
       "exec-once" = [
         "bash ~/.config/scripts/randomimage.sh"
         "bash ~/.config/scripts/lockscreentime.sh"
+        "wl-paste --type text --watch cliphist store"
+        "wl-paste --type image --watch cliphist store"
       ]; 
 
       dwindle = {

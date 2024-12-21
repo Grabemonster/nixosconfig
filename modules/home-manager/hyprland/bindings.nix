@@ -18,6 +18,9 @@
         "$mod, SPACE, exec, $wofi"
         "$mod, U, exec, $background"
 
+        #clipboards
+        "$mod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
+
         #Move focus
         "$mod, left, movefocus, l"
         "$mod, right, movefocus, r"
