@@ -4,14 +4,9 @@
     enable = true;
     settings = {
       
-  "$schema"= "https=//github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json";
+  "$schema"= "nixos";
   "logo"= {
     "source"= "xenia";
-    "color"= {
-      "1"= "1;97";
-      "2"= "red";
-      "3"= "yellow";
-    };
   };
   "display"= {
     "separator"= " \u001b[33m  ";
