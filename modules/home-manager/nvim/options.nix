@@ -1,9 +1,8 @@
 {user, ...}: {
 programs.nixvim= {
-  globalOpts = {
+   globals.mapleader = " ";
 
-    globals.mapleader = " ";
-  
+  globalOpts = {
     number = true;
     relativenumber = true;
 
