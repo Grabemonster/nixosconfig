@@ -4,14 +4,10 @@
     enable = true;
     settings = {
       
-  "$schema"= "nixos";
+  
   "logo"= {
     "source"= "nixos";
-    "color"= {
-      "1"= "1;97";
-      "2"= "red";
-      "3"= "yellow";
-    };
+    
   };
   "display"= {
     "separator"= " \u001b[33m  ";
