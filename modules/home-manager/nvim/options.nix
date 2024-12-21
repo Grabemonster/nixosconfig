@@ -20,7 +20,7 @@ programs.nixvim= {
     undodir = "/home/${user}/.config/.nvim/undodir";
     undofile = true;
 
-    hlssearch = false;
+    hlsearch = false;
     incsearch = true;
 
     scrolloff = 8;
