@@ -16,6 +16,7 @@
       ../../modules/home-manager/yazi.nix
       ../../modules/home-manager/tmux.nix 
       ../../modules/home-manager/webbrowser.nix
+      ../../modules/home-manager/fastfetch.nix
     ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
