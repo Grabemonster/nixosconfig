@@ -95,7 +95,7 @@
     gnome-terminal
     wlroots
     wallust
-    swaylock-effects
+
     swayidle
     nixd
     lua-language-server

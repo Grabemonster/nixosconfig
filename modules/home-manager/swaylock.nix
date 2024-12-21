@@ -1,5 +1,9 @@
 {pkgs, ...}:
 {
+  programs.swaylock = {
+    enable = true;
+    package = pkgs.swaylock-effects;
+  };
   home.file.".config/swaylock/config".text = ''
     ignore-empty-password
 
