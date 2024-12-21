@@ -4,14 +4,13 @@ imports = [
   ./telescope.nix
   ./cmp.nix
   ./treesitter.nix
+  ./undotree.nix
 ];
 programs.nixvim = { 
  plugins = { 
     
     # Icons 
     web-devicons.enable = true;
-
-  
    
     # Todo comments
     todo-comments = {
@@ -24,16 +23,7 @@ programs.nixvim = {
         default = ["Identifier" "#7C3AED"];
         test = ["Identifier" "#FF00FF"];
       };
-    };
-
-    
-    undotree = {
-      enable = true;
-      settings = {
-        autoOpenDiff = true;
-        focusOnToggle = true;
-      };
-    };
+    }; 
   };
  
 
