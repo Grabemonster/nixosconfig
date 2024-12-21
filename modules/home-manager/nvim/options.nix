@@ -18,7 +18,7 @@ programs.nixvim= {
 
     swapfile = false;
     backup = false;
-    undodir.__raw = ''os.genenv("HOME") .. "/.vim/undodir"'';
+    undodir.__raw = ''os.genenv("HOME") .. "/.nvim/undodir"'';
     undofile = true;
 
     hlssearch = false;
