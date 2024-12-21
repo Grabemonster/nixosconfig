@@ -5,7 +5,7 @@
     allowImages = true;
   };
 
-  services.clipmen = {
+  services.clipman = {
     enable = true;
   };
 }

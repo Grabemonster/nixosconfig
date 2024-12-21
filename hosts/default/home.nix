@@ -17,6 +17,7 @@
       ../../modules/home-manager/tmux.nix 
       ../../modules/home-manager/webbrowser.nix
       ../../modules/home-manager/fastfetch.nix
+      ../../modules/home-manager/clipboard.nix
     ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
