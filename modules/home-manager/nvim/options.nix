@@ -1,6 +1,9 @@
 {self, ...}: {
 programs.nixvim= {
   globalOpts = {
+
+    globals.mapleader = " ";
+
     # Line numbers
     number = true;
     relativenumber = true;
@@ -26,15 +29,15 @@ programs.nixvim= {
     # Tab defaults (might get overwritten by an LSP server)
     tabstop = 4;
     shiftwidth = 4;
-    softtabstop = 0;
+    softtabstop = 4;
     expandtab = true;
-    smarttab = true;
+
+    smartindent = true;
 
     # System clipboard support, needs xclip/wl-clipboard
     clipboard = {
       providers = {
         wl-copy.enable = true; # Wayland 
-        xsel.enable = true; # For X11
       };
       register = "unnamedplus";
     };
@@ -65,22 +68,6 @@ programs.nixvim= {
     WQ.bang = true;
     W.command = "q";
     W.bang = true;
-  };
-
-  globals.mapleader = " ";
-
-  autoCmd = [
-    {
-      event = [ "VimEnter" ];
-      callback = { __raw = "function() if vim.fn.argv(0) == '' then require('telescope.builtin').find_files() end end"; };
-    }
-  ];
-  
-
-  highlight = {
-    Comment.fg = "#fafafa";
-    Comment.underline = true;
-    Comment.bold = true;
-  };
+  };  
   };
 }
