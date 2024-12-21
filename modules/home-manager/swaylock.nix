@@ -43,6 +43,9 @@
   ''; 
 
 
+  services.swayidle = {
+    enable = true;
+  };
   home.file.".config/scripts/lockscreentime.sh".text = ''
     #!${pkgs.bash}/bin/bash
 

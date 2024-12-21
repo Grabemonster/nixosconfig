@@ -95,8 +95,6 @@
     gnome-terminal
     wlroots
     wallust
-
-    swayidle
     nixd
     lua-language-server
     vscode-langservers-extracted
