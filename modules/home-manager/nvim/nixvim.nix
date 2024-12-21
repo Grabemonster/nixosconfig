@@ -2,9 +2,9 @@
 {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
-    ./nvim/options.nix
-    ./nvim/keymappings.nix
-    ./nvim/plugins.nix
+    ./options.nix
+    ./keymappings.nix
+    ./plugins/plugins.nix
   ];
   programs.nixvim = {
     enable = true;

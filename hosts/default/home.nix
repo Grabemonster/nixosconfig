@@ -10,7 +10,7 @@
       ../../modules/home-manager/waybar.nix
       ../../modules/home-manager/wlogout.nix
       ../../modules/home-manager/swaylock.nix
-      ../../modules/home-manager/nixvim.nix
+      ../../modules/home-manager/nvim/nixvim.nix
       ../../modules/home-manager/rebuild.nix
       ../../modules/home-manager/bash.nix
       ../../modules/home-manager/yazi.nix
