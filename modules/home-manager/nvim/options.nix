@@ -1,4 +1,4 @@
-{self, ...}: {
+{user, ...}: {
 programs.nixvim= {
   globalOpts = {
 
@@ -18,7 +18,7 @@ programs.nixvim= {
 
     swapfile = false;
     backup = false;
-    undodir.__raw = ''os.genenv("HOME") .. "/.nvim/undodir"'';
+    undodir = "/home/${user}/.config/.nvim/undodir";
     undofile = true;
 
     hlssearch = false;
