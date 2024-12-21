@@ -3,15 +3,11 @@
   programs.fastfetch = {
     enable = true;
     settings = {
-      
-  
   "logo"= {
     "source"= "nixos";
-    
   };
   "display"= {
-    "separator"= " \u001b[33m  ";
-    "color"= "red";
+    "separator"= " \u001b[33m  ";    
   };
   "modules"= [
     {
