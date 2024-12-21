@@ -7,7 +7,7 @@
     ./nvim/plugins.nix
   ];
   programs.nixvim = {
-    enable = false;
+    enable = true;
     defaultEditor = true;
     enableMan = true;
     viAlias = true;
