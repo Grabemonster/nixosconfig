@@ -3,30 +3,10 @@ programs.nixvim= {
   globalOpts = {
 
     globals.mapleader = " ";
-
-    # Line numbers
+  
     number = true;
     relativenumber = true;
 
-    # Always show the signcolumn, otherwise text would be shifted when displaying error icons
-    signcolumn = "yes";
-
-    # Enable mouse
-    mouse = "a";
-
-    # Search
-    ignorecase = true;
-    smartcase = true;
-  
-    # Configure how new splits should be opened
-    splitright = true;
-    splitbelow = true;
-
-    list = true;
-    # NOTE: .__raw here means that this field is raw lua code
-    listchars.__raw = "{ tab = '» ', trail = '·', nbsp = '␣' }";
-
-    # Tab defaults (might get overwritten by an LSP server)
     tabstop = 4;
     shiftwidth = 4;
     softtabstop = 4;
@@ -34,40 +14,24 @@ programs.nixvim= {
 
     smartindent = true;
 
-    # System clipboard support, needs xclip/wl-clipboard
-    clipboard = {
-      providers = {
-        wl-copy.enable = true; # Wayland 
-      };
-      register = "unnamedplus";
-    };
+    wrap = false;
 
-    # Save undo history
+    swapfile = false;
+    backup = false;
+    undodir.__raw = ''os.genenv("HOME") .. "/.vim/undodir"'';
     undofile = true;
 
+    hlssearch = false;
+    incsearch = true;
 
-    # Highlight the current line for cursor
-    cursorline = true;
+    scrolloff = 8;
+    signcolumn = "yes";
 
-    # Show line and column when searching
-    ruler = true;
+    updatetime = 50;
 
-    # Global substitution by default
-    gdefault = true;
+    cloorcolumn = "80";
 
-    # Start scrolling when the cursor is X lines away from the top/bottom
-    scrolloff = 5;
+    mouse = "a";
   };
-
-  userCommands = {
-    Q.command = "q";
-    Q.bang = true;
-    Wq.command = "q";
-    Wq.bang = true;
-    WQ.command = "q";
-    WQ.bang = true;
-    W.command = "q";
-    W.bang = true;
-  };  
-  };
+};
 }
