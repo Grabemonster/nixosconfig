@@ -6,7 +6,12 @@
       
   "$schema"= "nixos";
   "logo"= {
-    "source"= "xenia";
+    "source"= "nixos";
+    "color"= {
+      "1"= "1;97";
+      "2"= "red";
+      "3"= "yellow";
+    };
   };
   "display"= {
     "separator"= " \u001b[33m  ";
