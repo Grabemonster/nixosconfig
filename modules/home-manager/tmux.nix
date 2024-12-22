@@ -14,10 +14,19 @@
 
         plugins = with pkgs; [
             tmuxPlugins.sensible
-                tmuxPlugins.vim-tmux-navigator
-                tmuxPlugins.yank 
+            tmuxPlugins.vim-tmux-navigator
+            tmuxPlugins.yank 
         ];
         sensibleOnTop = true;
 
     };
+
+    home.file.".config/scripts/tmuxinatorselect".text = ''
+        selection=$(tmuxinator list | sed -n '2p' | tr ' ' '\n' | grep -v '^$' | wofi --dmenu)
+        if [ -n "$selection" ]; then
+            tmuxinator start "$selection"
+        else
+            echo "Keine Auswahl getroffen." >&2
+        fi
+    '';
 }
