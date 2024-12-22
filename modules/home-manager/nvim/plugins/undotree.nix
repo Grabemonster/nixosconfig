@@ -14,7 +14,7 @@
     # Undotree
     {
       mode = "n";
-      key = "<leader>u";
+      key = "<leader>ut";
       action = "<cmd>UndotreeToggle<CR>";
       options = {
         desc = "Undotree";
