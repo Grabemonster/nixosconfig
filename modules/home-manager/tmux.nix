@@ -25,7 +25,7 @@
         selection=$(tmuxinator list | sed -n '2p' | tr ' ' '\n' | grep -v '^$' | wofi --dmenu | xargs)
         echo $selection
         if [ -n "$selection" ]; then
-            gnome-terminal -- bash -c 'tmuxinator start "$selection"; exec bash'
+            gnome-terminal -- bash -c 'tmuxinator start $selection; exec bash'
         else
             echo "Keine Auswahl getroffen." >&2
         fi
