@@ -18,7 +18,7 @@
     }
     {
       action = "<cmd>Telescope find_files<CR>";
-      key = "<leader-S>";
+      key = "<leader><SHIFT>";
     }
     {
       action = "<cmd>Telescope git_commits<CR>";
