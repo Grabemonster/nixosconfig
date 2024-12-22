@@ -13,6 +13,7 @@
     };
     keymaps = [
     {
+      mode = "n";
       action = "<cmd>Telescope live_grep<CR>";
       key = "<S-S>";
     }
