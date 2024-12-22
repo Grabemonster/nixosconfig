@@ -2,6 +2,11 @@
 programs.nixvim= {
    globals.mapleader = " ";
 
+   opts = {
+	number = true;
+	relativenumber = true;
+   };
+
   globalOpts = {
     number = true;
     relativenumber = true;
