@@ -15,19 +15,15 @@
     {
       mode = "n";
       action = "<cmd>Telescope live_grep<CR>";
-      key = "<S-f>";
+      key = "<S-g>";
     }
     {
       action = "<cmd>Telescope find_files<CR>";
-      key = "<leader>ff";
+      key = "<leader>f";
     }
     {
       action = "<cmd>Telescope git_commits<CR>";
       key = "<leader>fg";
-    }
-    {
-      action = "<cmd>Telescope oldfiles<CR>";
-      key = "<leader>fh";
     }
     {
       action = "<cmd>Telescope colorscheme<CR>";
