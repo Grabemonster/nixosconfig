@@ -16,16 +16,19 @@
             tmuxPlugins.sensible
             tmuxPlugins.vim-tmux-navigator
             tmuxPlugins.yank
-            tmuxPlugins.dracula
+            {
+                plugin = tmuxPlugins.dracula;
+                extraConfig = ''
+                    set -g @dracula-show-powerline true
+                    set -g @dracula-fixed-location "Germany"
+                    set -g @dracula-show-flags true
+                    set -g @dracula-show-left-icon session
+                '';
+            }
         ];
         sensibleOnTop = true;
 
         extraConfig = ''
-            set -g @dracula-show-powerline true
-            set -g @dracula-fixed-location "Germany"
-            set -g @dracula-show-flags true
-            set -g @dracula-show-left-icon session
-
             set -g status-position top
         '';
     };
