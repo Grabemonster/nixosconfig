@@ -15,7 +15,7 @@
     {
       mode = "n";
       action = "<cmd>Telescope live_grep<CR>";
-      key = "<S-S>";
+      key = "<S-f>";
     }
     {
       action = "<cmd>Telescope find_files<CR>";
