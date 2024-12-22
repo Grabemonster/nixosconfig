@@ -2,8 +2,13 @@
   programs.nixvim = {
   keymaps = [
     
-    # Bufferline bindings
+    {
+        mode = "n";
+        key = "<leader>fm";
+        action = "<cmd>Ex<cr>";
+    }
 
+    # Bufferline bindings
     {
       mode = "n";
       key = "<Tab>";
