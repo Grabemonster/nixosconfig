@@ -9,7 +9,7 @@
                 log_level = "debug";
                 open_for_directories = true;
                 yazi_floating_window_border = "single";
-                yazi_floating_window_winblend = 50;
+                yazi_floating_window_winblend = 80;
                 keymaps = {
                     copy_relative_path_to_selected_files = "<c-y>";
                     cycle_open_buffers = "<tab>";
