@@ -4,7 +4,7 @@
     
     {
         mode = "n";
-        key = "<leader>fm";
+        key = "<leader>y";
         action = "<cmd>Ex<cr>";
     }
 
