@@ -43,7 +43,7 @@
         mapping = {
           "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
           "<S-Tab>" = "cmp.mapping.select_prev_item()";
-          "<Esc>" = "cmp.mapping.abort()";
+          "<S-Esc>" = "cmp.mapping.abort()";
           "<S-DOWN>" = "cmp.mapping.scroll_docs(-4)";
           "<S-UP>" = "cmp.mapping.scroll_docs(4)";
           "<CR>" = "cmp.mapping.confirm({ select = true })";
