@@ -15,7 +15,7 @@
                     cycle_open_buffers = "<tab>";
                     grep_in_directory = "<c-s>";
                     open_file_in_horizontal_split = "<c-x>";
-                    open_file_in_tab = "<c-t>";
+                    open_file_in_tab = "<C-t>";
                     open_file_in_vertical_split = "<c-v>";
                     replace_in_directory = "<c-g>";
                     send_to_quickfix_list = "<c-q>";
