@@ -25,6 +25,9 @@ programs.nixvim = {
         test = ["Identifier" "#FF00FF"];
       };
     }; 
+  
+    tmux-navigator.enable = true;
+
   };
  
 
