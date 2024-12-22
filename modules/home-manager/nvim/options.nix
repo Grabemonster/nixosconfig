@@ -28,7 +28,7 @@ programs.nixvim= {
 
     updatetime = 50;
 
-    colorcolumn = "80";
+    colorcolumn = "120";
 
     mouse = "a";
   };
