@@ -15,8 +15,7 @@
         plugins = with pkgs; [
             tmuxPlugins.sensible
                 tmuxPlugins.vim-tmux-navigator
-                tmuxPlugins.yank
-                tmuxPlugins.catppuccin
+                tmuxPlugins.yank 
         ];
         sensibleOnTop = true;
 
