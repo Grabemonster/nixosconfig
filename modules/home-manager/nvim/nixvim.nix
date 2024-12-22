@@ -13,8 +13,5 @@
     viAlias = true;
     vimAlias = true;
   };
-
-  
-
 }
 

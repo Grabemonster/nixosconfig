@@ -94,9 +94,6 @@
     wget
     gnome-terminal
     wallust
-    nixd
-    lua-language-server
-    vscode-langservers-extracted
     nodejs_22
     psmisc
     wl-clipboard
