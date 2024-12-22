@@ -1,25 +1,24 @@
 {config, pkgs, ...}:
 {
-  programs.tmux = {
-    enable = true;
-    package = pkgs.tmux;
-    
-    baseIndex = 1;
-    clock24 = true;
-    keyMode = "vi";
-    mouse = true;
-    prefix = "C-SPACE";
-    terminal = "screen-256color";
+    programs.tmux = {
+        enable = true;
+        package = pkgs.tmux;
 
-    plugins = with pkgs; [
-      tmuxPlugins.sensible
-      tmuxPlugins.vim-tmux-navigator
-      tmuxPlugins.yank
-    ];
-    sensibleOnTop = true;
+        baseIndex = 1;
+        clock24 = true;
+        keyMode = "vi";
+        mouse = true;
+        prefix = "C-SPACE";
+        terminal = "screen-256color";
+        tmuxinator.enable = true;
 
-    extraConfig = ''
-      set -sa terminal-overrides "xterm-256color:RGB"
-    '';
-  };
+        plugins = with pkgs; [
+            tmuxPlugins.sensible
+                tmuxPlugins.vim-tmux-navigator
+                tmuxPlugins.yank
+                tmuxPlugins.catppuccin
+        ];
+        sensibleOnTop = true;
+
+    };
 }
