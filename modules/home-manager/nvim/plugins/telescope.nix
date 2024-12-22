@@ -19,7 +19,7 @@
     }
     {
       action = "<cmd>Telescope find_files<CR>";
-      key = "<leader>f";
+      key = "<leader>ff";
     }
     {
       action = "<cmd>Telescope git_commits<CR>";
