@@ -14,7 +14,7 @@
         label = "logout";
         action = "hyprctl dispatch exit";
         text = "Logout";
-        keybind = "l";
+        keybind = "a";
       }
       {
         label = "shutdown";
