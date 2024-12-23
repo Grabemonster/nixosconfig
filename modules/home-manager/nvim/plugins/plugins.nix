@@ -8,30 +8,50 @@ imports = [
   ./yazi.nix
 ];
 programs.nixvim = { 
- plugins = { 
-    
-    # Icons 
-    web-devicons.enable = true;
-   
-    # Todo comments
-    todo-comments = {
-      enable = true;
-      settings.colors = {
-        error = ["DiagnosticError" "ErrorMsg" "#DC2626"];
-        warning = ["DiagnosticWarn" "WarningMsg" "#FBBF24"];
-        info = ["DiagnosticInfo" "#2563EB"];
-        hint = ["DiagnosticHint" "#10B981"];
-        default = ["Identifier" "#7C3AED"];
-        test = ["Identifier" "#FF00FF"];
-      };
-    }; 
-  
-    tmux-navigator = {
-        enable = true;
-        
-    };
+    plugins = { 
 
-  };
+# Icons 
+        web-devicons.enable = true;
+
+# Todo comments
+        todo-comments = {
+            enable = true;
+            settings.colors = {
+                error = ["DiagnosticError" "ErrorMsg" "#DC2626"];
+                warning = ["DiagnosticWarn" "WarningMsg" "#FBBF24"];
+                info = ["DiagnosticInfo" "#2563EB"];
+                hint = ["DiagnosticHint" "#10B981"];
+                default = ["Identifier" "#7C3AED"];
+                test = ["Identifier" "#FF00FF"];
+            };
+        }; 
+
+        tmux-navigator = {
+            enable = true;
+            keymaps = [
+            {
+                action = "left";
+                key = "<C-LEFT>";
+            }
+            {
+                action = "down";
+                key = "<C-DOWN>";
+            }
+            {
+                action = "up";
+                key = "<C-UP>";
+            }
+            {
+                action = "right";
+                key = "<C-RIGHT>";
+            }
+            {
+                action = "previous";
+                key = "";
+            }
+            ];
+        };
+    };
  
 
   extraConfigLua = ''

@@ -17,7 +17,13 @@
             tmuxPlugins.sensible
             {
                 plugin = tmuxPlugins.vim-tmux-navigator;
-               
+                extraConfig = ''
+                    set -g @vim_navigator_mapping_left "C-Left C-h"  # use C-h and C-Left
+                    set -g @vim_navigator_mapping_right "C-Right C-l"
+                    set -g @vim_navigator_mapping_up "C-UP C-k"
+                    set -g @vim_navigator_mapping_down "C-DOWN C-j"
+                    set -g @vim_navigator_mapping_prev ""  # removes the C-\ binding
+                '';
             }
         tmuxPlugins.yank
         {
