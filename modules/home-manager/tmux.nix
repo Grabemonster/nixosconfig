@@ -8,7 +8,7 @@
         clock24 = true;
         keyMode = "vi";
         mouse = true;
-        prefix = "M";
+        prefix = "C";
         terminal = "screen-256color";
         resizeAmount = 20;
         tmuxinator.enable = true;
@@ -17,13 +17,6 @@
             tmuxPlugins.sensible
             {
                 plugin = tmuxPlugins.vim-tmux-navigator;
-                extraConfig = ''
-                    bind-key -T copy-mode-vi 'M-LEFT' select-pane -L
-                    bind-key -T copy-mode-vi 'M-DOWN' select-pane -D
-                    bind-key -T copy-mode-vi 'M-UP' select-pane -U
-                    bind-key -T copy-mode-vi 'M-RIGHT' select-pane -R
-                    bind-key -T copy-mode-vi 'M-\' select-pane -l
-                '';
             }
             tmuxPlugins.yank
             {
