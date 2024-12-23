@@ -79,7 +79,7 @@
 
   home-manager = {
     extraSpecialArgs = {inherit inputs pkgs user nur; };
-    users.${user} = import ./home.nix;
+    users.${user} = import ./../../modules/home-manager/home.nix;
   };
 
    programs.hyprland.enable = true;
