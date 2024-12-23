@@ -17,6 +17,13 @@
             tmuxPlugins.sensible
             {
                 plugin = tmuxPlugins.vim-tmux-navigator;
+                extraConfig = ''
+                    bind-key -T copy-mode-vi 'C-LEFT' select-pane -L
+                    bind-key -T copy-mode-vi 'C-DOWN' select-pane -D
+                    bind-key -T copy-mode-vi 'C-UP' select-pane -U
+                    bind-key -T copy-mode-vi 'C-RIGHT' select-pane -R
+                    bind-key -T copy-mode-vi 'C-\' select-pane -l
+                '';
             }
             tmuxPlugins.yank
             {
