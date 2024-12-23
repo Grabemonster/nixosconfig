@@ -52,7 +52,7 @@
     };
 
     home.file.".config/scripts/tmuxinatorselect".text = ''
-        selection=$(tmuxinator list | sed -n '2p' | tr ' ' '\n' | grep -v '^$' | tac | wofi --dmenu | xargs)
+        selection=$(tmuxinator list | sed -n '2p' | tr ' ' '\n' | grep -v '^$' | wofi --dmenu | xargs)
         if [ -n "$selection" ]; then
             gnome-terminal -- bash -c "tmuxinator start $selection; exec bash"
         else
