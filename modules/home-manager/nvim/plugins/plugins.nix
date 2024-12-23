@@ -51,6 +51,7 @@ programs.nixvim = {
                 key = "<C-RIGHT>";
             }
             {
+                mode = "n";
                 action = "previous";
                 key = "";
             }
