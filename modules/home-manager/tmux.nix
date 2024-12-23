@@ -18,10 +18,10 @@
             {
                 plugin = tmuxPlugins.vim-tmux-navigator;
                 extraConfig = ''                    
-                    set -g @vim_navigator_mapping_left "C-Left C-h
-                    set -g @vim_navigator_mapping_right "C-Right C-l"
-                    set -g @vim_navigator_mapping_up "C-Up C-k"
-                    set -g @vim_navigator_mapping_down "C-Down C-j"
+                    set -g @vim_navigator_mapping_left "C-Left"
+                    set -g @vim_navigator_mapping_right "C-Right"
+                    set -g @vim_navigator_mapping_up "C-Up"
+                    set -g @vim_navigator_mapping_down "C-Down"
                     set -g @vim_navigator_mapping_prev "C-p" 
                 '';
             }
