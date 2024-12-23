@@ -18,11 +18,11 @@
             {
                 plugin = tmuxPlugins.vim-tmux-navigator;
                 extraConfig = ''                    
-                    bind-key -T C-LEFT select-pane -L
-                    bind-key -T C-DOWN select-pane -D
-                    bind-key -T C-UP select-pane -U
-                    bind-key -T C-RIGHT select-pane -R
-                    bind-key -T C-p select-pane -l
+                    bind-key C-LEFT select-pane -L
+                    bind-key C-DOWN select-pane -D
+                    bind-key C-UP select-pane -U
+                    bind-key C-RIGHT select-pane -R
+                    bind-key C-p select-pane -l
                 '';
             }
         tmuxPlugins.yank
