@@ -31,19 +31,19 @@ programs.nixvim = {
         keymaps = [
             {
                 action = "left";
-                key = "<M-LEFT>";
+                key = "<C-LEFT>";
             }
             {
                 action = "down";
-                key = "<M-DOWN>";
+                key = "<C-DOWN>";
             }
             {
                 action = "up";
-                key = "<M-UP>";
+                key = "<C-UP>";
             }
             {
                 action = "right";
-                key = "<M-RIGHT>";
+                key = "<C-RIGHT>";
             }
             {
                 action = "previous";
