@@ -8,7 +8,7 @@
         clock24 = true;
         keyMode = "vi";
         mouse = true;
-        prefix = "C-SPACE";
+        prefix = "M";
         terminal = "screen-256color";
         tmuxinator.enable = true;
 
