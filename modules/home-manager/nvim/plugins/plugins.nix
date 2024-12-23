@@ -30,24 +30,29 @@ programs.nixvim = {
         enable = true;
         keymaps = [
             {
+                mode = "n";
                 action = "left";
                 key = "<C-LEFT>";
             }
             {
+                mode = "n";
                 action = "down";
                 key = "<C-DOWN>";
             }
             {
+                mode = "n";
                 action = "up";
                 key = "<C-UP>";
             }
             {
+                mode = "n";
                 action = "right";
                 key = "<C-RIGHT>";
             }
             {
+                mode = "n";
                 action = "previous";
-                key = "<C-w>\\";
+                key = "<C-/>";
             }
         ];
     };
