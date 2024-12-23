@@ -17,26 +17,20 @@
             tmuxPlugins.sensible
             {
                 plugin = tmuxPlugins.vim-tmux-navigator;
-                extraConfig = ''
-                    bind-key -n C-LEFT select-pane -L
-                    bind-key -n C-DOWN select-pane -D
-                    bind-key -n C-UP select-pane -U
-                    bind-key -n C-RIGHT select-pane -R
-                    bind-key -n C-\\ select-pane -l
-
-                '';
+               
             }
-            tmuxPlugins.yank
-            {
-                plugin = tmuxPlugins.dracula;
-                extraConfig = ''
-                    set -g @dracula-show-powerline true
-                    set -g @dracula-fixed-location "Germany"
-                    set -g @dracula-show-flags true
-                    set -g @dracula-plugins "weather"
-                    set -g @dracula-show-left-icon session
-                '';
-            }
+        tmuxPlugins.yank
+        {
+            plugin = tmuxPlugins.dracula;
+            extraConfig = ''
+                set -g @dracula-show-powerline true
+                set -g @dracula-fixed-location "Germany"
+                set -g @dracula-show-flags true
+                set -g @dracula-plugins "weather"
+                set -g @dracula-show-fahrenheit false
+                set -g @dracula-show-left-icon session
+            '';
+        }
         ];
         sensibleOnTop = true;
 
