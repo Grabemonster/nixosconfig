@@ -10,6 +10,7 @@
         mouse = true;
         prefix = "M";
         terminal = "screen-256color";
+        resizeAmount = 20;
         tmuxinator.enable = true;
 
         plugins = with pkgs; [
@@ -29,6 +30,10 @@
         sensibleOnTop = true;
 
         extraConfig = ''
+            { "command": { "action": "moveFocus", "direction": "down" }, "keys": "alt+down" }, 
+            { "command": { "action": "moveFocus", "direction": "left" }, "keys": "alt+left" }, 
+            { "command": { "action": "moveFocus", "direction": "right" }, "keys": "alt+right" }, 
+            { "command": { "action": "moveFocus", "direction": "up" }, "keys": "alt+up" }, 
             set -g status-position top
         '';
     };
