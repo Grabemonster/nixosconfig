@@ -8,26 +8,7 @@
         action = "<cmd>Ex<cr>";
     }
 
-    {
-        mode = "n";
-        key = "<C-LEFT>";
-        action = "<C-w><left>";
-    }
-    {
-        mode = "n";
-        key = "<C-RIGHT>";
-        action = "<C-w><right>";
-    }
-    {
-        mode = "n";
-        key = "<C-UP>";
-        action = "<C-w><up>";
-    }
-    {
-        mode = "n";
-        key = "<C-DOWN>";
-        action = "<C-w><down>";
-    }
+    
 
     # Bufferline bindings
     {
