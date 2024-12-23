@@ -26,7 +26,31 @@ programs.nixvim = {
       };
     }; 
   
-    tmux-navigator.enable = true;
+    tmux-navigator = {
+        enable = true;
+        keymaps = [
+            {
+                action = "left";
+                key = "<M-LEFT>";
+            }
+            {
+                action = "down";
+                key = "<M-DOWN>";
+            }
+            {
+                action = "up";
+                key = "<M-UP>";
+            }
+            {
+                action = "right";
+                key = "<M-RIGHT>";
+            }
+            {
+                action = "previous";
+                key = "<C-w>\\";
+            }
+        ];
+    };
 
   };
  
