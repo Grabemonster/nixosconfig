@@ -28,20 +28,25 @@ programs.nixvim = {
 
         tmux-navigator = {
             enable = true;
+            settings.no_mappings = true;
             keymaps = [
             {
+                mode = "n";
                 action = "left";
                 key = "<C-LEFT>";
             }
             {
+                mode = "n";
                 action = "down";
                 key = "<C-DOWN>";
             }
             {
+                mode = "n";
                 action = "up";
                 key = "<C-UP>";
             }
             {
+                mode = "n";
                 action = "right";
                 key = "<C-RIGHT>";
             }
