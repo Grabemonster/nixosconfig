@@ -43,12 +43,6 @@
                     "bind-key -n 'C-\\' if-shell \"$is_vim\" 'send-keys C-\\'  'select-pane -l'"
                     if-shell -b '[ "$(echo "$tmux_version >= 3.0" | bc)" = 1 ]' \
                     "bind-key -n 'C-\\' if-shell \"$is_vim\" 'send-keys C-\\\\'  'select-pane -l'"
-
-                    bind-key -T copy-mode-vi 'C-Left' select-pane -L
-                    bind-key -T copy-mode-vi 'C-Down' select-pane -D
-                    bind-key -T copy-mode-vi 'C-Up' select-pane -U
-                    bind-key -T copy-mode-vi 'C-Right' select-pane -R
-                    bind-key -T copy-mode-vi 'C-p' select-pane -l
         '';
     };
 
