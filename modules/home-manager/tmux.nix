@@ -15,7 +15,16 @@
 
         plugins = with pkgs; [
             tmuxPlugins.sensible
-            tmuxPlugins.vim-tmux-navigator
+            {
+                plugin = tmuxPlugins.vim-tmux-navigator;
+                extraConfig = ''
+                    bind-key -T copy-mode-vi 'M-LEFT' select-pane -L
+                    bind-key -T copy-mode-vi 'M-DOWN' select-pane -D
+                    bind-key -T copy-mode-vi 'M-UP' select-pane -U
+                    bind-key -T copy-mode-vi 'M-RIGHT' select-pane -R
+                    bind-key -T copy-mode-vi 'M-\' select-pane -l
+                '';
+            }
             tmuxPlugins.yank
             {
                 plugin = tmuxPlugins.dracula;
@@ -30,12 +39,6 @@
         sensibleOnTop = true;
 
         extraConfig = ''
-            "keybindings": [
-                { "command": { "action": "moveFocus", "direction": "down" }, "keys": "alt+down" }, 
-                { "command": { "action": "moveFocus", "direction": "left" }, "keys": "alt+left" }, 
-                { "command": { "action": "moveFocus", "direction": "right" }, "keys": "alt+right" }, 
-                { "command": { "action": "moveFocus", "direction": "up" }, "keys": "alt+up" }
-            ]
             set -g status-position top
         '';
     };
