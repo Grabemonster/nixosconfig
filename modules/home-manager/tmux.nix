@@ -18,11 +18,12 @@
             {
                 plugin = tmuxPlugins.vim-tmux-navigator;
                 extraConfig = ''
-                    bind-key -T copy-mode-vi 'C-LEFT' select-pane -L
-                    bind-key -T copy-mode-vi 'C-DOWN' select-pane -D
-                    bind-key -T copy-mode-vi 'C-UP' select-pane -U
-                    bind-key -T copy-mode-vi 'C-RIGHT' select-pane -R
-                    bind-key -T copy-mode-vi 'C-\' select-pane -l
+                    bind-key -n C-LEFT select-pane -L
+                    bind-key -n C-DOWN select-pane -D
+                    bind-key -n C-UP select-pane -U
+                    bind-key -n C-RIGHT select-pane -R
+                    bind-key -n C-\\ select-pane -l
+
                 '';
             }
             tmuxPlugins.yank
@@ -33,7 +34,6 @@
                     set -g @dracula-fixed-location "Germany"
                     set -g @dracula-show-flags true
                     set -g @dracula-plugins "weather"
-                    set -g @dracula-show-fahrenheit false
                     set -g @dracula-show-left-icon session
                 '';
             }
