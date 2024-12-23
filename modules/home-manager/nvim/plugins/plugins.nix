@@ -53,7 +53,7 @@ programs.nixvim = {
             {
                 mode = "n";
                 action = "previous";
-                key = "";
+                key = "<C-p>";
             }
             ];
         };
