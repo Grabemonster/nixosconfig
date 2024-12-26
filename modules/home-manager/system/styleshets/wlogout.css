@@ -1,0 +1,47 @@
+@import '../../.cache/wallust/meiner.css';
+
+window {
+	background: rgba(12,12,12,0.1);
+}
+
+button {
+	background: rgba(12,12,12,0.3);
+	color: @foreground;
+	font-size: 20px;
+
+	border-style: solid;
+	border: 2px solid @foreground;
+
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	margin: 10px;
+	border-radius:20px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:30%;
+}
+
+button:focus,
+button:active {
+	color: @color10;
+	background-color: rgba(12, 12, 12, 0.5);
+	border: 2px solid @color10;
+}
+
+button:hover {
+	color: @color11;
+	background-color: rgba(12, 12, 12, 0.5);
+	border: 2px solid @color11;
+}
+
+#lock {
+	background-image: url("./icons/lock.png");
+}
+#logout {
+	background-image: url("./icons/logout.png");
+}
+#shutdown {
+	background-image: url("./icons/shutdown.png");
+}
+#reboot {
+	background-image: url("./icons/reboot.png");
+}
