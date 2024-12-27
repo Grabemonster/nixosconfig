@@ -51,7 +51,9 @@
 
     # Funktion zum Prüfen, ob ein Video abgespielt wird
     is_video_playing() {
-      pgrep -x "mpv" > /dev/null || pgrep -x "vlc" > /dev/null
+      # Prüfen auf bekannte Player: mpv, vlc, Firefox (über playerctl)
+      pgrep -x "mpv" > /dev/null || pgrep -x "vlc" > /dev/null || \
+      ${pkgs.playerctl}/bin/playerctl --player=firefox status 2>/dev/null | grep -q "Playing"
     }
 
     # Start von swayidle
@@ -72,7 +74,6 @@
         kill -CONT $SWAYIDLE_PID
       fi
       sleep 10
-    done
-  '';
+    done  '';
 
 }
