@@ -49,7 +49,30 @@
   home.file.".config/scripts/lockscreentime.sh".text = ''
     #!${pkgs.bash}/bin/bash
 
-    ${pkgs.swayidle}/bin/swayidle -w timeout 300 'swaylock -f' timeout 360 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'
+    # Funktion zum Prüfen, ob ein Video abgespielt wird
+    is_video_playing() {
+      pgrep -x "mpv" > /dev/null || pgrep -x "vlc" > /dev/null
+    }
+
+    # Start von swayidle
+    ${pkgs.swayidle}/bin/swayidle -w \
+      timeout 300 'swaylock -f' \
+      timeout 360 'hyprctl dispatch dpms off' \
+      resume 'hyprctl dispatch dpms on' &
+
+    SWAYIDLE_PID=$!
+
+    # Hauptüberwachungsprozess
+    while true; do
+      if is_video_playing; then
+        # Wenn ein Video abgespielt wird, stoppe swayidle
+        kill -STOP $SWAYIDLE_PID
+      else
+        # Wenn kein Video abgespielt wird, setze swayidle fort
+        kill -CONT $SWAYIDLE_PID
+      fi
+      sleep 10
+    done
   '';
 
 }
