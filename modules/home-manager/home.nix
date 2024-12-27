@@ -1,4 +1,4 @@
-{user, config, pkgs, ... }:
+{user,system, ghostty, config, pkgs, ... }:
 {
     imports = 
         [
@@ -43,6 +43,7 @@
         gparted 
         unzip
         onedrive
+        ghostty.packages."${system}".default
     ];
 
 # This value determines the Home Manager release that your configuration is

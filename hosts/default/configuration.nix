@@ -138,7 +138,7 @@
   };
 
   home-manager = {
-    extraSpecialArgs = {inherit inputs pkgs user nur; };
+    extraSpecialArgs = {inherit inputs pkgs user nur system ghostty; };
     users.${user} = import ./../../modules/home-manager/home.nix;
   };
 
@@ -170,7 +170,7 @@
     hunspellDicts.de_DE
     hunspellDicts.en_US
     wireplumber
-    ghostty.packages."${system}".default
+    
   ];
 
   fonts.packages = with pkgs; [ 
