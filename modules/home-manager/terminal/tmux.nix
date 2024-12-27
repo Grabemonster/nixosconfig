@@ -32,6 +32,7 @@
 
         extraConfig = ''
             set -g status-position top
+            set -g status-style bg=default
 
             is_vim="ps -o state= -o comm= -t '#{pane_tty}' \ | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|l?n?vim?x?|fzf)(diff)?$'"
             bind-key -n 'C-Left' if-shell "$is_vim" 'send-keys C-h'  'select-pane -L'
