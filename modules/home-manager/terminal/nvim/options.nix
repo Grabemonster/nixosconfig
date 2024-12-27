@@ -32,7 +32,7 @@ programs.nixvim= {
 
     mouse = "a";
 
-    highlight.normal.ctermbg= "none";
+    highlight.NORMAL.ctermbg= "NONE";
 
   };
 };
