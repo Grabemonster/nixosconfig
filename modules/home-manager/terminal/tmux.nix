@@ -16,17 +16,7 @@
         plugins = with pkgs; [
             tmuxPlugins.sensible
         tmuxPlugins.yank
-        {
-            plugin = tmuxPlugins.dracula;
-            extraConfig = ''
-                set -g @dracula-show-powerline true
-                set -g @dracula-fixed-location "Germany"
-                set -g @dracula-show-flags true
-                set -g @dracula-plugins "weather"
-                set -g @dracula-show-fahrenheit false
-                set -g @dracula-show-left-icon session
-            '';
-        }
+        
         ];
         sensibleOnTop = true;
 
