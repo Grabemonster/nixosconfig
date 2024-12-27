@@ -54,7 +54,7 @@
     home.file.".config/scripts/tmuxinatorselect".text = ''
         selection=$(tmuxinator list | sed -n '2p' | tr ' ' '\n' | grep -v '^$' | wofi --sort-order=default --dmenu | xargs)
         if [ -n "$selection" ]; then
-            ghostty -- bash -c "tmuxinator start $selection; exec bash"
+            ghostty -e "tmuxinator start $selection; exec bash"
         else
             echo "Keine Auswahl getroffen." >&2
         fi
