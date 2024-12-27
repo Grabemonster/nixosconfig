@@ -49,7 +49,7 @@
   {
     nixosConfigurations = {
       default = nixpkgs.lib.nixosSystem {
-	    specialArgs = {inherit system; inherit inputs; inherit user;};
+	    specialArgs = {inherit system; inherit inputs; inherit user ghostty;};
   
         modules = [
            nur.modules.nixos.default

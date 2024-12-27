@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{config, user, pkgs, inputs, nur, ... }:
+{config, system, user, ghostty, pkgs, inputs, nur, ... }:
 
 {
   imports =
@@ -169,7 +169,8 @@
     hunspell
     hunspellDicts.de_DE
     hunspellDicts.en_US
-    wireplumber 
+    wireplumber
+    ghostty.packages.${system}.default
   ];
 
   fonts.packages = with pkgs; [ 
