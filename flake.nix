@@ -16,8 +16,7 @@
     };
 
     ghostty = {
-        url = "github:ghostty-org/ghostty";
-        inputs.nixpkgs.follows = "nixpkgs";
+        url = "github:ghostty-org/ghostty"; 
     };
 
     hyprpanel = {
