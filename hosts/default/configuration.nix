@@ -11,24 +11,16 @@
       inputs.home-manager.nixosModules.default
     ];
 
-  fileSystems."/boot/efi" = {
-    device = "/dev/nvme0n1p1"; # ESP-Partition
-    fsType = "vfat";           # Dateisystemtyp der ESP
-  };
-
-
-  # Bootloader.
   boot.loader = {
-  efi = {
-   # canTouchEfiVariables = true;
-    efiSysMountPoint = "/boot/efi"; # ← use the same mount point here.
+    efi = {
+      canTouchEfiVariables = true;
+    };
+    grub = {
+      efiSupport = true;
+      device = "nodev";
+      useOSProber = true;
+    }; 
   };
-  grub = {
-     efiSupport = true;
-     efiInstallAsRemovable = true; # in case canTouchEfiVariables doesn't work for your system
-     device = "nodev";
-  };
-};
 
   networking.hostName = "nixos"; # Define your hostname.
 
