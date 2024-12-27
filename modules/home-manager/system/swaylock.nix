@@ -53,7 +53,7 @@
     is_video_playing() {
       # Prüfen auf bekannte Player: mpv, vlc, Firefox (über playerctl)
       pgrep -x "mpv" > /dev/null || pgrep -x "vlc" > /dev/null || \
-      ${pkgs.playerctl}/bin/playerctl --player=firefox status 2>/dev/null | grep -q "Playing"
+      ${pkgs.playerctl}/bin/playerctl status 2>/dev/null | grep -q "Playing"
     }
 
     # Start von swayidle
