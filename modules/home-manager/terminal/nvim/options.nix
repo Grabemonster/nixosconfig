@@ -31,6 +31,9 @@ programs.nixvim= {
     colorcolumn = "100";
 
     mouse = "a";
+
+    highligtt.NORMAL.ctermbg= "NONE";
+
   };
 };
 }
