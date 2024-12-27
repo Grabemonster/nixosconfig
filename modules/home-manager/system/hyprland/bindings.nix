@@ -1,7 +1,7 @@
 {pkgs, lib, ...}:
 {
   wayland.windowManager.hyprland.settings = {
-   "$terminal" = "gnome-terminal";
+   "$terminal" = "ghosty";
    "$fileManager" = ''bash ~/.config/scripts/tmuxinatorselect'';
    "$firefox" = "firefox";
    "$wofi" = "wofi"; 
