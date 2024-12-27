@@ -44,6 +44,7 @@
         unzip
         onedrive
         ghostty.packages."${system}".default
+        godot_4
     ];
 
 # This value determines the Home Manager release that your configuration is
