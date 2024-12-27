@@ -170,7 +170,7 @@
     hunspellDicts.de_DE
     hunspellDicts.en_US
     wireplumber
-    ghostty.packages.${system}.default
+    ghostty.packages."${system}".default
   ];
 
   fonts.packages = with pkgs; [ 
