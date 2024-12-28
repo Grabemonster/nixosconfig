@@ -18,7 +18,9 @@
       monitor = [
       "DP-2, 2560x1440@165,0x0,1"
       "HDMI-A-3, 1920x1080@60,-1920x540,1"
-      ];   
+      ];
+
+      workspace="DP-2,1";
 
       "exec-once" = [
         "bash ~/.config/scripts/randomimage.sh"
