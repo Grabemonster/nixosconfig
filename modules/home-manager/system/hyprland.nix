@@ -20,7 +20,7 @@
       "HDMI-A-3, 1920x1080@60,-1920x540,1"
       ];
 
-      workspace="1, monitor:DP-2";
+      
 
       "exec-once" = [
         "bash ~/.config/scripts/randomimage.sh"
