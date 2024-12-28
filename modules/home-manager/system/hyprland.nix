@@ -16,7 +16,7 @@
 
     settings = {
       monitor = [
-      "DP-2, 2560x1440@165,0x0,1"
+      "DP-2, 2560x1440@143,0x0,1"
       "HDMI-A-3, 1920x1080@60,-1920x540,1"
       ];
 
@@ -27,6 +27,7 @@
         "bash ~/.config/scripts/lockscreentime.sh"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
+        "xrandr --output DP-2 --primary"
       ]; 
 
       dwindle = {
