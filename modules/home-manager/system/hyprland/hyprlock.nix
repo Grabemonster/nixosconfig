@@ -12,7 +12,7 @@
 
             background = [
             {
-                path = "~/wallpaper/anime-girl-warrior-sword.jpg";
+                path = "~/.cache/activwalpaper.jpg";
                 blur_passes = 3;
                 blur_size = 1;
             }
