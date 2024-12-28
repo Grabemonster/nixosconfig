@@ -7,6 +7,7 @@ wayland.windowManager.hyprland.settings = {
     "kb_model" ="";
     "kb_options" ="";
     "kb_rules" ="";
+    numlock_by_default = true;
  
     "follow_mouse" = "1";
 
