@@ -28,6 +28,7 @@
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
         "xrandr --output DP-2 --primary"
+
       ]; 
 
       dwindle = {
