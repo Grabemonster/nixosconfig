@@ -14,26 +14,13 @@
     enable = true;
     xwayland.enable = true;
 
-    extraConfig = ''
-    wsbind=1,DP-2
-    wsbind=2,DP-2
-    wsbind=3,DP-2
-    wsbind=4,DP-2
-    wsbind=5,DP-2
-    wsbind=6,DP-2
-    wsbind=7,DP-2
-    wsbind=8,DP-2
-    wsbind=9,DP-2
-    wsbind=10,DP-2
-  '';
-    
     settings = {
       monitor = [
       "DP-2, 2560x1440@165,0x0,1"
       "HDMI-A-3, 1920x1080@60,-1920x540,1"
       ];
 
-      workspace="DP-2,1";
+      workspace="1, monitor:DP-2";
 
       "exec-once" = [
         "bash ~/.config/scripts/randomimage.sh"
