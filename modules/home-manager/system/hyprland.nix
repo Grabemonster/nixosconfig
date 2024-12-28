@@ -21,6 +21,7 @@
       ];
 
       workspace="DP-2,1";
+      wsbind="1,DP-2";
 
       "exec-once" = [
         "bash ~/.config/scripts/randomimage.sh"
