@@ -8,6 +8,7 @@
     ./hyprland/decoration.nix
     ./hyprland/animations.nix
     ./hyprland/wallpaper.nix
+    ./hyprland/hyprlock.nix
   ];
 
   wayland.windowManager.hyprland = {
