@@ -5,14 +5,14 @@
         settings = {
             general = {
                 disable_loading_bar = true;
-                grace = 10;
+                grace = 5;
                 hide_cursor = true;
                 no_fade_in = false;
             };
 
             background = {
             monitor = {
-                path = "screenshot";
+                path = "~/wallpaper/anime-girl-warrior-sword.jpg";
                 blur_passes = 3;
                 blur_size = 8;
             };
