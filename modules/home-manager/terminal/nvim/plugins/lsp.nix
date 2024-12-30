@@ -10,6 +10,7 @@
         ts_ls.enable = true; # TS/JS
         cssls.enable = true; # CSS
         clangd.enable = true;
+        csharp_ls.enable = true;
         html.enable = true; # HTML
         phpactor.enable = true; # PHP
         pyright.enable = true; # Python
