@@ -12,12 +12,11 @@ programs.waybar ={
 
     "hyprland/workspaces" = {
          "all-outputs"= false;
-         "format" = "{icon}";
+         "format" = "{name}";
          "on-scroll-up" = "hyprctl dispatch workspace e+1";
          "on-scroll-down" = "hyprctl dispatch workspace e-1";
          "format-icons" = {
-             "1" = "1";
-             "11" = "1";
+
 
              "active" = "";
              "default" = "";
