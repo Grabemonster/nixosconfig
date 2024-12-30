@@ -11,7 +11,7 @@ programs.waybar ={
     modules-right = ["clock" "custom/logout"];
 
     "hyprland/workspaces" = {
-         "all-outputs"= true;
+         "all-outputs"= false;
          "format" = "{name}{icon}";
          "on-scroll-up" = "hyprctl dispatch workspace e+1";
          "on-scroll-down" = "hyprctl dispatch workspace e-1";
@@ -29,9 +29,6 @@ programs.waybar ={
         "ignore-list" = [
 
         ];
-        "app_ids-mapping" = {
-            "code-url-handler" = "vscode";
-        };
       };
 
     "hyprland/window" = {
