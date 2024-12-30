@@ -6,10 +6,8 @@
             ./system/rebuild.nix
             ./system/waybar.nix
             ./system/wlogout.nix
-            #./system/swaylock.nix
             ./system/wofi.nix
             ./system/clipboard.nix
-            #./system/swaync.nix
             ./system/playerctl.nix
 
             ./terminal/nvim/nixvim.nix
