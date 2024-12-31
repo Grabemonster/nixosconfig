@@ -16,6 +16,7 @@
             ./terminal/tmux.nix
             ./terminal/yazi.nix
             ./terminal/fastfetch.nix
+            ./terminal/ghostty.nix
 
             ./apps/webbrowser.nix
             ./apps/E-mail.nix
