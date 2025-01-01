@@ -22,7 +22,7 @@
             "*" = {
                 background-color = mkLiteral "rgba ( 0, 0, 0, 20%)";
                 color = mkLiteral "#FFFFFF";
-                width = 512;
+                width = "50%";
             };
 
             "#inputbar" = {
