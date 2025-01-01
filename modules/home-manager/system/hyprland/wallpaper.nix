@@ -52,10 +52,11 @@ check_constrast = true
 
 
 [templates]
-meiner = {template = 'meiner.css', target = '~/.cache/wallust/meiner.css'}
+css_template = {template = 'css_template.css', target = '~/.cache/wallust/css_template.css'}
+rasi_template = {template = 'rasi_template.rasi', target = '~/.cache/wallust/rasi_template.rasi'}
   '';
 
-  home.file.".config/wallust/templates/meiner.css".text = ''  
+  home.file.".config/wallust/templates/css_template.css".text = ''  
 @define-color background {{background}};
 @define-color foreground {{foreground}};
 @define-color cursor {{cursor}};
@@ -77,4 +78,27 @@ meiner = {template = 'meiner.css', target = '~/.cache/wallust/meiner.css'}
 @define-color color15 {{color15}};
   '';
 
+  home.file.".config/wallust/templates/rasi_template.rasi".text = '' 
+  *{
+background: {{background}};
+foreground: {{foreground}};
+cursor: {{cursor}};
+color0: {{color0}}; 
+color1: {{color1}};
+color2: {{color2}};
+color3: {{color3}};
+color4: {{color4}};
+color5: {{color5}};
+color6: {{color6}};
+color7: {{color7}};
+color8: {{color8}};
+color9: {{color9}};
+color10: {{color10}}; 
+color11: {{color11}};
+color12: {{color12}};
+color13: {{color13}};
+color14: {{color13}};
+color15: {{color15}};
+  }
+  '';
 }
