@@ -1,19 +1,9 @@
-/* MACOS SPOTLIGHT LIKE DARK THEME FOR ROFI  */
-/* Author: Newman Sanchez (https://github.com/newmanls) */
-
+@import "~/.cache/wallust/rasi_template.rasi"
 * {
     font:   "Montserrat 12";
 
-    bg0:    #242424E6;
-    bg1:    #7E7E7E80;
-    bg2:    #0860f2E6;
-
-    fg0:    #DEDEDE;
-    fg1:    #FFFFFF;
-    fg2:    #DEDEDE80;
-
     background-color:   transparent;
-    text-color:         @fg0;
+    text-color:         #FFFFFF;
 
     margin:     0;
     padding:    0;
@@ -21,7 +11,7 @@
 }
 
 window {
-    background-color:   @bg0;
+    background-color:   background;
 
     location:       center;
     width:          640;
@@ -29,7 +19,6 @@ window {
 }
 
 inputbar {
-    font:       "Montserrat 20";
     padding:    12px;
     spacing:    12px;
     children:   [ icon-search, entry ];
@@ -49,13 +38,13 @@ entry {
     font:   inherit;
 
     placeholder         : "Search";
-    placeholder-color   : @fg2;
+    placeholder-color   : @background;
 }
 
 message {
     border:             2px 0 0;
-    border-color:       @bg1;
-    background-color:   @bg1;
+    border-color:       @background;
+    background-color:   @background;
 }
 
 textbox {
@@ -68,7 +57,7 @@ listview {
 
     fixed-height:   false;
     border:         1px 0 0;
-    border-color:   @bg1;
+    border-color:   @background;
 }
 
 element {
@@ -86,8 +75,8 @@ element alternate active {
 }
 
 element selected normal, element selected active {
-    background-color:   @bg2;
-    text-color:         @fg1;
+    background-color:   @background;
+    text-color:         #FFFFFF;
 }
 
 element-icon {
