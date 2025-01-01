@@ -17,7 +17,7 @@ window {
     border-color: white;  /* Weißer Rand */
     border-width: 2px;
     location: center;
-    width: 640;
+    width: 70%;
     border-radius: 5px;  /* Gleiche Ecken wie in Wofi */
 }
 
