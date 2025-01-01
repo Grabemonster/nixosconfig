@@ -1,4 +1,4 @@
-@import "~/.cache/wallust/rasi_template.rasi";
+@import "~/.cache/wallust/rasi_template.rasi"
 
 * {
     font:   "Montserrat 12";
