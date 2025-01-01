@@ -20,7 +20,7 @@
             inherit (config.lib.formats.rasi) mkLiteral;
         in {
             "*" = {
-                background-color = mkLiteral "rgba ( 0, 0, 0, 0%)";
+                background-color = mkLiteral "rgba ( 0, 0, 0, 20%)";
                 foreground-color = mkLiteral "rgba ( 250, 251, 252, 100 % )";
                 border-color = mkLiteral "#FFFFFF";
                 width = 512;
