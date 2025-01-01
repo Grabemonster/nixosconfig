@@ -11,7 +11,7 @@
 }
 
 window {
-    background-color:   background;
+    background-color:   @background;
 
     location:       center;
     width:          640;
