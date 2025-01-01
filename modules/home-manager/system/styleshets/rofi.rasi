@@ -6,36 +6,37 @@
     margin: 0;
     padding: 0;
     spacing: 0;
-    border-radius: 5;  /* Abgerundete Ecken */
+    border-radius: 5px;  /* Abgerundete Ecken */
 }
 
 window {
+    font-size: 32px;  /* Schriftgröße */
     background-color: rgba(0, 0, 0, 0.3);  /* Transparenter Hintergrund */
     color: #FFFFFF;  /* Weißer Text */
-    border-width: 2;
+    border-width: 2px;
     border-color: #FFFFFF;  /* Weißer Rand */
     location: center;
     width: 60%;
-    border-radius: 5;  /* Gleiche Ecken wie in Wofi */
+    border-radius: 5px;  /* Gleiche Ecken wie in Wofi */
 }
 
 inputbar {
-    padding: 12;  /* Konsistente Polsterung */
-    spacing: 30;
+    padding: 12px;  /* Konsistente Polsterung */
+    spacing: 12px;
     children: [ icon-search, entry ];
 }
 
 icon-search {
     expand: false;
     filename: "search";
-    size: 40;
+    size: 28px;
 }
 
 entry {
     font: inherit;
     background-color: transparent;  /* Transparent wie in Wofi */
     color: #FFFFFF;  /* Weißer Text */
-    padding: 0.25;  /* Gleiche Polsterung wie in Wofi */
+    padding: 0.25em;  /* Gleiche Polsterung wie in Wofi */
     placeholder: "Search";
     placeholder-color: #FFFFFF;  /* Weißer Placeholder-Text */
 }
@@ -44,16 +45,16 @@ listview {
     lines: 7;
     columns: 1;
     fixed-height: true;
-    border-width: 1;
+    border-width: 1px;
     border-color: #FFFFFF;  /* Weißer Rand für Listview */
 }
 
 element {
-    padding: 8 16px;
-    spacing: 16;
+    padding: 8px 16px;
+    spacing: 16px;
     background-color: transparent;  /* Transparent für Elemente */
     text-color: #FFFFFF;  /* Weißer Text */
-    border-width: 1;
+    border-width: 1px;
     border-color: #FFFFFF;  /* Weißer Rand für jedes Element */
 }
 
@@ -71,9 +72,9 @@ element selected normal, element selected active {
 }
 
 element-icon {
-    size: 1;
-    margin-left: 0.25;  /* Konsistenz mit Wofi */
-    margin-right: 0.25;
+    size: 1em;
+    margin-left: 0.25em;  /* Konsistenz mit Wofi */
+    margin-right: 0.25em;
 }
 
 element-text {
@@ -81,14 +82,14 @@ element-text {
 }
 
 message {
-    border-width: 2 0 0;
+    border-width: 2px 0 0;
     border-color: #FFFFFF;  /* Weißer Rand für Nachrichten */
     background-color: transparent;  /* Transparenter Hintergrund */
     text-color: #FFFFFF;  /* Weißer Text */
 }
 
 textbox {
-    padding: 8 24px;
+    padding: 8px 24px;
     text-color: #FFFFFF;  /* Weißer Text in Textboxen */
     background-color: transparent;  /* Transparenter Hintergrund */
 }
