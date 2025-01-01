@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{pkgs, ghostty, system, ...}:
 {
     programs.rofi = {
         enable = true;
