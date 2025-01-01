@@ -18,8 +18,7 @@
 #   bar = mkLiteral "abc"; => bar: abc;
 # };
             inherit (config.lib.formats.rasi) mkLiteral;
-        in {
-            "@import" = "../../../../.cache/wallust/meiner.css";
+        in { 
             "*" = {
                 background-color = mkLiteral "rgba ( 0, 0, 0, 20%)";
                 border-color = mkLiteral "#FFFFFF";
@@ -34,7 +33,7 @@
                 expand = false;
                 str = ":";
                 margin = mkLiteral "0px 0.3em 0em 0em";
-                color = mkLiteral "@foreground-color";
+                color = mkLiteral "#FFFFFF";
             };
         };
     };
