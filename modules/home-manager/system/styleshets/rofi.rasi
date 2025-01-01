@@ -8,15 +8,14 @@
     padding: 0;
     spacing: 0;
     border-radius: 5px;  /* Abgerundete Ecken */
-    border-color: #FFFFFF;  /* Weißer Rand */
 }
 
 window {
     font-size: 32px;  /* Schriftgröße */
     background-color: rgba(0, 0, 0, 0.3);  /* Transparenter Hintergrund */
     color: #FFFFFF;  /* Weißer Text */
-    border-color: #FFFFFF;  /* Weißer Rand */
     border-width: 2px;
+    border-color: #FFFFFF;  /* Weißer Rand */
     location: center;
     width: 60%;
     border-radius: 5px;  /* Gleiche Ecken wie in Wofi */
@@ -47,8 +46,8 @@ listview {
     lines: 10;
     columns: 1;
     fixed-height: false;
-    border-color: #FFFFFF;  /* Weißer Rand */
-    border-width: 1px 0 0;
+    border-width: 1px;
+    border-color: #FFFFFF;  /* Weißer Rand für Listview */
 }
 
 element {
@@ -56,6 +55,8 @@ element {
     spacing: 16px;
     background-color: transparent;  /* Transparent für Elemente */
     text-color: #FFFFFF;  /* Weißer Text */
+    border-width: 1px;
+    border-color: #FFFFFF;  /* Weißer Rand für jedes Element */
 }
 
 element normal active {
@@ -75,7 +76,6 @@ element-icon {
     size: 1em;
     margin-left: 0.25em;  /* Konsistenz mit Wofi */
     margin-right: 0.25em;
-    text-color: #FFFFFF;  /* Weißer Text für Icons */
 }
 
 element-text {
@@ -83,8 +83,8 @@ element-text {
 }
 
 message {
-    border-color: #FFFFFF;  /* Weißer Rand für Nachrichten */
     border-width: 2px 0 0;
+    border-color: #FFFFFF;  /* Weißer Rand für Nachrichten */
     background-color: transparent;  /* Transparenter Hintergrund */
     text-color: #FFFFFF;  /* Weißer Text */
 }
