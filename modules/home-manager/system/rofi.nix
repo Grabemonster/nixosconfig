@@ -22,14 +22,14 @@
             "*" = {
                 background-color = mkLiteral "rgba ( 0, 0, 0, 20%)";
                 color = mkLiteral "#FFFFFF";
-                width = "50%";
+                width = "70%";
             };
 
-            "#inputbar" = {
+            "inputbar" = {
                 children = map mkLiteral [ "prompt" "entry" ];
             };
 
-            "#textbox-prompt-colon" = {
+            "textbox-prompt-colon" = {
                 expand = false;
                 str = ":";
                 margin = mkLiteral "0px 0.3em 0em 0em";
