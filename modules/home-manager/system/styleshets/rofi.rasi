@@ -10,7 +10,6 @@
 }
 
 window {
-      /* Schriftgröße */
     background-color: rgba(0, 0, 0, 0.3);  /* Transparenter Hintergrund */
     color: #FFFFFF;  /* Weißer Text */
     border-width: 2px;
@@ -29,7 +28,7 @@ inputbar {
 icon-search {
     expand: false;
     filename: "search";
-    size: 28px;
+    size: 40px;
 }
 
 entry {
