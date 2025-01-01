@@ -46,8 +46,6 @@
         godot_4
         wlr-randr
         gimp
-        libqalculate
-        rofi
         rofi-calc
     ];
 
