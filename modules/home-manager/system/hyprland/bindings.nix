@@ -19,7 +19,7 @@
         "$mod, U, exec, $background"
 
         #clipboards
-        "$mod, V, exec, cliphist list | rofi --sort-order=default --dmenu | cliphist decode | wl-copy"
+        "$mod, V, exec, cliphist list | rofi -sort-order=default -dmenu | cliphist decode | wl-copy"
 
         #Move focus
         "$mod, left, movefocus, l"
