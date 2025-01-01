@@ -4,7 +4,7 @@
 
     bg0:    #242424E6;
     bg1:    @color15;
-    bg2:    #0860f2E6;
+    bg2:    @color15;
 
     fg0:    #DEDEDE;
     fg1:    #FFFFFF;
