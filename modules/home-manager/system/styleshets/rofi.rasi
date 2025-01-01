@@ -1,68 +1,60 @@
-@import "~/.cache/wallust/rasi_template.rasi"
+
+@import "~/.cache/wallust/rasi_template.rasi";
+
 * {
     font:   "Montserrat 12";
-
     background-color: transparent;
-    text-color:         #FFFFFF;
-
-    margin:     0;
-    padding:    0;
-    spacing:    0;
+    text-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+    border-radius: 5px;  /* Übernommen aus Wofi */
+    border: none;
 }
 
 window {
-    background-color: rgba(0,0,0, 20%);
-    location:       center;
-    width:          640;
-    border-radius:  8;
+    font-size: 32px;  /* Angepasst aus Wofi */
+    background-color: rgba(0, 0, 0, 0.3);  /* Transparenter Hintergrund */
+    color: @foreground;
+    border: 2px solid white;  /* Weißer Rand */
+    location: center;
+    width: 640;
+    border-radius: 5px;  /* Gleiche Ecken wie in Wofi */
 }
 
 inputbar {
-    padding:    12px;
-    spacing:    12px;
-    children:   [ icon-search, entry ];
+    padding: 12px;  /* Konsistente Polsterung */
+    spacing: 12px;
+    children: [ icon-search, entry ];
 }
 
 icon-search {
-    expand:     false;
-    filename:   "search";
+    expand: false;
+    filename: "search";
     size: 28px;
 }
 
-icon-search, entry, element-icon, element-text {
-    vertical-align: 0.5;
-}
-
 entry {
-    font:   inherit;
-
-    placeholder         : "Search";
-    placeholder-color   : @background;
-}
-
-message {
-    border:             2px 0 0;
-    border-color:       @background;
-    background-color:   @background;
-}
-
-textbox {
-    padding:    8px 24px;
+    font: inherit;
+    background-color: rgba(0, 0, 0, 0.3);  /* Ähnlich wie #input in Wofi */
+    color: @foreground;
+    padding: 0.25em;  /* Gleiche Polsterung wie in Wofi */
+    placeholder: "Search";
+    placeholder-color: @background;
 }
 
 listview {
-    lines:      10;
-    columns:    1;
-
-    fixed-height:   false;
-    border:         1px 0 0;
-    border-color:   @background;
+    lines: 10;
+    columns: 1;
+    fixed-height: false;
+    border: 1px 0 0;
+    border-color: @background;
 }
 
 element {
-    padding:            8px 16px;
-    spacing:            16px;
-    background-color:   transparent;
+    padding: 8px 16px;
+    spacing: 16px;
+    background-color: transparent;
 }
 
 element normal active {
@@ -74,14 +66,27 @@ element alternate active {
 }
 
 element selected normal, element selected active {
-    background-color:   @background;
-    text-color:         #FFFFFF;
+    background-color: linear-gradient(90deg, @color13, @color15);  /* Farbverlauf wie in Wofi */
+    text-color: #FFFFFF;  /* Textfarbe für ausgewählte Elemente */
 }
 
 element-icon {
-    size:   1em;
+    size: 1em;
+    margin-left: 0.25em;  /* Konsistenz mit Wofi */
+    margin-right: 0.25em;
 }
 
 element-text {
     text-color: inherit;
 }
+
+message {
+    border: 2px 0 0;
+    border-color: @background;
+    background-color: @background;
+}
+
+textbox {
+    padding: 8px 24px;
+}
+
