@@ -6,17 +6,17 @@
     margin: 0;
     padding: 0;
     spacing: 0;
-    border-radius: 5px;  /* Abgerundete Ecken */
+    border-radius: 5;  /* Abgerundete Ecken */
 }
 
 window {
     background-color: rgba(0, 0, 0, 0.3);  /* Transparenter Hintergrund */
     color: #FFFFFF;  /* Weißer Text */
-    border-width: 2px;
+    border-width: 2;
     border-color: #FFFFFF;  /* Weißer Rand */
     location: center;
     width: 60%;
-    border-radius: 5px;  /* Gleiche Ecken wie in Wofi */
+    border-radius: 5;  /* Gleiche Ecken wie in Wofi */
 }
 
 inputbar {
@@ -28,7 +28,7 @@ inputbar {
 icon-search {
     expand: false;
     filename: "search";
-    size: 40px;
+    size: 40;
 }
 
 entry {
@@ -44,16 +44,16 @@ listview {
     lines: 7;
     columns: 1;
     fixed-height: true;
-    border-width: 1px;
+    border-width: 1;
     border-color: #FFFFFF;  /* Weißer Rand für Listview */
 }
 
 element {
-    padding: 8px 16px;
-    spacing: 16px;
+    padding: 8 16px;
+    spacing: 16;
     background-color: transparent;  /* Transparent für Elemente */
     text-color: #FFFFFF;  /* Weißer Text */
-    border-width: 1px;
+    border-width: 1;
     border-color: #FFFFFF;  /* Weißer Rand für jedes Element */
 }
 
@@ -81,14 +81,14 @@ element-text {
 }
 
 message {
-    border-width: 2px 0 0;
+    border-width: 2 0 0;
     border-color: #FFFFFF;  /* Weißer Rand für Nachrichten */
     background-color: transparent;  /* Transparenter Hintergrund */
     text-color: #FFFFFF;  /* Weißer Text */
 }
 
 textbox {
-    padding: 8px 24px;
+    padding: 8 24px;
     text-color: #FFFFFF;  /* Weißer Text in Textboxen */
     background-color: transparent;  /* Transparenter Hintergrund */
 }
