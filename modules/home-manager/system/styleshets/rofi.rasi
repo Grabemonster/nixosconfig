@@ -3,8 +3,8 @@
 * {
 
     bg0:    #242424E6;
-    bg1:    @color15;
-    bg2:    @color15;
+    bg1:    @color13;
+    bg2:    @color13;
 
     fg0:    #DEDEDE;
     fg1:    #FFFFFF;
