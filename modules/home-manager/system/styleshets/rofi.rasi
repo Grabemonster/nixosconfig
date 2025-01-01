@@ -29,7 +29,7 @@ inputbar {
 icon-search {
     expand: false;
     filename: "search";
-    size: 50px;
+    size: 28px;
 }
 
 entry {
