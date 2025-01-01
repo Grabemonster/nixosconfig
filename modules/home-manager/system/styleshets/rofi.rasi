@@ -2,7 +2,7 @@
 * {
     font:   "Montserrat 12";
 
-    background-color:   transparent;
+    background-color:   rgba(0,0,0, 20%);
     text-color:         #FFFFFF;
 
     margin:     0;
@@ -11,8 +11,6 @@
 }
 
 window {
-    background-color:   transparent;
-
     location:       center;
     width:          640;
     border-radius:  8;
