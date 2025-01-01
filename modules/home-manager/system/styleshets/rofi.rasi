@@ -10,7 +10,7 @@
 }
 
 window {
-    font-size: 50px;  /* Schriftgröße */
+      /* Schriftgröße */
     background-color: rgba(0, 0, 0, 0.3);  /* Transparenter Hintergrund */
     color: #FFFFFF;  /* Weißer Text */
     border-width: 2px;
