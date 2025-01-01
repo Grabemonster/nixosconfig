@@ -2,7 +2,7 @@
 {
     programs.rofi = {
         enable = true;
-        package = pkgs.rofi;
+        package = pkgs.rofi-wayland;
         plugins = [pkgs.rofi-calc pkgs.rofi-emoji];
         extraConfig = {
             modi = "drun,calc,emoji";
