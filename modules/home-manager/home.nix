@@ -47,6 +47,8 @@
         wlr-randr
         gimp
         libqalculate
+        rofi
+        rofi-calc
     ];
 
 # This value determines the Home Manager release that your configuration is
