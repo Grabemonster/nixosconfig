@@ -21,7 +21,7 @@
         in { 
             "*" = {
                 background-color = mkLiteral "rgba ( 0, 0, 0, 20%)";
-                border-color = mkLiteral "#FFFFFF";
+                color = mkLiteral "#FFFFFF";
                 width = 512;
             };
 
