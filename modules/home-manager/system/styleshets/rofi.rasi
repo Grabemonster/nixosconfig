@@ -1,4 +1,3 @@
-
 @import "~/.cache/wallust/rasi_template.rasi"
 
 * {
@@ -66,7 +65,7 @@ element alternate active {
 }
 
 element selected normal, element selected active {
-    background-color: linear-gradient(90deg, @color13, @color15);  /* Farbverlauf wie in Wofi */
+    background-color: @color14;  /* Festgelegte Farbe für ausgewählte Elemente */
     text-color: #FFFFFF;  /* Textfarbe für ausgewählte Elemente */
 }
 
