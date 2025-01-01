@@ -20,8 +20,8 @@ window {
 }
 
 inputbar {
-    padding: 12px;  /* Konsistente Polsterung */
-    spacing: 30px;
+    padding: 12;  /* Konsistente Polsterung */
+    spacing: 30;
     children: [ icon-search, entry ];
 }
 
