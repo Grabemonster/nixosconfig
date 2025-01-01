@@ -1,24 +1,24 @@
 @import "~/.cache/wallust/rasi_template.rasi"
 
 * {
-    font:   "Montserrat 12";
+    font: "Montserrat 12";
     background-color: transparent;
-    text-color: #FFFFFF;
+    text-color: #FFFFFF;  /* Weißer Text */
     margin: 0;
     padding: 0;
     spacing: 0;
     border-radius: 5px;  /* Abgerundete Ecken */
-    border-color: #FFFFFF;
+    border-color: #FFFFFF;  /* Weißer Rand */
 }
 
 window {
     font-size: 32px;  /* Schriftgröße */
     background-color: rgba(0, 0, 0, 0.3);  /* Transparenter Hintergrund */
-    color: @foreground;
-    border-color: white;  /* Weißer Rand */
+    color: #FFFFFF;  /* Weißer Text */
+    border-color: #FFFFFF;  /* Weißer Rand */
     border-width: 2px;
     location: center;
-    width: 70%;
+    width: 60%;
     border-radius: 5px;  /* Gleiche Ecken wie in Wofi */
 }
 
@@ -36,57 +36,61 @@ icon-search {
 
 entry {
     font: inherit;
-    background-color: transparent;  /* Ähnlich wie #input in Wofi */
-    color: #FFFFFF;
+    background-color: transparent;  /* Transparent wie in Wofi */
+    color: #FFFFFF;  /* Weißer Text */
     padding: 0.25em;  /* Gleiche Polsterung wie in Wofi */
     placeholder: "Search";
-    placeholder-color: @background;
+    placeholder-color: #FFFFFF;  /* Weißer Placeholder-Text */
 }
 
 listview {
     lines: 10;
     columns: 1;
     fixed-height: false;
-    border-color: @background;
+    border-color: #FFFFFF;  /* Weißer Rand */
     border-width: 1px 0 0;
 }
 
 element {
     padding: 8px 16px;
     spacing: 16px;
-    background-color: transparent;
+    background-color: transparent;  /* Transparent für Elemente */
+    text-color: #FFFFFF;  /* Weißer Text */
 }
 
 element normal active {
-    text-color: @background;
+    text-color: #FFFFFF;  /* Weißer Text für aktive normale Elemente */
 }
 
 element alternate active {
-    text-color: @color2;
+    text-color: #FFFFFF;  /* Weißer Text für alternative aktive Elemente */
 }
 
 element selected normal, element selected active {
-    background-color: @color14;  /* Festgelegte Farbe für ausgewählte Elemente */
-    text-color: #FFFFFF;  /* Textfarbe für ausgewählte Elemente */
+    background-color: rgba(255, 255, 255, 0.2);  /* Leicht transparenter weißer Hintergrund */
+    text-color: #FFFFFF;  /* Weißer Text für ausgewählte Elemente */
 }
 
 element-icon {
     size: 1em;
     margin-left: 0.25em;  /* Konsistenz mit Wofi */
     margin-right: 0.25em;
+    text-color: #FFFFFF;  /* Weißer Text für Icons */
 }
 
 element-text {
-    text-color: inherit;
+    text-color: #FFFFFF;  /* Weißer Text für Elementtexte */
 }
 
 message {
-    border-color: @background;
+    border-color: #FFFFFF;  /* Weißer Rand für Nachrichten */
     border-width: 2px 0 0;
-    background-color: @background;
+    background-color: transparent;  /* Transparenter Hintergrund */
+    text-color: #FFFFFF;  /* Weißer Text */
 }
 
 textbox {
     padding: 8px 24px;
+    text-color: #FFFFFF;  /* Weißer Text in Textboxen */
+    background-color: transparent;  /* Transparenter Hintergrund */
 }
-
