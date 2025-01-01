@@ -1,3 +1,4 @@
+
 @import "~/.cache/wallust/rasi_template.rasi"
 
 * {
@@ -7,15 +8,15 @@
     margin: 0;
     padding: 0;
     spacing: 0;
-    border-radius: 5px;  /* Übernommen aus Wofi */
-    border: none;
+    border-radius: 5px;  /* Abgerundete Ecken */
 }
 
 window {
-    font-size: 32px;  /* Angepasst aus Wofi */
+    font-size: 32px;  /* Schriftgröße */
     background-color: rgba(0, 0, 0, 0.3);  /* Transparenter Hintergrund */
     color: @foreground;
-    border: 2px solid white;  /* Weißer Rand */
+    border-color: white;  /* Weißer Rand */
+    border-width: 2px;
     location: center;
     width: 640;
     border-radius: 5px;  /* Gleiche Ecken wie in Wofi */
@@ -46,8 +47,8 @@ listview {
     lines: 10;
     columns: 1;
     fixed-height: false;
-    border: 1px 0 0;
     border-color: @background;
+    border-width: 1px 0 0;
 }
 
 element {
@@ -80,8 +81,8 @@ element-text {
 }
 
 message {
-    border: 2px 0 0;
     border-color: @background;
+    border-width: 2px 0 0;
     background-color: @background;
 }
 
