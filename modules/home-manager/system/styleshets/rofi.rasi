@@ -35,7 +35,7 @@ entry {
     font: inherit;
     background-color: transparent;  /* Transparent wie in Wofi */
     color: #FFFFFF;  /* Weißer Text */
-    padding: 0.25em;  /* Gleiche Polsterung wie in Wofi */
+    padding: 0.25;  /* Gleiche Polsterung wie in Wofi */
     placeholder: "Search";
     placeholder-color: #FFFFFF;  /* Weißer Placeholder-Text */
 }
@@ -71,9 +71,9 @@ element selected normal, element selected active {
 }
 
 element-icon {
-    size: 1em;
-    margin-left: 0.25em;  /* Konsistenz mit Wofi */
-    margin-right: 0.25em;
+    size: 1;
+    margin-left: 0.25;  /* Konsistenz mit Wofi */
+    margin-right: 0.25;
 }
 
 element-text {
