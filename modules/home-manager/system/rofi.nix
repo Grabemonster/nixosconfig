@@ -21,7 +21,6 @@
         in {
             "*" = {
                 background-color = mkLiteral "rgba ( 0, 0, 0, 20%)";
-                color = mkLiteral "rgba ( 250, 251, 252, 100 % )";
                 border-color = mkLiteral "#FFFFFF";
                 width = 512;
             };
@@ -34,7 +33,7 @@
                 expand = false;
                 str = ":";
                 margin = mkLiteral "0px 0.3em 0em 0em";
-                text-color = mkLiteral "@foreground-color";
+                color = mkLiteral "@foreground-color";
             };
         };
     };
