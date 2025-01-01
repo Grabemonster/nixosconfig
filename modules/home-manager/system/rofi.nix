@@ -19,6 +19,7 @@
 # };
             inherit (config.lib.formats.rasi) mkLiteral;
         in {
+            "@import" = ".cache/wallust/meiner.css";
             "*" = {
                 background-color = mkLiteral "rgba ( 0, 0, 0, 20%)";
                 border-color = mkLiteral "#FFFFFF";
