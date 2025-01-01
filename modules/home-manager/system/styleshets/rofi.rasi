@@ -42,9 +42,9 @@ entry {
 }
 
 listview {
-    lines: 10;
+    lines: 7;
     columns: 1;
-    fixed-height: false;
+    fixed-height: true;
     border-width: 1px;
     border-color: #FFFFFF;  /* Weißer Rand für Listview */
 }
