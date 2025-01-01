@@ -67,11 +67,11 @@ element {
 }
 
 element normal active {
-    text-color: @bg2;
+    text-color: @background;
 }
 
 element alternate active {
-    text-color: @bg2;
+    text-color: @color2;
 }
 
 element selected normal, element selected active {
