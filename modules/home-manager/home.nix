@@ -7,6 +7,7 @@
             ./system/waybar.nix
             ./system/wlogout.nix
             ./system/wofi.nix
+            ./system/rofi.nix
             ./system/clipboard.nix
             ./system/playerctl.nix
 
@@ -46,7 +47,6 @@
         godot_4
         wlr-randr
         gimp
-        rofi-calc
     ];
 
 # This value determines the Home Manager release that your configuration is
