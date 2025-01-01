@@ -4,7 +4,7 @@
    "$terminal" = "ghostty";
    "$fileManager" = ''bash ~/.config/scripts/tmuxinatorselect'';
    "$firefox" = "firefox";
-   "$wofi" = ''rofi -show drun -show-icon''; 
+   "$wofi" = ''rofi -show combi -combi-modes "drun,calc" -show-icons''; 
    "$background" = "bash ~/.config/scripts/randomimage.sh";
 
    "$mod" = "SUPER";
