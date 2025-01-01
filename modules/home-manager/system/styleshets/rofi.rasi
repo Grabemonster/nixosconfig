@@ -29,7 +29,7 @@ inputbar {
 icon-search {
     expand: false;
     filename: "search";
-    size: 28px;
+    size: 50px;
 }
 
 entry {
@@ -51,7 +51,6 @@ listview {
 
 element {
     padding: 8px 16px;
-    height: 50px;
     spacing: 16px;
     background-color: transparent;  /* Transparent für Elemente */
     text-color: #FFFFFF;  /* Weißer Text */
