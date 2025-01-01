@@ -36,7 +36,7 @@ icon-search {
 
 entry {
     font: inherit;
-    background-color: rgba(0, 0, 0, 0.3);  /* Ähnlich wie #input in Wofi */
+    background-color: transparent;  /* Ähnlich wie #input in Wofi */
     color: @foreground;
     padding: 0.25em;  /* Gleiche Polsterung wie in Wofi */
     placeholder: "Search";
