@@ -47,6 +47,8 @@
         godot_4
         wlr-randr
         gimp
+        grim
+        slurp
     ];
 
 # This value determines the Home Manager release that your configuration is
