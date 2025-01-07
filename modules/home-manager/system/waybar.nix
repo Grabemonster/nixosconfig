@@ -42,7 +42,6 @@ programs.waybar ={
       "wlr/taskbar" = {
         "format" = "{icon}";
         "on-click" = "activate";
-        all-outputs = true;
         "tooltip-format" = "{app_id}";
         "icon-size" = 10;
         "ignore-list" = [
