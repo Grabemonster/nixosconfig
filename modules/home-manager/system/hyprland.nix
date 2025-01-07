@@ -53,9 +53,6 @@
       };
 
       };
-    plugins  = [
-        #pkgs.hyprlandPlugins.hyprsplit
-    ];
   };
 }
 
