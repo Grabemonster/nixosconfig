@@ -7,7 +7,7 @@
 
       git add *
       if [[ "$1" == "-t" ]]; then
-          if sudo nixos-rebuild switch --flake ~/.config/nixos#default; then
+          if sudo nixos-rebuild test --flake ~/.config/nixos#default; then
               echo "erfolgreicher test build"
           else
               echo ""
