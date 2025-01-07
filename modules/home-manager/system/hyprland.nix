@@ -10,19 +10,29 @@
     ./hyprland/wallpaper.nix
     ./hyprland/hyprlock.nix
     ./hyprland/hypridle.nix
+    ./hyprland/cange_workspace.nix
   ];
 
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
 
-    settings = {
+    settings =
+        let
+        # Monitor-Namen
+        monitor1 = "DP-2"; # Ersetzen Sie dies durch den tatsächlichen Namen Ihres ersten Monitors
+        monitor2 = "HDMI-A-3"; # Ersetzen Sie dies durch den tatsächlichen Namen Ihres zweiten Monitors
+    in
+    {
       monitor = [
-      "DP-2, 2560x1440@143,0x0,1"
-      "HDMI-A-3, 1920x1080@60,-1920x540,1"
+      "${monitor1}, 2560x1440@143,0x0,1"
+      "${monitor2}, 1920x1080@60,-1920x540,1"
       ];
 
       
+      workspace = map (ws: "${toString ws},monitor:${monitor1}") [1 2 3 4 5 6 7 8 9]
+        ++ map (ws: "${toString ws},monitor:${monitor2}") [11 12 13 14 15 16 17 18 19];
+
 
       "exec-once" = [
         "bash ~/.config/scripts/randomimage.sh"

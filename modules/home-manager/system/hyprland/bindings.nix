@@ -52,15 +52,13 @@
 
         #open Mail
         ",XF86Mail, exec, thunderbird"
-
-        #"$mod, G, split:grabroguewindows"
       ]
       ++ (
         builtins.concatLists (builtins.genList (i:
           let ws = i + 1;
           in [
-            "$mod, code:1${toString i}, workspace, ${toString ws}"
-            "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
+            "$mod, code:1${toString i}, exec, bash ~/.config/scripts/workspace.sh ${toString ws}"
+            "$mod SHIFT, code:1${toString i}, exec, bash ~/.config/scripts/movetoworkspace.sh ${toString ws}"
           ]
         )
         9)
