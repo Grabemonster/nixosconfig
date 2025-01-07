@@ -44,7 +44,7 @@
 
       };
     plugins  = [
-        pkgs.hyprlandPlugins.hyprsplit
+        #pkgs.hyprlandPlugins.hyprsplit
     ];
   };
 }
