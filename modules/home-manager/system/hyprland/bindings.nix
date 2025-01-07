@@ -50,6 +50,9 @@
         ",XF86AudioNext, exec, playerctl next"
         ",XF86AudioStop, exec, playerctl stop"
 
+        #open Mail
+        ",XF86Mail, exec, thunderbird"
+
         #"$mod, G, split:grabroguewindows"
       ]
       ++ (
