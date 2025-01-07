@@ -50,14 +50,14 @@
         ",XF86AudioNext, exec, playerctl next"
         ",XF86AudioStop, exec, playerctl stop"
 
-        "$mod, G, split:grabroguewindows"
+        #"$mod, G, split:grabroguewindows"
       ]
       ++ (
         builtins.concatLists (builtins.genList (i:
           let ws = i + 1;
           in [
-            "$mod, code:1${toString i}, split:workspace, ${toString ws}"
-            "$mod SHIFT, code:1${toString i}, split:movetoworkspace, ${toString ws}"
+            "$mod, code:1${toString i}, workspace, ${toString ws}"
+            "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
           ]
         )
         9)
