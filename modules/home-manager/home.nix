@@ -44,7 +44,6 @@
         gparted 
         unzip
         onedrive
-        ghostty.packages."${system}".default
         godot_4
         wlr-randr
         gimp

@@ -15,10 +15,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    ghostty = {
-        url = "github:ghostty-org/ghostty"; 
-    };
-
     hyprpanel = {
       url = "github:Jas-SinghFSU/HyprPanel";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -30,7 +26,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixvim, ghostty, hyprpanel, nur, ... }@inputs: 
+  outputs = { self, nixpkgs, home-manager, nixvim, hyprpanel, nur, ... }@inputs: 
   let
     system = "x86_64-linux";
 
@@ -48,7 +44,7 @@
   {
     nixosConfigurations = {
       default = nixpkgs.lib.nixosSystem {
-	    specialArgs = {inherit system; inherit inputs; inherit user ghostty;};
+	    specialArgs = {inherit system; inherit inputs; inherit user;};
   
         modules = [
            nur.modules.nixos.default

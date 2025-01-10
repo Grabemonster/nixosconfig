@@ -145,6 +145,7 @@
     isNormalUser = true;
     description = "${user}";
     extraGroups = [ "networkmanager" "wheel" "${user}"];
+    shell = pkgs.nushell;
   };
 
   home-manager = {
