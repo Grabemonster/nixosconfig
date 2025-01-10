@@ -15,6 +15,7 @@
         "$mod, C, killactive"
         "$mod, M, exec, wlogout -b 2"
         "$mod, H, togglefloating"
+        "$mod, F, fullscreen"
         "$mod, SPACE, exec, $wofi"
         "$mod, U, exec, $background"
 
