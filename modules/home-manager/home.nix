@@ -18,6 +18,7 @@
             ./terminal/yazi.nix
             ./terminal/fastfetch.nix
             ./terminal/ghostty.nix
+            ./terminal/nushell.nix
 
             ./apps/webbrowser.nix
             ./apps/E-mail.nix
