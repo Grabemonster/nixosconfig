@@ -1,4 +1,4 @@
-{...}:
+{pkgs, ...}:
 {
     programs = {
         nushell = { 
@@ -35,7 +35,8 @@
            };
 
            environmentVariables = {
-                EDITOR = "nvim";     
+                EDITOR = "nvim";
+                SHELL = "${pkgs.nushell}/bin/nu";
            };
        };  
        carapace.enable = true;
