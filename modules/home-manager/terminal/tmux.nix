@@ -12,11 +12,11 @@
         terminal = "screen-256color";
         resizeAmount = 20;
         tmuxinator.enable = true;
+        shell = "\${pkgs.nushell}/bin/nu";
 
         plugins = with pkgs; [
             tmuxPlugins.sensible
-        tmuxPlugins.yank
-        
+            tmuxPlugins.yank 
         ];
         sensibleOnTop = true;
 

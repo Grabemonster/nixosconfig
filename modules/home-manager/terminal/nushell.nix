@@ -33,6 +33,10 @@
            shellAliases = {
                nixrebuild = "bash ~/.config/scripts/rebuild";
            };
+
+           environmentVariables = {
+                EDITOR = "nvim";     
+           };
        };  
        carapace.enable = true;
        carapace.enableNushellIntegration = true;
