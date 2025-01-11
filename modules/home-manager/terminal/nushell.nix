@@ -5,9 +5,6 @@
           enable = true;
           # for editing directly to config.nu 
           extraConfig = ''
-           let carapace_completer = {|spans|
-           carapace $spans.0 nushell $spans | from json
-           }
            $env.config = {
             show_banner: false,
             completions: {
@@ -20,7 +17,6 @@
                 enable: true 
             # set to lower can improve completion performance at the cost of omitting some options
                 max_results: 100 
-                completer: $carapace_completer # check 'carapace_completer' 
               }
             }
            } 
@@ -42,14 +38,5 @@
        carapace.enable = true;
        carapace.enableNushellIntegration = true;
 
-       starship = { enable = true;
-           settings = {
-             add_newline = true;
-             character = { 
-             success_symbol = "[➜](bold green)";
-             error_symbol = "[➜](bold red)";
-           };
-        };
-  };
-};
+       };
 }
