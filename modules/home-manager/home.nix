@@ -51,6 +51,7 @@
         slurp
         arduino-ide
         python3
+        python312Packages.pyserial
     ];
 
 # This value determines the Home Manager release that your configuration is
