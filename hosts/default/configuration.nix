@@ -144,7 +144,7 @@
   users.users.${user} = {
     isNormalUser = true;
     description = "${user}";
-    extraGroups = [ "networkmanager" "wheel" "${user}"];
+    extraGroups = [ "networkmanager" "wheel" "dialout" "${user}"];
     shell = pkgs.nushell;
   };
 
