@@ -52,6 +52,7 @@
         arduino-ide
         python3
         python312Packages.pyserial
+        jetbrains-toolbox
     ];
 
 # This value determines the Home Manager release that your configuration is
