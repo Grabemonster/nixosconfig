@@ -30,8 +30,8 @@
       ];
 
       
-      workspace = map (ws: "${toString ws},monitor:${monitor1}") [1 2 3 4 5 6 7 8 9]
-        ++ map (ws: "${toString ws},monitor:${monitor2}") [11 12 13 14 15 16 17 18 19];
+      workspace = map (ws: "${toString ws},monitor:${monitor1}") [11 12 13 14 15 16 17 18 19 20]
+        ++ map (ws: "${toString ws},monitor:${monitor2}") [1 2 3 4 5 6 7 8 9 10];
 
 
       "exec-once" = [
