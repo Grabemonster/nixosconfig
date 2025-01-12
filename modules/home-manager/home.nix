@@ -50,6 +50,7 @@
         grim
         slurp
         arduino-ide
+        python3
     ];
 
 # This value determines the Home Manager release that your configuration is
