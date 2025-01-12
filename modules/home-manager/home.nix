@@ -49,6 +49,7 @@
         gimp
         grim
         slurp
+        arduino-ide
     ];
 
 # This value determines the Home Manager release that your configuration is
