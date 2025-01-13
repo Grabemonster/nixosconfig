@@ -2,7 +2,7 @@
 {
     programs = {
         nushell = { 
-          enable = true;
+          enable = false;
           # for editing directly to config.nu 
           extraConfig = ''
            $env.config = {

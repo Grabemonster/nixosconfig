@@ -7,7 +7,7 @@
     };
     bashrcExtra = ''
     export EDITOR="nvim"
-    export SHELL="${pkgs.nushell}/bin/nu"
+    export SHELL="${pkgs.bash}/bin/bash"
     '';
   };
 }
