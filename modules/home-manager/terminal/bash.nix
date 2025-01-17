@@ -7,7 +7,6 @@
     };
     bashrcExtra = ''
     export EDITOR="nvim"
-    export SHELL="${pkgs.bash}/bin/bash"
     '';
   };
 }
