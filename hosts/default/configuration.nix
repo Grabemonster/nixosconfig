@@ -144,6 +144,7 @@
   users.users.${user} = {
     isNormalUser = true;
     description = "${user}";
+    shell = "${pkgs.zsh}/bin/zsh";
     extraGroups = [ "networkmanager" "wheel" "dialout" "${user}"];
   };
 
