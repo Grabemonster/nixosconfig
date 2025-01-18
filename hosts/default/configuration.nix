@@ -199,6 +199,7 @@
   environment.variables = {
     MOZ_ENABLE_WAYLAND = "1";
   };
+  environment.pathsToLink = ["/share/zsh"];
   # programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
