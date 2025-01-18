@@ -12,7 +12,7 @@
         terminal = "screen-256color";
         resizeAmount = 20;
         tmuxinator.enable = true;
-        shell = "\${pkgs.zsh}/bin/zsh";
+
 
         plugins = with pkgs; [
             tmuxPlugins.sensible
