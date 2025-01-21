@@ -55,6 +55,32 @@
         desc = "Delete buffer";
       };
     }
+
+    {
+        mode = "v";
+        key = "<S-C-c>";
+        action = "\"+y";
+        options = {
+            desc = "wl-copy";
+        };
+    }
+
+    {
+        mode = "i";
+        key = "<S-C-v>";
+        action = "<C-r>+";
+        options = {
+            desc = "wl-copy";
+        };
+    }
+    {
+        mode = "v";
+        key = "<S-C-v>";
+        action = "c<ESC>\"+p";
+        options = {
+            desc = "replace with clipbord";
+        };
+    }
   ];
 };
 }

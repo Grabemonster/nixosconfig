@@ -10,5 +10,6 @@
         };
         font = "JETBRAINS MONO";
         theme = ./styleshets/rofi.rasi;
+        terminal = "ghostty";
     };
 }

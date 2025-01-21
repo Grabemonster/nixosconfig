@@ -6,6 +6,13 @@ programs.nixvim= {
     number = true;
     relativenumber = true;
 
+    clipboard = {
+        providers = {
+            wl-copy.enable = true;
+        };
+        register = "unnamedplus";
+    }; 
+
     tabstop = 4;
     shiftwidth = 4;
     softtabstop = 4;
