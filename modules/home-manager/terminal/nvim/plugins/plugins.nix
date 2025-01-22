@@ -6,6 +6,7 @@ imports = [
   ./treesitter.nix
   ./undotree.nix
   ./yazi.nix
+  ./markdown.nix
 ];
 programs.nixvim = { 
     plugins = { 
