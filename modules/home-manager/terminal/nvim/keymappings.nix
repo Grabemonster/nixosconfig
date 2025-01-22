@@ -62,6 +62,8 @@
         action = "\"+y";
         options = {
             desc = "wl-copy";
+            noremap = true;
+            silent = true;
         };
     }
 
@@ -71,6 +73,9 @@
         action = "<C-r>+";
         options = {
             desc = "wl-copy";
+            noremap = true;
+            silent = true;
+
         };
     }
     {
@@ -79,8 +84,43 @@
         action = "c<ESC>\"+p";
         options = {
             desc = "replace with clipbord";
+            noremap = true;
+            silent = true;
         };
     }
+    {
+        mode = "v";
+        key = "<C-c>";
+        action = "\"+y";
+        options = {
+            desc = "wl-copy";
+            noremap = true;
+            silent = true;
+        };
+    }
+
+    {
+        mode = "i";
+        key = "<C-v>";
+        action = "<C-r>+";
+        options = {
+            desc = "wl-copy";
+            noremap = true;
+            silent = true;
+
+        };
+    }
+    {
+        mode = "v";
+        key = "<C-v>";
+        action = "c<ESC>\"+p";
+        options = {
+            desc = "replace with clipbord";
+            noremap = true;
+            silent = true;
+        };
+    }
+
   ];
 };
 }
