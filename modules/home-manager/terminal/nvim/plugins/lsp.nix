@@ -18,6 +18,7 @@
         nil_ls.enable = true; # Nix
         bashls.enable = true; # Bash
         yamlls.enable = true; # YAML
+        asm_lsp.enable = true;
         ltex = {
           enable = true;
           settings = {
@@ -43,6 +44,10 @@
           installCargo = true;
         };
       };
+    };
+    plantuml-syntax = {
+        enable = true;
+
     };
   };
 }

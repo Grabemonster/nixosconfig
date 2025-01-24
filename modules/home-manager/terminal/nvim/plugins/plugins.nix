@@ -7,9 +7,19 @@ imports = [
   ./undotree.nix
   ./yazi.nix
   ./markdown.nix
+  ./onedark.nix
 ];
 programs.nixvim = { 
-    plugins = { 
+    plugins = {
+        copilot-vim = {
+            enable = true;
+            settings = {
+                workspace_folders = [
+                "~/sandbox/gs_script/"
+                "~/.config/nixos/"
+                ];
+            };
+        };
 
 # Icons 
         web-devicons.enable = true;
