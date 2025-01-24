@@ -13,7 +13,7 @@
     # Bufferline bindings
     {
       mode = "n";
-      key = "<Tab>";
+      key = "<C-Tab>";
       action = "<cmd>BufferLineCycleNext<cr>";
       options = {
         desc = "Cycle to next buffer";
