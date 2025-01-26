@@ -11,6 +11,13 @@ imports = [
 ];
 programs.nixvim = { 
     plugins = {
+        dap = {
+            enable = true;
+            extensions = {
+                dap-python.enable = true;
+            };
+        };
+
         copilot-vim = {
             enable = true;
             settings = {

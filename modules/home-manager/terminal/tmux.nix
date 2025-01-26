@@ -16,7 +16,7 @@
 
         plugins = with pkgs; [
             tmuxPlugins.sensible
-            tmuxPlugins.yank 
+            tmuxPlugins.yank
         ];
         sensibleOnTop = true;
 
