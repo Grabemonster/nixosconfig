@@ -13,6 +13,12 @@ programs.nixvim = {
     plugins = {
         dap = {
             enable = true;
+            adapters = {
+                executables = {
+                    command = "gdb";
+                    name = "cppdbg";
+                };
+            };
             extensions = {
                 dap-python.enable = true;
             };
