@@ -30,6 +30,7 @@ programs.nixvim = {
                 workspace_folders = [
                 "~/sandbox/gs_script/"
                 "~/.config/nixos/"
+                "~/sandbox/webglMath/"
                 ];
             };
         };

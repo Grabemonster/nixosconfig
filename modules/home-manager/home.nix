@@ -52,7 +52,7 @@
         arduino-ide
         python3
         python312Packages.pyserial
-        jetbrains-toolbox#
+        jetbrains-toolbox
         plantuml
     ];
 
