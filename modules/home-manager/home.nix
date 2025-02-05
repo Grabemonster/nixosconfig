@@ -54,6 +54,7 @@
         python312Packages.pyserial
         jetbrains-toolbox
         plantuml
+        kdePackages.kdenlive
     ];
 
 # This value determines the Home Manager release that your configuration is
