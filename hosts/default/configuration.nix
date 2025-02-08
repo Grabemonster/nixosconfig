@@ -199,6 +199,8 @@
   };
   environment.variables = {
     MOZ_ENABLE_WAYLAND = "1";
+    _JAVA_OPTIONS="-Dsun.java2d.uiScale=1 -Dawt.useSystemAAFontSettings=on";
+    WAYLAND_DISPLAY="wayland-0";
   };
   environment.pathsToLink = ["/share/zsh"];
   # programs need SUID wrappers, can be configured further or are
