@@ -57,6 +57,13 @@
         kdePackages.kdenlive
     ];
 
+    home.sessionVariables = {
+        _JAVA_AWT_WM_NONREPARENTING = "1";
+        __GLX_VENDOR_LIBRARY_NAME = "nvidia"; # Falls du eine NVIDIA-GPU hast
+        WLR_NO_HARDWARE_CURSORS = "1"; # Falls du NVIDIA benutzt 
+        _JAVA_OPTIONS = "-Dsun.java2d.uiScale=1 -Dawt.useSystemAAFontSettings=on";
+    };
+
 # This value determines the Home Manager release that your configuration is
 # compatible with. This helps avoid breakage when a new Home Manager release
 # introduces backwards incompatible changes.
