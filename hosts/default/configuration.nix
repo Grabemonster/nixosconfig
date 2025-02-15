@@ -30,6 +30,9 @@
         "rw"
     ];
   };
+  swapDevices = [
+    { device = "/dev/disk/by-uuid/e406c7ec-bdb9-4117-8e38-f07235d25fd9"; }
+  ];
 
   networking.hostName = "nixos"; # Define your hostname.
 
