@@ -10,6 +10,7 @@
    "$mod" = "SUPER";
 
       bind = [
+        "$mod, N, exec, rofi -show calc"
         "$mod, Q, exec, $terminal"
         "$mod, E, exec, $fileManager"
         "$mod, C, killactive"
