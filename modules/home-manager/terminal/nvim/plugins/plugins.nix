@@ -11,29 +11,7 @@ imports = [
 ];
 programs.nixvim = { 
     plugins = {
-        dap = {
-            enable = true;
-            adapters = {
-                executables = {
-                    command = "gdb";
-                    name = "cppdbg";
-                };
-            };
-            extensions = {
-                dap-python.enable = true;
-            };
-        };
-
-        copilot-vim = {
-            enable = true;
-            settings = {
-                workspace_folders = [
-                "~/sandbox/gs_script/"
-                "~/.config/nixos/"
-                "~/sandbox/webglMath/"
-                ];
-            };
-        };
+        
 
 # Icons 
         web-devicons.enable = true;

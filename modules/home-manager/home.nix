@@ -1,4 +1,4 @@
-{user,system, ghostty, config, pkgs, ... }:
+{user, pkgs, ... }:
 {
     imports = 
         [
@@ -55,9 +55,6 @@
         jetbrains-toolbox
         plantuml
         kdePackages.kdenlive
-        vim
-        wget
-        gnome-terminal
         wallust
         wl-clipboard
         fzf
