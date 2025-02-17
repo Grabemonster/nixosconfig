@@ -55,6 +55,19 @@
         jetbrains-toolbox
         plantuml
         kdePackages.kdenlive
+        vim
+        wget
+        gnome-terminal
+        wallust
+        wl-clipboard
+        fzf
+        libreoffice-qt
+        hunspell
+        hunspellDicts.de_DE
+        hunspellDicts.en_US
+        wireplumber
+        psmisc
+        htop
     ];
 
     home.sessionVariables = {

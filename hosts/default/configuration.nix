@@ -174,17 +174,6 @@
     vim 
     wget
     gnome-terminal
-    wallust
-    nodejs_22
-    psmisc
-    wl-clipboard
-    fzf
-    libreoffice-qt
-    hunspell
-    hunspellDicts.de_DE
-    hunspellDicts.en_US
-    wireplumber
-    
   ];
 
   fonts.packages = with pkgs; [ 
