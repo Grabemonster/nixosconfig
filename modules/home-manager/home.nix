@@ -65,6 +65,7 @@
         wireplumber
         psmisc
         htop
+        weylus
     ];
 
     home.sessionVariables = {
