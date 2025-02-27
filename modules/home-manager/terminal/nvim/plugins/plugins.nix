@@ -5,7 +5,7 @@ imports = [
   ./cmp.nix
   ./treesitter.nix
   ./undotree.nix
-  ./yazi.nix
+  #./yazi.nix
   ./markdown.nix
   ./onedark.nix
 ];
