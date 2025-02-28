@@ -7,7 +7,7 @@
         syntaxHighlighting.enable = true;
         shellAliases = {
             nixrebuild = "bash ~/.config/scripts/rebuild";
-            intellij = "echo ${pkgs.jetbrains.idea-community-bin}";
+            jetbrainsIdea = "${pkgs.jetbrains.idea-community-bin}/bin/idea-community";
         };
         history = {
             append = true;
