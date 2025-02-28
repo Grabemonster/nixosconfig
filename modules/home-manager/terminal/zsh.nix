@@ -1,4 +1,4 @@
-{lib, ...}:
+{lib,pkgs, ...}:
 {
     programs.zsh = {
         enable = true;
@@ -7,6 +7,7 @@
         syntaxHighlighting.enable = true;
         shellAliases = {
             nixrebuild = "bash ~/.config/scripts/rebuild";
+            intellij = "echo ${pkgs.jetbrains.idea-community-bin}";
         };
         history = {
             append = true;
