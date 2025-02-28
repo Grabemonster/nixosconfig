@@ -52,8 +52,6 @@
         arduino-ide
         python3
         python312Packages.pyserial
-        jetbrains.phpstorm
-        jetbrains.idea-community-bin
         plantuml
         kdePackages.kdenlive
         wallust
