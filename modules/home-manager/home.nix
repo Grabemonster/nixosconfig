@@ -65,6 +65,7 @@
         psmisc
         htop
         weylus
+        openmw
     ];
 
     home.sessionVariables = {
