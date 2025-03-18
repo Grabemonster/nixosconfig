@@ -11,6 +11,7 @@
     ./hyprland/hyprlock.nix
     ./hyprland/hypridle.nix
     ./hyprland/cange_workspace.nix
+    ./hyprland/swaylock.nix
   ];
 
   wayland.windowManager.hyprland = {
