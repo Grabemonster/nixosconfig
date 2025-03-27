@@ -43,7 +43,8 @@
     };
 
     home.file.".config/scripts/tmuxinatorselect".text = ''
-        selection=$(tmuxinator list | sed -n '2p' | tr ' ' '\n' | grep -v '^$' | rofi -sort-order=default -dmenu | xargs)
+        #!${pkgs.bash}/bin/bash
+        selection=$(tmuxinator list | tail -n +2 | tr ' ' '\n' | grep -v '^$' | rofi -sort-order=default -dmenu)
         if [ -n "$selection" ]; then
             ghostty -e "tmuxinator start $selection; exec bash"
         else
