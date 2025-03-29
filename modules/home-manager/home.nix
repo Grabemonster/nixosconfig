@@ -65,7 +65,6 @@
         psmisc
         htop
         weylus
-        hplip
     ];
 
     home.sessionVariables = {
