@@ -132,13 +132,6 @@
           userServices = true;
       };
   };
-  services.printing = {
-      listenAddresses = [ "*:631" ];
-      allowFrom = [ "all" ];
-      browsing = true;
-      defaultShared = true;
-      openFirewall = true;
-  };
   
 
 
@@ -194,6 +187,7 @@
     vim 
     wget
     gnome-terminal
+    pkgs.hplip
   ];
 
   fonts.packages = with pkgs; [ 
