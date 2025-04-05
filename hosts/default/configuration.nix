@@ -136,7 +136,12 @@
 
 
   # Enable sound with pipewire.
-  services.pulseaudio.enable = false;
+  services.pulseaudio = {
+      enable = false;
+      extraConfig = ''
+        load-module module-null-sink sink_name=VirtualSink sink_description="Virtueller Audio-Ausgang"
+      '';
+  };
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
