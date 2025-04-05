@@ -21,9 +21,15 @@ in
         ${pw-link} "unSaveAudio:monitor_FR" "CombinedOutput:playback_FR"
 
 
-        ${pactl} set-default-sink customu_SA
-        for sink in $(${pactl} list short sinks | grep -v custom | awk '{print $2}'); do
-            pactl set-sink-input-sink $sink custom_CO
+        
+# Hole alle Ausgabegeräte (außer dem custom Sink)
+        devices=$(pw-cli ls | grep node.name | grep -v custom | grep output | awk '{print $3}' | tr -d '"')
+
+# Verbinde jedes Gerät mit dem virtuellen Sink
+        for device in $devices; do
+            echo "Verbinde Gerät $device mit custom_CO"
+            pw-link "$device" custom_CO
         done
+
     '';
 }
