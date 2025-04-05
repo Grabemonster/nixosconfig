@@ -189,6 +189,7 @@
     gnome-terminal
     pkgs.hplip
     helvum
+    pulseaudio
   ];
 
   fonts.packages = with pkgs; [ 
