@@ -24,24 +24,9 @@ in
 TARGET_L="unSaveAudio:playback_FL"
 TARGET_R="unSaveAudio:playback_FR"
 
-# Alle Output-Ports durchsuchen (z.B. von Programmen)
-${pw-link} -o | grep -E "output_(FL|FR)" | while read port; do
-  # Prüfe, ob bereits mit SaveAudio verbunden
-  if ! ${pw-link} | grep -q "SaveAudio.*-> $port"; then
-    # Bestimme, ob FL oder FR und verbinde entsprechend
-    if [[ "$port" == *output_FL ]]; then
-      echo "🔗 Verbinde $port → $TARGET_L"
-      ${pw-link} "$port" "$TARGET_L"
-    elif [[ "$port" == *output_FR ]]; then
-      echo "🔗 Verbinde $port → $TARGET_R"
-      ${pw-link} "$port" "$TARGET_R"
-    fi
-  else
-    echo "⏭️  Überspringe $port (bereits mit SaveAudio verbunden)"
-  fi
-done
-id = $(${pactl} list sinks )
-echo "Die ID ist: $id"
+
+${pactl} list sinks
+#echo "Die ID ist: $id"
 # ${pactl} set-default-sink $id
     '';
 }
