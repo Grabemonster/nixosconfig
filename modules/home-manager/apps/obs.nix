@@ -41,6 +41,6 @@ ${pw-link} -o | grep -E "output_(FL|FR)" | while read port; do
   fi
 done
 id = $(pactl set-default-sink)
-pactl set-default-sink = id
+pactl set-default-sink $id
     '';
 }
