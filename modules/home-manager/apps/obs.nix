@@ -25,7 +25,7 @@ in
         if ! ${pw-link} | grep -q "SaveAudio.*-> $input"; then
 # Falls nicht, verbinde ihn mit unSaveAudio
             echo "Verbinde: unSaveAudio -> $input"
-                ${pw-link} "unSaveAudio:monitor_FL" "$input"
+                ${pw-link} "unSaveAudio:playback_FL" "$input"
         else
             echo "Übersprungen (bereits mit SaveAudio verbunden): $input"
                 fi
