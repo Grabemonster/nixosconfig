@@ -188,6 +188,7 @@
     wget
     gnome-terminal
     pkgs.hplip
+    helvum
   ];
 
   fonts.packages = with pkgs; [ 
