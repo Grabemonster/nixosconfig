@@ -40,8 +40,8 @@ ${pw-link} -o | grep -E "output_(FL|FR)" | while read port; do
     echo "⏭️  Überspringe $port (bereits mit SaveAudio verbunden)"
   fi
 done
-id = $(pactl list sinks | tr '\n' ' ' | sed $'s/Sink/\\n/g' | grep unSaveAudio | awk '{print $1}' | tr -d '#')
+id = $(${pactl} list sinks | tr '\n' ' ' | sed $'s/Sink/\\n/g' | grep unSaveAudio | awk '{print $1}')
 echo "Die ID ist: $id"
-pactl set-default-sink $id
+# ${pactl} set-default-sink $id
     '';
 }
