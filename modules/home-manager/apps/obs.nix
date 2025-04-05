@@ -26,6 +26,6 @@ TARGET_R="unSaveAudio:playback_FR"
 
 
 ${pactl} set-default-sink customuSA
-${pactl} set-default-sink customCO
+${pactl} set-default-source customCO
     '';
 }
