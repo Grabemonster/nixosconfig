@@ -20,12 +20,12 @@ in
         ${pw-link} "unSaveAudio:monitor_FL" "CombinedOutput:playback_FL"
         ${pw-link} "unSaveAudio:monitor_FR" "CombinedOutput:playback_FR"
 
-        p=w-link -i | while read input; do
+        ${pw-link} -i | while read input; do
 # Prüfe, ob dieser Port schon mit SaveAudio verbunden ist
-        if ! pw-link | grep -q "SaveAudio.*-> $input"; then
+        if ! ${pw-link} | grep -q "SaveAudio.*-> $input"; then
 # Falls nicht, verbinde ihn mit unSaveAudio
             echo "Verbinde: unSaveAudio -> $input"
-                pw-link "unSaveAudio:monitor_FL" "$input"
+                ${pw-link} "unSaveAudio:monitor_FL" "$input"
         else
             echo "Übersprungen (bereits mit SaveAudio verbunden): $input"
                 fi
