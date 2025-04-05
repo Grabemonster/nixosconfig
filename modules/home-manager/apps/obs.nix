@@ -10,9 +10,9 @@ in
 
     home.file.".config/scripts/audio.sh".text = ''
         ${pkgs.pipewire}/bin/pw-cli ls | tr '\n' ' ' | sed $'s/\\tid/\\n/g' | grep custom | awk '{print $1}' | tr ',' ' ' | while read id; do pw-cli destroy "$id"; done
-        ${pkgs.pulseaudio}/bin/pactl load-module module-null-sink sink_name=customSA sink_properties=device.description=\"SaveAudio\"
-        ${pkgs.pulseaudio}/bin/pactl load-module module-null-sink sink_name=customuSA sink_properties=device.description=\"unSaveAudio\"
-        ${pkgs.pulseaudio}/bin/pactl load-module module-null-sink sink_name=customCO sink_properties=device.description=\"CombinedOutput\"
+        ${pkgs.pulseaudio}/bin/pactl load-module module-null-sink sink_name=custom_SA sink_properties=device.description=\"SaveAudio\"
+        ${pkgs.pulseaudio}/bin/pactl load-module module-null-sink sink_name=custom_uSA sink_properties=device.description=\"unSaveAudio\"
+        ${pkgs.pulseaudio}/bin/pactl load-module module-null-sink sink_name=custom_CO sink_properties=device.description=\"CombinedOutput\"
 
         ${pw-link} "SaveAudio:monitor_FL" "CombinedOutput:playback_FL"
         ${pw-link} "SaveAudio:monitor_FR" "CombinedOutput:playback_FR"
@@ -20,12 +20,10 @@ in
         ${pw-link} "unSaveAudio:monitor_FL" "CombinedOutput:playback_FL"
         ${pw-link} "unSaveAudio:monitor_FR" "CombinedOutput:playback_FR"
 
-        # Ziel-Ports
-TARGET_L="unSaveAudio:playback_FL"
-TARGET_R="unSaveAudio:playback_FR"
 
-
-${pactl} set-default-sink customuSA
-${pactl} set-default-source customCO
+        ${pactl} set-default-sink customu_SA
+        for sink in $(${pactl} list short sinks | grep -v custom | awk '{print $2}'); do
+            pactl set-sink-input-sink $sink custom_CO
+        done
     '';
 }
