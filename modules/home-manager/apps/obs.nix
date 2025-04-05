@@ -20,15 +20,27 @@ in
         ${pw-link} "unSaveAudio:monitor_FL" "CombinedOutput:playback_FL"
         ${pw-link} "unSaveAudio:monitor_FR" "CombinedOutput:playback_FR"
 
-        ${pw-link} -i | while read input; do
-# Prüfe, ob dieser Port schon mit SaveAudio verbunden ist
-        if ! ${pw-link} | grep -q "SaveAudio.*-> $input"; then
-# Falls nicht, verbinde ihn mit unSaveAudio
-            echo "Verbinde: unSaveAudio -> $input"
-                ${pw-link} "unSaveAudio:playback_FL" "$input"
-        else
-            echo "Übersprungen (bereits mit SaveAudio verbunden): $input"
-                fi
-                done
+        # Ziel-Ports
+TARGET_L="unSaveAudio:playback_FL"
+TARGET_R="unSaveAudio:playback_FR"
+
+# Alle Output-Ports durchsuchen (z.B. von Programmen)
+${pw-link} -o | grep -E "output_(FL|FR)" | while read port; do
+  # Prüfe, ob bereits mit SaveAudio verbunden
+  if ! ${pw-link} | grep -q "SaveAudio.*-> $port"; then
+    # Bestimme, ob FL oder FR und verbinde entsprechend
+    if [[ "$port" == *output_FL ]]; then
+      echo "🔗 Verbinde $port → $TARGET_L"
+      ${pw-link} "$port" "$TARGET_L"
+    elif [[ "$port" == *output_FR ]]; then
+      echo "🔗 Verbinde $port → $TARGET_R"
+      ${pw-link} "$port" "$TARGET_R"
+    fi
+  else
+    echo "⏭️  Überspringe $port (bereits mit SaveAudio verbunden)"
+  fi
+done
+id = $(pactl set-default-sink)
+pactl set-default-sink = id
     '';
 }
