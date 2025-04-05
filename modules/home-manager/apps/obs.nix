@@ -29,7 +29,7 @@ in
 # Verbinde jedes Gerät mit dem virtuellen Sink
         for device in $devices; do
             echo "Verbinde Gerät $device mit custom_CO"
-            pw-link "custom:CO" "$device" 
+            pw-link "custom_CO" "$device" 
         done
 
     '';
