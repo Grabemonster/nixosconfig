@@ -1,6 +1,7 @@
 {pkgs, ...}:
 let
 pactl = ''${pkgs.pulseaudio}/bin/pactl'';
+pw-link = ''${pkgs.pipewire}/bin/pw-link'';
 in
 {
     programs.obs-studio = {
@@ -12,5 +13,11 @@ in
         ${pkgs.pulseaudio}/bin/pactl load-module module-null-sink sink_name=custom sink_properties=device.description=\"SaveAudio\"
         ${pkgs.pulseaudio}/bin/pactl load-module module-null-sink sink_name=custom sink_properties=device.description=\"unSaveAudio\"
         ${pkgs.pulseaudio}/bin/pactl load-module module-null-sink sink_name=custom sink_properties=device.description=\"CombinedOutput\"
+
+        ${pw-link} "SaveAudio:monitor_FL" "CombinedOutput:playback_FL"
+        ${pw-link} "SaveAudio:monitor_FR" "CombinedOutput:playback_FR"
+
+        ${pw-link} "unSaveAudio:monitor_FL" "CombinedOutput:playback_FL"
+        ${pw-link} "unSaveAudio:monitor_FR" "CombinedOutput:playback_FR"
     '';
 }
