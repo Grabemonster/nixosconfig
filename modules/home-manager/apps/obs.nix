@@ -24,13 +24,12 @@ in
 
         
 # Hole alle Ausgabegeräte (außer dem custom Sink)
-        devices=$(pw-cli ls| tr '\n' ' '| sed $'s/\\tid/\\n\\n&/g' | grep -v custom | grep output | tr '\t' '\n' | grep node.description | awk -F '"' '{print $2}')
+        devices=$(pw-cli ls| tr '\n' ' '| sed $'s/\\tid/\\n\\n&/g' | grep -v custom | grep output | tr '\t' '\n' | grep node.name | awk -F '"' '{print $2}')
 
 # Verbinde jedes Gerät mit dem virtuellen Sink
         for device in $devices; do
             echo "Verbinde Gerät $device mit custom_CO"
             pw-link "custom:CO" "$device" 
-            pw-link "custom_CO" "$device"
         done
 
     '';
