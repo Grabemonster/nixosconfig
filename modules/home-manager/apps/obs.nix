@@ -25,8 +25,8 @@ TARGET_L="unSaveAudio:playback_FL"
 TARGET_R="unSaveAudio:playback_FR"
 
 
-${pactl} list sinks | tr '\n' ' ' | sed $'s/Sink/\\n/g' | grep unSaveAudio | awk '{print $1}' | tr -d '#'
-#echo "Die ID ist: $id"
+id=$(${pactl} list sinks | tr '\n' ' ' | sed $'s/Sink/\\n/g' | grep unSaveAudio | awk '{print $1}' | tr -d '#')
+echo "Die ID ist: $id"
 # ${pactl} set-default-sink $id
     '';
 }
