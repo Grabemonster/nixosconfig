@@ -28,8 +28,8 @@ in
 # Verbinde jedes Gerät mit dem virtuellen Sink
         for device in $devices; do
             echo "Verbinde Gerät $device mit custom_CO"
-            pw-link "$device:playback_FR" CombinedOutput:monitor_FR
-            pw-link "$device:playback_FL" CombinedOutput:monitor_FL
+            pw-link "$device:playback_FR" "CombinedOutput:monitor_FR"
+            pw-link "$device:playback_FL" "CombinedOutput:monitor_FL"
         done
 
     '';
