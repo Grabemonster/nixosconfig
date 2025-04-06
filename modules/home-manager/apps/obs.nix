@@ -15,7 +15,7 @@ in
             After = [ "default.target" ];
         };
         Service = {
-            ExecStart = "${config.home.homeDirectory}/.config/scripts/audio.sh";
+            ExecStart = "bash ${config.home.homeDirectory}/.config/scripts/audio.sh";
             Type = "oneshot";
         };
         Install = {
