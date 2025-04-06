@@ -1,4 +1,4 @@
-{pkgs, lib, config,  ...}:
+{pkgs, ...}:
 let
 pactl = ''${pkgs.pulseaudio}/bin/pactl'';
 pw-link = ''${pkgs.pipewire}/bin/pw-link'';
@@ -15,10 +15,7 @@ audioStartupScript = pkgs.writeShellScriptBin "audio-startup" ''
 
         ${pw-link} "unSaveAudio:monitor_FL" "CombinedOutput:playback_FL"
         ${pw-link} "unSaveAudio:monitor_FR" "CombinedOutput:playback_FR"
-        ${pactl} set-default-sink customuSA
-
-
-        
+        ${pactl} set-default-sink customuSA 
 # Hole alle Ausgabegeräte (außer dem custom Sink)
         devices=$(${pw-cli} ls| tr '\n' ' '| sed $'s/\\tid/\\n\\n&/g' | grep -v custom | grep output | tr '\t' '\n' | grep node.name | awk -F '"' '{print $2}')
 
