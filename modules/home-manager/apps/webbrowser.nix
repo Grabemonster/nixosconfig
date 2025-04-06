@@ -12,14 +12,6 @@
         bitwarden
         ublock-origin
       ];
-      bookmarks = [
-        {
-          name = "home-manager";
-          tags = ["nix" "home" "manager"];
-          keyword = "home-manager";
-          url = "https://nix-community.github.io/home-manager/options.xhtml";
-        }
-      ];
       settings = {
         "browser.newtabpage.pinned" = [{
           title="home-manager";
