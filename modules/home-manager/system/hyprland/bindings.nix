@@ -54,6 +54,9 @@
 
         #open Mail
         ",XF86Mail, exec, thunderbird"
+
+        #screenshot
+        ",Print, exec, bash  ~/.config/scripts/screenshot.sh"
       ]
       ++ (
         builtins.concatLists (builtins.genList (i:

@@ -12,6 +12,7 @@
     ./hyprland/hypridle.nix
     ./hyprland/cange_workspace.nix
     ./hyprland/swaylock.nix
+    ./hyprland/screenshot.nix
   ];
 
   wayland.windowManager.hyprland = {
