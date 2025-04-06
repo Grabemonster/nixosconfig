@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{pkgs, user,  ...}:
 let
 pactl = ''${pkgs.pulseaudio}/bin/pactl'';
 pw-link = ''${pkgs.pipewire}/bin/pw-link'';
@@ -8,6 +8,19 @@ in
     programs.obs-studio = {
         enable = true;
     };
+
+    home.file.".config/systemd/user/audio-startup.service".text = ''
+[Unit]
+Description=My User Startup Script
+After=default.target
+
+[Service]
+ExecStart=/home/${user}/.config/scripts/audio.sh
+Type=oneshot
+
+[Install]
+WantedBy=default.target        
+    '';
 
     home.file.".config/scripts/audio.sh".text = ''
         ${pw-cli} ls | tr '\n' ' ' | sed $'s/\\tid/\\n/g' | grep custom | awk '{print $1}' | tr ',' ' ' | while read id; do pw-cli destroy "$id"; done
