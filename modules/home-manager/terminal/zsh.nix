@@ -6,8 +6,7 @@
         enableVteIntegration = true;
         syntaxHighlighting.enable = true;
         shellAliases = {
-            nixrebuild = "bash ~/.config/scripts/rebuild";
-            jetbrainsIdea = "${pkgs.jetbrains.idea-community-bin}/bin/idea-community";
+            nixrebuild = "bash ~/.config/scripts/rebuild"; 
         };
         history = {
             append = true;
