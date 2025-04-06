@@ -40,7 +40,7 @@ in
             After = [ "default.target" ];
         };
         Service = {
-            ExecStart = "${config.home.homeDirectory}/.config/scripts/audio.sh";
+            ExecStart = "${audioStartupScript}/bin/audio-startup";
             Type = "oneshot";
         };
         Install = {
