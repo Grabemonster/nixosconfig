@@ -15,7 +15,7 @@ in
             After = [ "default.target" ];
         };
         Service = {
-            ExecStart = "bash ${config.home.homeDirectory}/.config/scripts/audio.sh";
+            ExecStart = "${config.home.homeDirectory}/.config/scripts/audio.sh";
             Type = "oneshot";
         };
         Install = {
@@ -24,6 +24,7 @@ in
     }; 
 
     home.file.".config/scripts/audio.sh".text = ''
+        #!${pkgs.bash}/bin/bash
         ${pw-cli} ls | tr '\n' ' ' | sed $'s/\\tid/\\n/g' | grep custom | awk '{print $1}' | tr ',' ' ' | while read id; do pw-cli destroy "$id"; done
         ${pactl} load-module module-null-sink sink_name=custom_SA sink_properties=device.description=\"SaveAudio\"
         ${pactl} load-module module-null-sink sink_name=custom_uSA sink_properties=device.description=\"unSaveAudio\"
