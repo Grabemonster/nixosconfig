@@ -1,30 +1,10 @@
-{pkgs, user, config,  ...}:
+{pkgs, lib, config,  ...}:
 let
 pactl = ''${pkgs.pulseaudio}/bin/pactl'';
 pw-link = ''${pkgs.pipewire}/bin/pw-link'';
 pw-cli = ''${pkgs.pipewire}/bin/pw-cli'';
-in
-{
-    programs.obs-studio = {
-        enable = true;
-    };
-
-    systemd.user.services.audioStartup = {
-        Unit = {
-            Description = "Audio Startup";
-            After = [ "default.target" ];
-        };
-        Service = {
-            ExecStart = "${config.home.homeDirectory}/.config/scripts/audio.sh";
-            Type = "oneshot";
-        };
-        Install = {
-            WantedBy = [ "default.target" ];
-        };
-    }; 
-
-    home.file.".config/scripts/audio.sh".text = ''
-        #!${pkgs.bash}/bin/bash
+audioStartupScript = pkgs.writeShellScriptBin "audio-startup" ''
+    #!${pkgs.bash}/bin/bash
         ${pw-cli} ls | tr '\n' ' ' | sed $'s/\\tid/\\n/g' | grep custom | awk '{print $1}' | tr ',' ' ' | while read id; do pw-cli destroy "$id"; done
         ${pactl} load-module module-null-sink sink_name=custom_SA sink_properties=device.description=\"SaveAudio\"
         ${pactl} load-module module-null-sink sink_name=custom_uSA sink_properties=device.description=\"unSaveAudio\"
@@ -47,6 +27,24 @@ in
             echo "Verbinde Gerät $device mit custom_CO"
             ${pw-link} "custom_CO" "$device" 
         done
+'';
+in
+{
+    programs.obs-studio = {
+        enable = true;
+    };
 
-    '';
+    systemd.user.services.audioStartup = {
+        Unit = {
+            Description = "Audio Startup";
+            After = [ "default.target" ];
+        };
+        Service = {
+            ExecStart = "${config.home.homeDirectory}/.config/scripts/audio.sh";
+            Type = "oneshot";
+        };
+        Install = {
+            WantedBy = [ "default.target" ];
+        };
+    }; 
 }
