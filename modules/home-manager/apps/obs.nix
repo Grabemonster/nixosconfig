@@ -27,9 +27,7 @@ audioStartupScript = pkgs.writeShellScriptBin "audio-startup" ''
 '';
 in
 {
-    programs.obs-studio = {
-        enable = true;
-    };
+
 
     systemd.user.services.audioStartup = {
         Unit = {
