@@ -15,4 +15,8 @@ wayland.windowManager.hyprland.settings = {
     "layout" = "dwindle";
   };
 };
+
+home.file.".config/hypr/xdph.conf".text = ''
+    allow_token_by_default = true
+'';
 }
