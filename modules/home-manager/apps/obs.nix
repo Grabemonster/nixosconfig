@@ -29,6 +29,7 @@ in
 {
     programs.obs-studio = {
         enable = true;
+        plugins = [ pkgs.obs-studio-plugins.wlrobs ];
     };
 
     systemd.user.services.audioStartup = {
