@@ -50,6 +50,7 @@ in{
     systemd.user.services.device-linker = {
         Unit = {
             Description = "Verbindet PipeWire Geräte nach dem Login";
+            After = ["audioStartup.service"];
         };
         Service = {
             ExecStart = ''${updateOutputDevices}/bin/device-update'';
