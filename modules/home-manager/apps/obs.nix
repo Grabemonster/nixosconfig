@@ -21,7 +21,7 @@ audioStartupScript = pkgs.writeShellScriptBin "audio-startup" ''
 updateOutputDevices = pkgs.writeShellScriptBin "device-update" ''
     devices=$(${pw-cli} ls| tr '\n' ' '| sed $'s/\\tid/\\n\\n&/g' | grep -v custom | grep output | tr '\t' '\n' | grep node.name | awk -F '"' '{print $2}')
     for device in $devices; do
-        echo "Verbinde Gerät $device mit custom_CO"
+        echo "Verbinde Gerät $device mit custom_CO" >> /tmp/audio-debug.log 2>&1
         ${pw-link} "custom_CO" "$device" 
     done
 '';
@@ -31,7 +31,7 @@ autoLinkDaemon = pkgs.writeShellScriptBin "auto-link-daemon" ''
     #!${pkgs.bash}/bin/bash
     ${pkgs.pipewire}/bin/pw-mon | while read -r line; do
         if echo "$line" | grep -q "new device"; then
-            echo "Neues Gerät erkannt – Verbinde..." >> /tmp/audi-debug.log
+            echo "Neues Gerät erkannt – Verbinde..."
             ${updateOutputDevices}/bin/device-update
         fi
     done
