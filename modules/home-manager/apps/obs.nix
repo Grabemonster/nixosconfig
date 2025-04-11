@@ -56,7 +56,7 @@ in{
             Type = "oneshot";
         };
         Install = {
-            wantedBy = [ "default.target"];
+            WantedBy = [ "default.target"];
         };
   };
 }
