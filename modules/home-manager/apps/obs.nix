@@ -25,17 +25,6 @@ updateOutputDevices = pkgs.writeShellScriptBin "device-update" ''
         ${pw-link} "custom_CO" "$device" 
     done
 '';
-
-
-autoLinkDaemon = pkgs.writeShellScriptBin "auto-link-daemon" ''
-    #!${pkgs.bash}/bin/bash
-    ${pkgs.pipewire}/bin/pw-mon | while read -r line; do
-        if echo "$line" | grep -q "new device"; then
-            echo "Neues Gerät erkannt – Verbinde..."
-            ${updateOutputDevices}/bin/device-update
-        fi
-    done
-  '';
 in{
 
     
@@ -57,4 +46,17 @@ in{
             WantedBy = [ "default.target" ];
         };
     };
+
+    systemd.user.services.device-linker = {
+        Unit = {
+            Description = "Verbindet PipeWire Geräte nach dem Login";
+        };
+        Service = {
+            ExecStart = ''${updateOutputDevices}/bin/device-update'';
+            Type = "oneshot";
+        };
+        Install = {
+            wantedBy = [ "default.target"];
+        };
+  };
 }
