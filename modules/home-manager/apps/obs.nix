@@ -38,6 +38,10 @@ autoLinkDaemon = pkgs.writeShellScriptBin "auto-link-daemon" ''
   '';
 in{
 
+    
+    home.packages = [
+        updateOutputDevices
+    ];
 
     systemd.user.services.audioStartup = {
         Unit = {
@@ -53,18 +57,4 @@ in{
             WantedBy = [ "default.target" ];
         };
     };
-
-    systemd.user.services.audioAutoLink = {
-    Unit = {
-      Description = "Auto-link new PipeWire devices to CombinedOutput";
-      After = [ "pipewire.service" ];
-    };
-    Service = {
-      ExecStart = "${updateOutputDevices}/dev/device-update";
-      Restart = "always";
-    };
-    Install = {
-      WantedBy = [ "default.target" ];
-    };
-  };
 }
