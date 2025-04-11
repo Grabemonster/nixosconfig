@@ -31,7 +31,7 @@ autoLinkDaemon = pkgs.writeShellScriptBin "auto-link-daemon" ''
     #!${pkgs.bash}/bin/bash
     ${pkgs.pipewire}/bin/pw-mon | while read -r line; do
         if echo "$line" | grep -q "new device"; then
-            echo "Neues Gerät erkannt – Verbinde..."
+            echo "Neues Gerät erkannt – Verbinde..." >> /tmp/audi-debug.log
             ${updateOutputDevices}/bin/device-update
         fi
     done
