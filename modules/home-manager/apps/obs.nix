@@ -15,9 +15,7 @@ audioStartupScript = pkgs.writeShellScriptBin "audio-startup" ''
 
     ${pw-link} "unSaveAudio:monitor_FL" "CombinedOutput:playback_FL"
     ${pw-link} "unSaveAudio:monitor_FR" "CombinedOutput:playback_FR"
-    ${pactl} set-default-sink custom_uSA 
-
-    ${updateOutputDevices}/bin/device-update
+    ${pactl} set-default-sink custom_uSA  
 '';
 
 updateOutputDevices = pkgs.writeShellScriptBin "device-update" ''
@@ -62,7 +60,7 @@ in{
       After = [ "pipewire.service" ];
     };
     Service = {
-      ExecStart = "${autoLinkDaemon}/bin/auto-link-daemon";
+      ExecStart = "${updateOutputDevices}/dev/device-update";
       Restart = "always";
     };
     Install = {
