@@ -44,7 +44,8 @@ in{
     systemd.user.services.audioStartup = {
         Unit = {
             Description = "Audio Startup";
-            After = [ "default.target" ];
+            After = [ "pipewire.service" "pipewire-pulse.service" "default.target" ];
+            Wants = [ "pipewire.service" "pipewire-pulse.service" ];
         };
         Service = {
             ExecStart = "${audioStartupScript}/bin/audio-startup";
@@ -53,7 +54,7 @@ in{
         Install = {
             WantedBy = [ "default.target" ];
         };
-    }; 
+    };
 
     systemd.user.services.audioAutoLink = {
     Unit = {
