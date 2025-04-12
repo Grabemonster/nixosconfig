@@ -11,7 +11,7 @@
             ./system/clipboard.nix
             ./system/playerctl.nix
 
-            ./terminal/nvim/nixvim.nix
+            #./terminal/nvim/nixvim.nix
             ./terminal/git.nix
             ./terminal/bash.nix
             ./terminal/tmux.nix
