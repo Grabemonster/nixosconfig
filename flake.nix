@@ -24,6 +24,9 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    my-vim = {
+      url = "github:Grabemonster/my-nvim";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, nixvim, hyprpanel, nur, ... }@inputs: 

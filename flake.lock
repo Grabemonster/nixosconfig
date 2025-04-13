@@ -195,6 +195,44 @@
         "type": "github"
       }
     },
+    "home-manager_2": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1744498625,
+        "narHash": "sha256-pL52uCt9CUoTTmysGG91c2FeU7XUvpB7Cep6yon2vDk=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "db56335ca8942d86f2200664acdbd5b9212b26ad",
+        "type": "github"
+      },
+      "original": {
+        "id": "home-manager",
+        "type": "indirect"
+      }
+    },
+    "home-manger": {
+      "inputs": {
+        "nixpkgs": [
+          "my-vim",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1744498625,
+        "narHash": "sha256-pL52uCt9CUoTTmysGG91c2FeU7XUvpB7Cep6yon2vDk=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "db56335ca8942d86f2200664acdbd5b9212b26ad",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
     "hyprcursor": {
       "inputs": {
         "hyprlang": [
@@ -503,6 +541,26 @@
         "type": "github"
       }
     },
+    "my-vim": {
+      "inputs": {
+        "home-manager": "home-manager_2",
+        "home-manger": "home-manger",
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "lastModified": 1744556501,
+        "narHash": "sha256-wl2e4RxC5brAtYd4Gnp2yEoake+H8qwpHiv5i7f+jik=",
+        "owner": "Grabemonster",
+        "repo": "my-nvim",
+        "rev": "5b264791cae3bd14bb211357f1ad85566f59acfd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Grabemonster",
+        "repo": "my-nvim",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1743583204,
@@ -520,6 +578,38 @@
       }
     },
     "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1744098102,
+        "narHash": "sha256-tzCdyIJj9AjysC3OuKA+tMD/kDEDAF9mICPDU7ix0JA=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "c8cd81426f45942bb2906d5ed2fe21d2f19d95b7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1744232761,
+        "narHash": "sha256-gbl9hE39nQRpZaLjhWKmEu5ejtQsgI5TWYrIVVJn30U=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "f675531bc7e6657c10a18b565cfebd8aa9e24c14",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_4": {
       "locked": {
         "lastModified": 1743827369,
         "narHash": "sha256-rpqepOZ8Eo1zg+KJeWoq1HAOgoMCDloqv5r2EAa9TSA=",
@@ -630,7 +720,8 @@
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "hyprpanel": "hyprpanel",
-        "nixpkgs": "nixpkgs_2",
+        "my-vim": "my-vim",
+        "nixpkgs": "nixpkgs_4",
         "nixvim": "nixvim",
         "nur": "nur"
       }
