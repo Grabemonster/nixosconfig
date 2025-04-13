@@ -215,7 +215,7 @@
     "home-manger": {
       "inputs": {
         "nixpkgs": [
-          "my-vim",
+          "my-nvim",
           "nixpkgs"
         ]
       },
@@ -541,18 +541,18 @@
         "type": "github"
       }
     },
-    "my-vim": {
+    "my-nvim": {
       "inputs": {
         "home-manager": "home-manager_2",
         "home-manger": "home-manger",
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1744556501,
-        "narHash": "sha256-wl2e4RxC5brAtYd4Gnp2yEoake+H8qwpHiv5i7f+jik=",
+        "lastModified": 1744557343,
+        "narHash": "sha256-mBhTPEOspbZWOafjq1qTkWmYCg8K9nZDy7ieHDsPmKc=",
         "owner": "Grabemonster",
         "repo": "my-nvim",
-        "rev": "5b264791cae3bd14bb211357f1ad85566f59acfd",
+        "rev": "519d287db73e56f2550fa6b54e09a314bc11804e",
         "type": "github"
       },
       "original": {
@@ -720,7 +720,7 @@
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "hyprpanel": "hyprpanel",
-        "my-vim": "my-vim",
+        "my-nvim": "my-nvim",
         "nixpkgs": "nixpkgs_4",
         "nixvim": "nixvim",
         "nur": "nur"

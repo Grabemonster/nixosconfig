@@ -1,7 +1,8 @@
-{user, pkgs, ... }:
+{user, pkgs, inputs, ... }:
 {
     imports = 
         [
+	    inputs.my-nvim.homeManagerModules.my-nvim
             ./system/hyprland.nix
             ./system/rebuild.nix
             ./system/waybar.nix
@@ -66,6 +67,7 @@
         htop
         weylus
     ];
+    programs.my-nvim.enable=true;
 
     home.sessionVariables = {
         _JAVA_AWT_WM_NONREPARENTING = "1";
