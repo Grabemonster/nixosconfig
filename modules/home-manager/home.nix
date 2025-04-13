@@ -67,7 +67,10 @@
         htop
         weylus
     ];
-    programs.my-nvim.enable=true;
+    programs.my-nvim = {
+        enable=true;
+        vimAlias = true;
+    };
 
     home.sessionVariables = {
         _JAVA_AWT_WM_NONREPARENTING = "1";
