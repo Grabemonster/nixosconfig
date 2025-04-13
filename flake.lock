@@ -212,27 +212,6 @@
         "type": "indirect"
       }
     },
-    "home-manger": {
-      "inputs": {
-        "nixpkgs": [
-          "my-nvim",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1744498625,
-        "narHash": "sha256-pL52uCt9CUoTTmysGG91c2FeU7XUvpB7Cep6yon2vDk=",
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "rev": "db56335ca8942d86f2200664acdbd5b9212b26ad",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "type": "github"
-      }
-    },
     "hyprcursor": {
       "inputs": {
         "hyprlang": [
@@ -544,15 +523,14 @@
     "my-nvim": {
       "inputs": {
         "home-manager": "home-manager_2",
-        "home-manger": "home-manger",
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1744557343,
-        "narHash": "sha256-mBhTPEOspbZWOafjq1qTkWmYCg8K9nZDy7ieHDsPmKc=",
+        "lastModified": 1744558281,
+        "narHash": "sha256-w8uhl3K/sIwKL34yXhvlSTNKm2S45T7u/wHGIssfXg8=",
         "owner": "Grabemonster",
         "repo": "my-nvim",
-        "rev": "519d287db73e56f2550fa6b54e09a314bc11804e",
+        "rev": "546708c6fa30cfb978d1a9769ca7da9d41de7420",
         "type": "github"
       },
       "original": {
