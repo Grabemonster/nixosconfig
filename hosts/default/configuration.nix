@@ -37,6 +37,7 @@
   networking.hostName = "nixos"; # Define your hostname.
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.trusted-users = [ "root" "grabemonster" ];
 
   # Enable OpenGL
   hardware.graphics = {
