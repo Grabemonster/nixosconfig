@@ -67,6 +67,7 @@
         htop
         weylus
         vlc
+        devenv
     ];
     programs.my-nvim = {
         enable=true;
