@@ -66,6 +66,7 @@
         psmisc
         htop
         weylus
+        vlc
     ];
     programs.my-nvim = {
         enable=true;
