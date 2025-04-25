@@ -47,7 +47,7 @@
         onedrive
         godot_4
         wlr-randr
-        gimp
+        gimp3
         grim
         slurp
         arduino-ide
