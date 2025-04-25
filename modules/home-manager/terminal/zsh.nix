@@ -17,7 +17,7 @@
             share = true;
             size = 10000;
         };
-        initExtra = ''
+        initContent = ''
             zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
             source <(carapace _carapac)
             '';
