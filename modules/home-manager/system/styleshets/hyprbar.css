@@ -57,6 +57,9 @@
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.3);
 }
+#calendar {
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
 #custom-logout {
   margin-right: 5px;
