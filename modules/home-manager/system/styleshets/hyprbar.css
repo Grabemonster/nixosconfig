@@ -55,11 +55,9 @@
   border-bottom-left-radius: 11px;
   font-size:15px;
   font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.9);
 }
-#clock.calendar {
-    background-color: rgba(0, 0, 0, 0.5);
-}
+
 
 #custom-logout {
   margin-right: 5px;
