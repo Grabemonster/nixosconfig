@@ -25,7 +25,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     my-nvim = {
-      url = "github:Grabemonster/my-nvim";
+      url = "github:Grabemonster/my-nvim?ref=dev";
     };
   };
 
