@@ -28,12 +28,6 @@
     }
     {
       "type"= "disk";
-      "folders"= "/";
-      "key"= " ";
-    }
-    {
-      "type"= "disk";
-      "folders"= "/srv/games/";
       "key"= " ";
     }
     {
