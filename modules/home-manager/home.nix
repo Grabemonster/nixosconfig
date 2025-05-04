@@ -72,6 +72,7 @@
     programs.my-nvim = {
         enable=true;
         vimAlias = true;
+        setEditor = true;
     };
 
     home.sessionVariables = {
