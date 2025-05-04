@@ -50,7 +50,7 @@ in{
     systemd.user.services.device-linker = {
         Unit = {
             Description = "Verbindet PipeWire Geräte nach dem Login";
-            After = [ "graphical-session.target" ]; # oder "hyprland-session.target", je nach Setup
+            After = [ "graphical-session.target" "audioStartup"]; # oder "hyprland-session.target", je nach Setup
             PartOf = [ "graphical-session.target" ]; # optional
         };
         Service = {
