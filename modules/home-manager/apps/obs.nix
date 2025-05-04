@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{pkgs, lib, ...}:
 let
 pactl = ''${pkgs.pulseaudio}/bin/pactl'';
 pw-link = ''${pkgs.pipewire}/bin/pw-link'';
@@ -60,5 +60,8 @@ in{
         Install = {
             WantedBy = [ "graphical-session.target" ]; # läuft nur, wenn du eingeloggt bist
         };
-  };
+    };
+    home.activation.updateDevices = lib.hm.dag.entryAfter ["writeBoundary"] ''
+        ${updateOutputDevices}/bin/device-update
+    '';
 }
