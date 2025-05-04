@@ -27,12 +27,12 @@
       "key"= "󰢮 ";
     }
     {
-      "type"= "disk main";
+      "type"= "disk";
       "folders"= "/";
       "key"= " ";
     }
     {
-      "type"= "disk secondary";
+      "type"= "disk";
       "folders"= "/srv/games/";
       "key"= " ";
     }
