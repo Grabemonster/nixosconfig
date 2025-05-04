@@ -58,10 +58,7 @@ in{
             Type = "oneshot";
         };
         Install = {
-            WantedBy = [ "graphical-session.target" ]; # läuft nur, wenn du eingeloggt bist
+            WantedBy = [ "graphical-session.target" "default.target" ]; # läuft nur, wenn du eingeloggt bist
         };
     };
-    home.activation.updateDevices = lib.hm.dag.entryAfter ["writeBoundary"] ''
-        ${updateOutputDevices}/bin/device-update
-    '';
-}
+} 
