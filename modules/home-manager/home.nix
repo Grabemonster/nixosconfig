@@ -33,6 +33,7 @@
 
     home.packages = with pkgs; [
         prismlauncher
+        nix-search-cli
         webcord
         hyprpolkitagent
         hyprpicker
