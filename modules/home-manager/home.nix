@@ -74,6 +74,7 @@
         enable=true;
         vimAlias = true;
         setEditor = true;
+        browser = "${pkgs.firefox}/bin/firefox";
     };
 
     home.sessionVariables = {
