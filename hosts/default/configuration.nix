@@ -143,6 +143,8 @@
         alsa.enable = true;
         alsa.support32Bit = true;
         pulse.enable = true;
+        jack.enable = true;
+        audio.enable = true;
     };
     xdg.portal = {
         enable = true;
@@ -189,6 +191,7 @@
         pkgs.hplip
         helvum
         pulseaudio
+        easyeffects
     ];
 
     programs.obs-studio = {
