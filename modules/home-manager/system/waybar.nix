@@ -59,7 +59,7 @@ programs.waybar ={
 
     "clock" = {
         "timezone" = "Europe/Berlin";
-        "tooltip-format" = "<big>{:%Y %B}</big>\n<tt><small color='#ffffff'>{calendar}</small></tt>";
+        "tooltip-format" = "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>";
         "format" = "{:%A %H:%M}";
         "calendar" = {
             "format" = {
