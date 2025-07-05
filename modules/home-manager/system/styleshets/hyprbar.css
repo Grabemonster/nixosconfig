@@ -5,7 +5,7 @@
   font-family: "Noto Sans CJK KR Regular";
   font-size: 13px;
   min-height: 0;
-  background-color: transparent;
+  background-color: @color10;
   color: #ffffff;
 }
 
@@ -57,13 +57,6 @@
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.9);
 }
-
-.tooltip {
-  background-color: rgba(0, 0, 0, 0.9);
-  border-radius: 11px;
-}
-
-
 
 #custom-logout {
   margin-right: 5px;
