@@ -28,6 +28,7 @@
 #workspaces {
   border: 2px solid #ffffff;
   border-radius: 11px;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 #workspaces button {
@@ -75,7 +76,7 @@ tooltip {
 
 #taskbar {
   margin-left: 5px;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.9);
   border-top-left-radius: 11px;
   border-bottom-left-radius: 11px; 
   border: 2px solid #ffffff; 
