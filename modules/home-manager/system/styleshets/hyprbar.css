@@ -28,7 +28,7 @@
 #workspaces {
   border: 2px solid #ffffff;
   border-radius: 11px;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 #workspaces button {
@@ -56,11 +56,11 @@
   border-bottom-left-radius: 11px;
   font-size:15px;
   font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 tooltip {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
   border: 2px solid #ffffff;
   border-radius: 11px;
 }
@@ -76,7 +76,7 @@ tooltip {
 
 #taskbar {
   margin-left: 5px;
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0,0,0,0.5);
   border-top-left-radius: 11px;
   border-bottom-left-radius: 11px; 
   border: 2px solid #ffffff; 
