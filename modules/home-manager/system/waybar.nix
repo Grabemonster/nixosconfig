@@ -63,6 +63,7 @@ programs.waybar ={
         "format" = "{:%A %H:%M}";
         "calendar" = {
             "format" = {
+                "months" = "<span color='#000000ff'><b><u>{}</u></b></span>";
                 "today" = "<span color='#000099'><b><u>{}</u></b></span>";
             };
         };
