@@ -6,7 +6,7 @@
   font-size: 13px;
   min-height: 0;
   background-color: transparent;
-  color: @foreground;
+  color: #ffffff;
 }
 
 .modules-left,
@@ -26,7 +26,7 @@
 }
 
 #workspaces {
-  border: 2px solid @foreground;
+  border: 2px solid #ffffff;
   border-radius: 11px;
 }
 
@@ -50,7 +50,7 @@
 
 #clock {
   padding: 1px 5px 0px 5px;
-  border: 2px solid @foreground;
+  border: 2px solid #ffffff;
   border-top-left-radius: 11px;
   border-bottom-left-radius: 11px;
   font-size:15px;
@@ -62,7 +62,7 @@
 #custom-logout {
   margin-right: 5px;
   padding: 5px 15px 5px 10px;
-  border: @foreground;
+  border: #ffffff;
   border-top-right-radius: 11px;
   border-bottom-right-radius: 11px;
   background: @color10;
@@ -73,7 +73,7 @@
   background-color: rgba(0,0,0,0.3);
   border-top-left-radius: 11px;
   border-bottom-left-radius: 11px; 
-  border: 2px solid @foreground;
+  border: 2px solid #ffffff; 
   min-width: 10px; 
 }
 
