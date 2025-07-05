@@ -57,7 +57,7 @@
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.9);
 }
-#clock#calendar {
+#clock:hover {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
