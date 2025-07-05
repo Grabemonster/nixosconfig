@@ -31,7 +31,7 @@ services.hyprpaper = {
     monitor=hyprctl monitors | grep Monitor | awk '{print $2}'
 
     if [ -d "$directory" ]; then
-      random_background=$(ls $directory/*.jpg | shuf -n 1)
+      random_background=$(ls "$directory"/*.jpg "$directory"/*.jpeg "$directory"/*.png "$directory"/*.JPG "$directory"/*.JPEG "$directory"/*.PNG "$directory"/*.webp| shuf -n 1)
       cp $random_background ~/.cache/activwalpaper.jpg
       wallust run $random_background --ignore-sequence="background,foreground,color0,color1,color2,color3,color4,color5,color6,color7,color8,color9,color10,color11,color12,color13,color14,color15"
 
