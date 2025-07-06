@@ -7,7 +7,7 @@
             background = "000000";
             foreground = "ffffff";
             font-family = "";
-            background-opacity = 0.5;
+            background-opacity = 0.8;
             window-decoration = false;
         };
     };
