@@ -20,7 +20,7 @@ wayland.windowManager.hyprland.settings = {
 
   device = {
     "name" = "epic-mouse-v1";
-    "sensitivity" = "-0.5";
+    "sensitivity" = "-0.3";
   };
 };
 }

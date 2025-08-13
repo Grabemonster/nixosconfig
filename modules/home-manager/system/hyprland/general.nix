@@ -17,6 +17,9 @@ wayland.windowManager.hyprland.settings = {
 };
 
 home.file.".config/hypr/xdph.conf".text = ''
-    allow_token_by_default = true
+    screencopy {
+        max_fps = 0;
+        allow_token_by_default = true;
+    }
 '';
 }
