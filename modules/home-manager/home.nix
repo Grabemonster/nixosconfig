@@ -32,6 +32,7 @@
 
 
     home.packages = with pkgs; [
+        rclone
         prismlauncher
         webcord
         hyprpolkitagent
