@@ -32,6 +32,7 @@
 
 
     home.packages = with pkgs; [
+        deja-dup
         prismlauncher
         nix-search-cli
         webcord
@@ -66,6 +67,7 @@
         wireplumber
         psmisc
         htop
+        btop
         weylus
         vlc
         devenv
