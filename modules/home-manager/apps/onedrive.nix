@@ -5,7 +5,9 @@ in
 {
 
     systemd.user.services.onedrive-mountpoint = {
-        Unit.Description = "Create OneDrive mountpoint";
+        Unit = {
+            Description = "Create OneDrive mountpoint";
+        };
         Service = {
             Type = "oneshot";
             ExecStart = "${pkgs.coreutils}/bin/mkdir -p ${onedriveMount}";
@@ -17,8 +19,8 @@ in
     systemd.user.services.rclone-onedrive = {
         Unit = {
             Description = "Rclone OneDrive Mount";
-            After = [ "network-online.target" ];
-            Wants = [ "network-online.target" ];
+            After = [ "network-online.target" "onedrive-mountpoint.service" ];
+            Wants = [ "network-online.target" "onedrive-mountpoint.service"];
         };
 
         Service = {
