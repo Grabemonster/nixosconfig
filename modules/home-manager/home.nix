@@ -108,9 +108,10 @@
 
     qt = {
         enable=true;
-        platformTheme.name = "kde6";
+        platformTheme.name = "gtk";
         style = {
-            package=pkgs.libsForQt5.breeze-qt5;
+            name = "adwaita-dark";
+            package=pkgs.adwaita-qt;
         };
     };
 
