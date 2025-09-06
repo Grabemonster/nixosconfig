@@ -73,7 +73,7 @@
         devenv
         libsForQt5.qt5ct
         libsForQt5.qtstyleplugin-kvantum
-        papirus-folders
+        libsForQt5.breeze-qt5
     ];
     programs.my-nvim = {
         enable=true;
@@ -136,6 +136,8 @@
     home.sessionVariables = {
         __GLX_VENDOR_LIBRARY_NAME = "nvidia"; # Falls du eine NVIDIA-GPU hast
         WLR_NO_HARDWARE_CURSORS = "1"; # Falls du NVIDIA benutzt 
+        QT_QPA_PLATFORMTHEME = "qt5ct";    # Erzwingt Nutzung von qt5ct
+  QT_STYLE_OVERRIDE = "Breeze-Dark";
     };
 
     # This value determines the Home Manager release that your configuration is
