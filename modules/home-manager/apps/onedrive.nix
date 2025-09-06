@@ -19,8 +19,8 @@ in
     systemd.user.services.rclone-onedrive = {
         Unit = {
             Description = "Rclone OneDrive Mount";
-            After = [ "network-online.target" "onedrive-mountpoint.service" ];
-            Wants = [ "network-online.target" "onedrive-mountpoint.service"];
+            After = [ "onedrive-mountpoint.service" ];
+            Wants = [ "onedrive-mountpoint.service" ];
         };
 
         Service = {
