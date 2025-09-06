@@ -8,8 +8,10 @@
     };
 
     Service = {
+      ExecStartPre = ''
+            ${pkgs.coreutils}/bin/mkdir -p ${config.home.homeDirectory}/OneDrive
+        '';
       ExecStart = ''
-        ${pkgs.coreutils}/bin/mkdir -p ${config.home.homeDirectory}/OneDrive
         ${pkgs.rclone}/bin/rclone mount \
           onedrive:Backup \
           ${config.home.homeDirectory}/OneDrive \
