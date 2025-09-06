@@ -110,7 +110,6 @@
         enable=true;
         platformTheme.name = "qt5ct";
         style = {
-            name="breeze";
             package=pkgs.libsForQt5.breeze-qt5;
         };
     };
