@@ -80,7 +80,7 @@
 
     dconf.settings = {
         "org/gnome/desktop/interface" = {
-            gtk-theme = "Breeze-Dark";
+            gtk-theme = "Adwaita-dark";
             color-scheme = "prefer-dark";
         };
     };
@@ -88,8 +88,8 @@
     gtk = {
         enable = true;
         theme = {
-            name = "Breeze-Dark";
-            package = pkgs.libsForQt5.breeze-gtk;
+            name = "Adwaita-dark";
+            package = pkgs.gnome-themes-extra;
         };
         gtk3 = {
             extraConfig.gtk-application-prefer-dark-theme = true;
