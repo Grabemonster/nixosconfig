@@ -9,7 +9,7 @@
 
     Service = {
       ExecStartPre = ''
-            ${pkgs.coreutils}/bin/mkdir -p ${config.home.homeDirectory}/OneDrive
+            ${pkgs.bash}/bin/bash -c '${pkgs.coreutils}/bin/mkdir -p ${config.home.homeDirectory}/OneDrive || true'
         '';
       ExecStart = ''
         ${pkgs.rclone}/bin/rclone mount \
