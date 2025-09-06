@@ -108,32 +108,11 @@
 
     
     
-    xdg.configFile = {
-        kvantum = {
-            target = "Kvantum/kvantum.kvconfig";
-            text = lib.generators.toINI { } {
-                General.theme = "Catppuccin-Mocha-Blue";
-            };
-        };
-
-        qt5ct = {
-            target = "qt5ct/qt5ct.conf";
-            text = lib.generators.toINI { } {
-                Appearance = {
-                    icon_theme = "Papirus-Dark";
-                };
-            };
-        };
-
-        qt6ct = {
-            target = "qt6ct/qt6ct.conf";
-            text = lib.generators.toINI { } {
-                Appearance = {
-                    icon_theme = "Papirus-Dark";
-                };
-            };
-        };
-    };
+    qt = {
+    enable = true;
+    platformTheme.name = "qtct";
+    style.name = "kvantum";
+  };
 
 
 
