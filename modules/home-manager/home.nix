@@ -1,4 +1,4 @@
-{user, pkgs, inputs, ... }:
+{user, config, pkgs, inputs, ... }:
 {
     imports = 
         [
@@ -76,6 +76,19 @@
         enable=true;
         vimAlias = true;
         setEditor = true;
+    };
+
+    xdg.userDirs.enable = true; 
+    xdg.userDirs.createDirectories = true;
+    xdg.userDirs.extraConfig = {
+        XDG_DESKTOP_DIR="${config.home.homeDirectory}/Desktop";
+        XDG_DOWNLOAD_DIR="${config.home.homeDirectory}/Downloads";
+        XDG_TEMPLATES_DIR="${config.home.homeDirectory}/Templates";
+        XDG_PUBLICSHARE_DIR="${config.home.homeDirectory}/";
+        XDG_DOCUMENTS_DIR="${config.home.homeDirectory}/Documents";
+        XDG_MUSIC_DIR="${config.home.homeDirectory}/Music";
+        XDG_PICTURES_DIR="${config.home.homeDirectory}/Pictures";
+        XDG_VIDEOS_DIR="${config.home.homeDirectory}/Videos";
     };
 
     home.sessionVariables = {
