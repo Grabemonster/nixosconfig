@@ -34,7 +34,6 @@ in
          --dir-cache-time 12h \
          --poll-interval 15s \
          --umask 022 \
-         --allow-other \
             '';
             ExecStop = "${pkgs.fuse3}/bin/fusermount3 -u ${onedriveMount}";
             Restart = "on-failure";
