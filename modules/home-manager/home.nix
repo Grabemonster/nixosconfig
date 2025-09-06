@@ -108,15 +108,12 @@
     };
 
     
-    
-    qt = {
-  enable = true;
-  platformTheme = "qtct";   # für qt5ct/qt6ct
-  style = {
-    name = "Breeze-Dark";
-    package = pkgs.libsForQt5.breeze-qt5;
-  };
-};
+   xdg.configFile = {
+      "Kvantum/Utterly-Nord-Solid-Plasma/Utterly-Nord-Solid/Utterly-Nord-Solid.kvconfig".source = "${pkgs.utterly-nord-plasma}/share/Kvantum/Utterly-Nord-Solid/Utterly-Nord-Solid.kvconfig";
+      "Kvantum/Utterly-Nord-Solid-Plasma/Utterly-Nord-Solid/Utterly-Nord-Solid.svg".source = "${pkgs.utterly-nord-plasma}/share/Kvantum/Utterly-Nord-Solid/Utterly-Nord-Solid.svg";
+      "Kvantum/Utterly-Nord-Solid-Plasma/Utterly-Nord-Solid/Nord.patchconfig".source = "${pkgs.utterly-nord-plasma}/share/Kvantum/Utterly-Nord-Solid/Nord.patchconfig";
+      "Kvantum/kvantum.kvconfig".text = "[General]\ntheme=Utterly-Nord-Solid";
+    }; 
 
 
 
@@ -136,8 +133,6 @@
     home.sessionVariables = {
         __GLX_VENDOR_LIBRARY_NAME = "nvidia"; # Falls du eine NVIDIA-GPU hast
         WLR_NO_HARDWARE_CURSORS = "1"; # Falls du NVIDIA benutzt 
-        QT_QPA_PLATFORMTHEME = "qt5ct";    # Erzwingt Nutzung von qt5ct
-  QT_STYLE_OVERRIDE = "Breeze-Dark";
     };
 
     # This value determines the Home Manager release that your configuration is
