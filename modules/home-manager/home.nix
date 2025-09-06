@@ -73,6 +73,7 @@
         devenv
         libsForQt5.qt5ct
         libsForQt5.qtstyleplugin-kvantum
+        papirus-folders
     ];
     programs.my-nvim = {
         enable=true;
