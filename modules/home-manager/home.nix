@@ -110,8 +110,8 @@
         enable=true;
         platformTheme.name = "qt5ct";
         style = {
-            name="bb10dark";
-            package=pkgs.libsForQt5.qtstyleplugins;
+            name="breeze";
+            package=pkgs.libsForQt5.breeze-qt5;
         };
     };
 
