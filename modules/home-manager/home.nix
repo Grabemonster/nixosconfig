@@ -72,7 +72,6 @@
         vlc
         devenv
         libsForQt5.qt5ct
-        libsForQt5.qtstyleplugin-kvantum
         libsForQt5.breeze-qt5
     ];
     programs.my-nvim = {
