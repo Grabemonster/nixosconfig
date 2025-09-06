@@ -105,13 +105,13 @@
     };
 
     qt = {
-        enable = true;
-        platformTheme = "gtk";
-        style = {
-            name = "Adwaita-dark";
-            package = pkgs.gnome-themes-extra;
-        };
+    enable = true;
+    platformTheme = "qtct";
+    style = {
+      name = "gtk2";
+      package = pkgs.libsForQt5.breeze-qt5;
     };
+  };
 
     xdg.userDirs.enable = true; 
     xdg.userDirs.createDirectories = true;
