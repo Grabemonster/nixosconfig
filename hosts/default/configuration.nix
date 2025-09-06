@@ -185,9 +185,8 @@
     # List packages installed in system profile. To search, run:
     # $ nix search wget
     environment.systemPackages = with pkgs; [
-        kdePackages.qtstyleplugin-kvantum
-        kdePackages.breeze-icons
-        kdePackages.breeze-gtk
+        adwaita-qt
+        adwaita-qt6
         vim 
         wget
         gnome-terminal
