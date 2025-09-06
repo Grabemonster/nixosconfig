@@ -107,7 +107,8 @@
     };
 
     qt = {
-        platformTheme.name = "gtk2";
+        enable=true;
+        platformTheme.name = "qt5ct";
     };
 
     
