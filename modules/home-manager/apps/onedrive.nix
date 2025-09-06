@@ -36,7 +36,7 @@ in
          --umask 022 \
          --allow-other \
             '';
-            ExecStop = "${pkgs.fuse}/bin/fusermount -u ${onedriveMount}";
+            ExecStop = "${pkgs.fuse3}/bin/fusermount3 -u ${onedriveMount}";
             Restart = "on-failure";
             RestartSec = 10;
         };
