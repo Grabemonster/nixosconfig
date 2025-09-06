@@ -42,13 +42,7 @@
     # Enable OpenGL
     hardware.graphics = {
         enable = true;
-    };
-
-    qt = {
-    enable = true;
-    platformTheme = "gnome";
-    style = "adwaita-dark";
-  };
+    }; 
 
     # Load nvidia driver for Xorg and Wayland
     services.xserver.videoDrivers = ["nvidia"];
@@ -191,6 +185,8 @@
     # List packages installed in system profile. To search, run:
     # $ nix search wget
     environment.systemPackages = with pkgs; [
+        kdePackages.breeze-icons
+        kdePackages.breeze-gtk
         vim 
         wget
         gnome-terminal
@@ -226,6 +222,9 @@
     };
     environment.variables = {
         MOZ_ENABLE_WAYLAND = "1"; 
+        GTK_THEME="Adwaita:dark";
+        QT_QPA_PLATFORMTHEME="kvantum";
+        QT_STYLE_OVERRIDE="Breeze";
     };
     environment.pathsToLink = ["/share/zsh"];
     # programs need SUID wrappers, can be configured further or are
