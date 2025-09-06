@@ -71,7 +71,6 @@
         weylus
         vlc
         devenv
-        nemo
     ];
     programs.my-nvim = {
         enable=true;
@@ -109,8 +108,8 @@
         enable = true;
         platformTheme = "gtk";
         style = {
-            name = "gtk2";
-            package = pkgs.libsForQt5.breeze-qt5;
+            name = "Adwaita-dark";
+            package = pkgs.adwaita-qt;
         };
     };
 
