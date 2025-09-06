@@ -33,7 +33,7 @@
 
 
     home.packages = with pkgs; [
-        nautilus
+        kdePackages.dolphin
         rclone
         prismlauncher
         webcord
