@@ -26,7 +26,7 @@ in
         Service = {
             ExecStart = ''
                 ${pkgs.rclone}/bin/rclone mount \
-         onedrive:Backup \
+         onedrive: \
                 ${onedriveMount}\
          --vfs-cache-mode=full \
          --vfs-cache-max-size 2G \
