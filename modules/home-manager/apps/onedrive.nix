@@ -34,7 +34,7 @@
       ExecStart = ''
         ${pkgs.rclone}/bin/rclone mount \
           onedrive:Backup \
-          ${config.home.homeDirectory}/OneDriveBackup \
+          ${config.home.homeDirectory}/OneDrive \
           --vfs-cache-mode=full \
           --vfs-cache-max-size 2G \
           --vfs-cache-max-age 12h \
