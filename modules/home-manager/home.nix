@@ -71,6 +71,7 @@
         weylus
         vlc
         devenv
+        qt6ct
     ];
     programs.my-nvim = {
         enable=true;
@@ -94,7 +95,6 @@
     home.sessionVariables = {
         __GLX_VENDOR_LIBRARY_NAME = "nvidia"; # Falls du eine NVIDIA-GPU hast
         WLR_NO_HARDWARE_CURSORS = "1"; # Falls du NVIDIA benutzt 
-        QT_QPA_PLATFORMTHEME = "qt5ct";
     };
 
     # This value determines the Home Manager release that your configuration is
