@@ -12,7 +12,6 @@
             ./system/clipboard.nix
             ./system/playerctl.nix
 
-            #./terminal/nvim/nixvim.nix
             ./terminal/git.nix
             ./terminal/bash.nix
             ./terminal/tmux.nix
@@ -108,10 +107,9 @@
 
     qt = {
         enable=true;
-        platformTheme.name = "gnome";
+        platformTheme.name = "qtct";
         style = {
-            name = "dark";
-            package=pkgs.adwaita-qt;
+            name = "kvantum";
         };
     };
 
