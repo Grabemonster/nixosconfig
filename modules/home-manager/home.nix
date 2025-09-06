@@ -107,7 +107,7 @@
     };
 
     qt = {
-        platformTheme.name = "gnome";
+        platformTheme.name = "gtk2";
     };
 
     
