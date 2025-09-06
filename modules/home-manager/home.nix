@@ -24,6 +24,7 @@
             ./apps/webbrowser.nix
             ./apps/E-mail.nix
             ./apps/obs.nix
+            ./apps/onedrive.nix
         ];
 # Home Manager needs a bit of information about you and the paths it should
 # manage.
@@ -45,7 +46,6 @@
         lutris
         gparted 
         unzip
-        onedrive
         godot_4
         wlr-randr
         gimp3
