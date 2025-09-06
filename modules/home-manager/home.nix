@@ -110,10 +110,13 @@
     
     
     qt = {
-    enable = true;
-    platformTheme.name = "qtct";
-    style.name = "kvantum";
+  enable = true;
+  platformTheme = "qtct";   # für qt5ct/qt6ct
+  style = {
+    name = "Breeze-Dark";
+    package = pkgs.libsForQt5.breeze-qt5;
   };
+};
 
 
 
