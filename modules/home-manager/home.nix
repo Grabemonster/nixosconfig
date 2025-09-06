@@ -1,4 +1,4 @@
-{user, config, pkgs, inputs, ... }:
+{user, config, pkgs, inputs, lib, ... }:
 {
     imports = 
         [
@@ -71,6 +71,8 @@
         weylus
         vlc
         devenv
+        libsForQt5.qt5ct
+        libsForQt5.qtstyleplugin-kvantum
     ];
     programs.my-nvim = {
         enable=true;
@@ -104,14 +106,36 @@
         };
     };
 
-    qt = {
-    enable = true;
-    platformTheme = "gtk";
-    style = {
-      name = "gtk2";
-      package = pkgs.libsForQt5.breeze-qt5;
+    
+    
+    xdg.configFile = {
+        kvantum = {
+            target = "Kvantum/kvantum.kvconfig";
+            text = lib.generators.toINI { } {
+                General.theme = "Catppuccin-Mocha-Blue";
+            };
+        };
+
+        qt5ct = {
+            target = "qt5ct/qt5ct.conf";
+            text = lib.generators.toINI { } {
+                Appearance = {
+                    icon_theme = "Papirus-Dark";
+                };
+            };
+        };
+
+        qt6ct = {
+            target = "qt6ct/qt6ct.conf";
+            text = lib.generators.toINI { } {
+                Appearance = {
+                    icon_theme = "Papirus-Dark";
+                };
+            };
+        };
     };
-  };
+
+
 
     xdg.userDirs.enable = true; 
     xdg.userDirs.createDirectories = true;
