@@ -223,8 +223,7 @@
     environment.variables = {
         MOZ_ENABLE_WAYLAND = "1"; 
         GTK_THEME="Adwaita:dark";
-        QT_QPA_PLATFORMTHEME="kvantum";
-        QT_STYLE_OVERRIDE="Breeze";
+        QT_QPA_PLATFORMTHEME="adwaita-qt";
     };
     environment.pathsToLink = ["/share/zsh"];
     # programs need SUID wrappers, can be configured further or are
