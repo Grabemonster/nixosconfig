@@ -71,6 +71,7 @@
         weylus
         vlc
         devenv
+        nemo
     ];
     programs.my-nvim = {
         enable=true;
