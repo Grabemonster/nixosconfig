@@ -71,12 +71,38 @@
         weylus
         vlc
         devenv
-        qt6ct
     ];
     programs.my-nvim = {
         enable=true;
         vimAlias = true;
         setEditor = true;
+    };
+
+    dconf.settings = {
+        "org/gnome/desktop/interface" = {
+            gtk-theme = "Breeze-Dark";
+            color-scheme = "prefer-dark";
+        };
+    };
+
+    gtk = {
+        enable = true;
+        theme = {
+            name = "Breeze-Dark";
+            package = pkgs.libsForQt5.breeze-gtk;
+        };
+        gtk3 = {
+            extraConfig.gtk-application-prefer-dark-theme = true;
+        };
+    };
+
+    qt = {
+        enable = true;
+        platformTheme = "gtk";
+        style = {
+            name = "gtk2";
+            package = pkgs.libsForQt5.breeze-qt5;
+        };
     };
 
     xdg.userDirs.enable = true; 

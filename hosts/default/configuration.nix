@@ -185,8 +185,6 @@
     # List packages installed in system profile. To search, run:
     # $ nix search wget
     environment.systemPackages = with pkgs; [
-        adwaita-qt
-        adwaita-qt6
         vim 
         wget
         gnome-terminal
@@ -222,8 +220,6 @@
     };
     environment.variables = {
         MOZ_ENABLE_WAYLAND = "1"; 
-        GTK_THEME="Adwaita:dark";
-        QT_QPA_PLATFORMTHEME="adwaita-qt";
     };
     environment.pathsToLink = ["/share/zsh"];
     # programs need SUID wrappers, can be configured further or are
