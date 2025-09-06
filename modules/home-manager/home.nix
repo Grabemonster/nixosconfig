@@ -131,6 +131,7 @@
     home.sessionVariables = {
         __GLX_VENDOR_LIBRARY_NAME = "nvidia"; # Falls du eine NVIDIA-GPU hast
         WLR_NO_HARDWARE_CURSORS = "1"; # Falls du NVIDIA benutzt 
+        KDE_USE_QT_SCALING = "1";
     };
 
     # This value determines the Home Manager release that your configuration is
