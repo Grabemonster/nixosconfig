@@ -35,7 +35,6 @@ in
          --poll-interval 15s \
          --umask 022 \
          --allow-other \
-         --daemon
             '';
             ExecStop = "${pkgs.fuse}/bin/fusermount -u ${onedriveMount}";
             Restart = "on-failure";
