@@ -33,6 +33,7 @@
 
 
     home.packages = with pkgs; [
+        nautilus
         rclone
         prismlauncher
         webcord
