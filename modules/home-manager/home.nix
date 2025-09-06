@@ -88,12 +88,19 @@
     gtk = {
         enable = true;
         theme = {
-            name = "Adwaita:dark";
+            name = "Adwaita:dark";       # <-- hier Adwaita-dark setzen
             package = pkgs.gnome-themes-extra;
         };
-        gtk3.extraConfig = {
-            gtk-application-prefer-dark-theme = true;
-            gtk-theme-name = "Adwaita:dark";
+        iconTheme = {
+            name = "Adwaita";            # <-- passende Adwaita Icons
+            package = pkgs.adwaita-icon-theme;
+        };
+        cursorTheme = {
+            name = "Adwaita";            # <-- Standard-Cursor
+            package = pkgs.adwaita-icon-theme;
+        };
+        gtk3 = {
+            extraConfig.gtk-application-prefer-dark-theme = true;
         };
     };
 
