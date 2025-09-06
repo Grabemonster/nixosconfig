@@ -108,7 +108,7 @@
 
     qt = {
         enable=true;
-        platformTheme.name = "qt5ct";
+        platformTheme.name = "kde6";
         style = {
             package=pkgs.libsForQt5.breeze-qt5;
         };
