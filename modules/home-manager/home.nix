@@ -80,7 +80,7 @@
 
     dconf.settings = {
         "org/gnome/desktop/interface" = {
-            gtk-theme = "Adwaita:dark";
+            gtk-theme = "Adwaita-dark";
             color-scheme = "prefer-dark";
         };
     };
@@ -88,7 +88,7 @@
     gtk = {
         enable = true;
         theme = {
-            name = "Adwaita:dark";       # <-- hier Adwaita-dark setzen
+            name = "Adwaita-dark";       # <-- hier Adwaita-dark setzen
             package = pkgs.gnome-themes-extra;
         };
         iconTheme = {
