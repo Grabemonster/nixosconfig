@@ -125,7 +125,7 @@
 
     qt = {
         enable = true;
-        platformTheme = "qtct"; # oder "kde" falls du Plasma nutzt
+        platformTheme.name = "qtct"; # oder "kde" falls du Plasma nutzt
         style = {
             name = "breeze-dark";
             package = pkgs.libsForQt5.breeze-qt5; # für Qt5
