@@ -107,32 +107,21 @@
     home.stateVersion = "24.05"; # Please read the comment before changing.
 
     dconf.settings = {
-        "org/gnome/desktop/background" = {
-            picture-uri-dark = "file://${pkgs.nixos-artwork.wallpapers.nineish-dark-gray.src}";
-        };
-        "org/gnome/desktop/interface" = {
-            color-scheme = "prefer-dark";
-        };
+      "org/gnome/desktop/background" = {
+        picture-uri-dark = "file://${pkgs.nixos-artwork.wallpapers.nineish-dark-gray.src}";
+      };
+      "org/gnome/desktop/interface" = {
+        color-scheme = "prefer-dark";
+      };
     };
 
     gtk = {
-        enable = true;
-        theme = {
-            name = "Adwaita-dark";
-            package = pkgs.gnome-themes-extra;
-        };
+      enable = true;
+      theme = {
+        name = "Adwaita-dark";
+        package = pkgs.gnome-themes-extra;
+      };
     };
-
-    qt = {
-        enable = true;
-        platformTheme.name = "qtct"; # oder "kde" falls du Plasma nutzt
-        style = {
-            name = "breeze-dark";
-            package = pkgs.libsForQt5.breeze-qt5; # für Qt5
-        };
-    };
-
-
 
     fonts.fontconfig.enable = true;
     # Let Home Manager install and manage itself.

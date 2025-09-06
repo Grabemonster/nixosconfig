@@ -44,6 +44,12 @@
         enable = true;
     };
 
+    qt = {
+    enable = true;
+    platformTheme = "gnome";
+    style = "adwaita-dark";
+  };
+
     # Load nvidia driver for Xorg and Wayland
     services.xserver.videoDrivers = ["nvidia"];
 
