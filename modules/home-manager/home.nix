@@ -32,7 +32,6 @@
 
 
     home.packages = with pkgs; [
-        nemo
         xfce.thunar
         rclone
         prismlauncher
