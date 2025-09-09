@@ -35,7 +35,7 @@
         xfce.thunar
         rclone
         prismlauncher
-        webcord
+        discord
         hyprpolkitagent
         hyprpicker
         playerctl 
