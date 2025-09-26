@@ -2,7 +2,6 @@
 {
     programs.rofi = {
         enable = true;
-        package = pkgs.rofi-wayland;
         plugins = [pkgs.rofi-calc pkgs.rofi-emoji];
         extraConfig = {
             kb-primary-paste = "Control+V,Shift+Insert";
