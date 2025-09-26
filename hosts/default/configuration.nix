@@ -211,6 +211,7 @@
         });
         plugins = with pkgs.obs-studio-plugins; [
             obs-backgroundremoval 
+            obs-vkcapture
         ];
         enableVirtualCamera = true;
     };
