@@ -522,11 +522,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1753645145,
-        "narHash": "sha256-Y4ScrfzhpN9XVqu7eKCs/ce1vVZvNIrDI5Fre7dRjYU=",
+        "lastModified": 1758909089,
+        "narHash": "sha256-4anpWcFyCfU+S+rfUa9HulFpToLfKU+kjk5JRkrtDVE=",
         "owner": "Grabemonster",
         "repo": "my-nvim",
-        "rev": "e1ec0291311cbc53708da3b0c2ef55d86598de46",
+        "rev": "7d55a81672e9f24dccb0690e3b7e1665b73c1b4c",
         "type": "github"
       },
       "original": {
