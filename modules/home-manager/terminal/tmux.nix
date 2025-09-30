@@ -50,7 +50,7 @@
         #!${pkgs.bash}/bin/bash
         selection=$(tmuxinator list | tail -n +2 | tr ' ' '\n' | grep -v '^$' | rofi -sort-order=default -dmenu)
         if [ -n "$selection" ]; then
-            ghostty -e "tmuxinator start $selection"
+            ghostty -e zsh -lc "tmuxinator start $selection"
         else
             echo "Keine Auswahl getroffen." >&2
         fi
