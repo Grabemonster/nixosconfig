@@ -171,6 +171,15 @@
 
     programs.hyprland.enable = true;
 
+    programs.virt-manager.enable = true;
+
+    users.groups.libvirtd.members = [user];
+
+    virtualisation.libvirtd.enable = true;
+
+    virtualisation.spiceUSBRedirection.enable = true;
+
+
     programs.steam = {
         enable = true;
         remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
