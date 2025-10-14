@@ -32,6 +32,7 @@
 
 
     home.packages = with pkgs; [
+        logisim
         xfce.thunar
         rclone
         prismlauncher
