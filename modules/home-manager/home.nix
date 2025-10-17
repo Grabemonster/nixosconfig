@@ -32,7 +32,7 @@
 
 
     home.packages = with pkgs; [
-        logisim
+        logisim-evolution
         xfce.thunar
         rclone
         prismlauncher
